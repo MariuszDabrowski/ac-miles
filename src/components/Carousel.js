@@ -9,9 +9,9 @@ import CarouselItem from './CarouselItem';
 
 function Carousel() {
   return (
-    <>
-      { achievementsData.map(item => <CarouselItem />) }
-    </>
+    <div className="carousel">
+      { achievementsData.map(item => <CarouselItem key={item['Unique Entry ID']} />) }
+    </div>
   );
 }
 

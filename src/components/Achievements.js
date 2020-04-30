@@ -12,13 +12,13 @@ import '../css/simplebar.css';
 function Achievements() {
   return (
     <>
-      <div class="mimic-scroll">
-        <div class="mimic-scroll__content"></div>
+      <div className="mimic-scroll">
+        <div className="mimic-scroll__content"></div>
       </div>
 
-      <div class="achievements-wrapper">
-        <div class="achievements">
-          { achievementsData.map(item => <AchievementsItem />) }
+      <div className="achievements-wrapper">
+        <div className="achievements">
+          { achievementsData.map(item => <AchievementsItem key={item['Unique Entry ID']} data={item} />) }
         </div>
       </div>
     </>

@@ -1,0 +1,11 @@
+.achievements-wrapper { height: 100vh; }
+.achievements-wrapper .simplebar-track { display: none; }
+
+.achievements {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 50px 113px 50px;
+  max-width: 1270px;
+  margin: 0 auto;
+}

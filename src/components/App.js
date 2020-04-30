@@ -13,7 +13,7 @@ function App() {
     <>
 
       <div className="cursor"></div>
-      {/* <Carousel /> */}
+      <Carousel />
       <Header />
       <Achievements />
 

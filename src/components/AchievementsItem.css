@@ -1,0 +1,107 @@
+.achievement {
+  width: 362px;
+  height: 216px;
+  border: 10px solid #fefef2;
+  background: #fde6d6;
+  margin: 14px;
+  box-shadow: 0 2px 5px rgba(0,0,0, 0.1);
+  background: #ced6ed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+.achievement:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.achievement:hover {
+  transform: rotate(-2deg) scale(1.07);
+}
+
+.achievement--event:before { background-image: url('../img/bg-event.png'); }
+.achievement--fish:before { background-image: url('../img/bg-fish.png'); }
+
+.achievement--event { background: #fbe4d2 url('../img/paper-bg.png') center repeat; }
+.achievement--fish { background: #bceae0 url('../img/paper-bg.png') center repeat; }
+.achievement--communication { background: #f9f5b8 url('../img/paper-bg.png') center repeat; }
+.achievement--insect { background: #f8f9b5 url('../img/paper-bg.png') center repeat; }
+.achievement--diy { background: #f9f2c6 url('../img/paper-bg.png') center repeat; }
+.achievement--hha { background: #faf3bf url('../img/paper-bg.png') center repeat; }
+.achievement--plant { background: #e5fac2 url('../img/paper-bg.png') center repeat; }
+.achievement--smartphone { background: #bfdef0 url('../img/paper-bg.png') center repeat; }
+.achievement--money { background: #faf9b8 url('../img/paper-bg.png') center repeat; }
+.achievement--negative { background: #ded9f7 url('../img/paper-bg.png') center repeat; }
+.achievement--landmaking { background: #d7efd0 url('../img/paper-bg.png') center repeat; }
+.achievement--mydesign { background: #fde4e0 url('../img/paper-bg.png') center repeat; }
+
+.achievement__title {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #72631e;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: auto;
+  z-index: 10;
+}
+
+.achivement__spaces {
+  position: relative;
+}
+
+.achivement__spaces--1 { width: 120px; margin-bottom: 8px; }
+.achivement__spaces--2 { width: 218px; margin-bottom: 8px; }
+.achivement__spaces--3 { width: 310px; margin-bottom: 14px; }
+.achivement__spaces--4 { width: 280px; margin-bottom: 8px; }
+.achivement__spaces--5 { width: 322px; margin-bottom: 8px; }
+.achivement__spaces--6 { width: 334px; margin-bottom: 12px; }
+
+.achivement__spaces-svg { width: 100%; height: 100%; }
+
+.achivement__spaces__stamp {
+  position: absolute;
+  display: block;
+}
+
+.achivement__spaces--1 .achivement__spaces__stamp { width: 126px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.achivement__spaces--2 .achivement__spaces__stamp { width: 100px; }
+.achivement__spaces--2 .achivement__spaces__stamp:nth-child(1) { top: 0px; left: 4px; }
+.achivement__spaces--2 .achivement__spaces__stamp:nth-child(2) { top: 0px; right: 4px; }
+
+.achivement__spaces--3 .achivement__spaces__stamp { width: 96px; }
+.achivement__spaces--3 .achivement__spaces__stamp:nth-child(1) { top: 2px; left: 0; transform: rotate(12deg); }
+.achivement__spaces--3 .achivement__spaces__stamp:nth-child(2) { top: 5px; left: 108px; transform: rotate(-5deg); }
+.achivement__spaces--3 .achivement__spaces__stamp:nth-child(3) { top: 3px; left: 213px; transform: rotate(2deg) }
+
+.achivement__spaces--4 .achivement__spaces__stamp { width: 72px; }
+.achivement__spaces--4 .achivement__spaces__stamp:nth-child(1) { top: 56px; left: 2px; transform: rotate(9deg); }
+.achivement__spaces--4 .achivement__spaces__stamp:nth-child(2) { top: 7px; left: 70px; transform: rotate(-10deg); }
+.achivement__spaces--4 .achivement__spaces__stamp:nth-child(3) { top: 54px; left: 142px; transform: rotate(3deg); }
+.achivement__spaces--4 .achivement__spaces__stamp:nth-child(4) { top: 2px; left: 204px; transform: rotate(-3deg); }
+
+.achivement__spaces--5 .achivement__spaces__stamp { width: 80px; }
+.achivement__spaces--5 .achivement__spaces__stamp:nth-child(1) { top: 48px; left: -1px; transform: rotate(9deg); }
+.achivement__spaces--5 .achivement__spaces__stamp:nth-child(2) { top: 3px; left: 59px; transform: rotate(6deg); }
+.achivement__spaces--5 .achivement__spaces__stamp:nth-child(3) { top: 48px; left: 123px; transform: rotate(-13deg); }
+.achivement__spaces--5 .achivement__spaces__stamp:nth-child(4) { top: 0px; left: 186px; transform: rotate(10deg); }
+.achivement__spaces--5 .achivement__spaces__stamp:nth-child(5) { top: 51px; left: 242px; transform: rotate(-8deg); }
+
+.achivement__spaces--6 .achivement__spaces__stamp { width: 70px; }
+.achivement__spaces--6 .achivement__spaces__stamp:nth-child(1) { top: 51px; left: -2px; transform: rotate(-9deg); }
+.achivement__spaces--6 .achivement__spaces__stamp:nth-child(2) { top: 0px; left: 51px; transform: rotate(6deg); }
+.achivement__spaces--6 .achivement__spaces__stamp:nth-child(3) { top: 51px; left: 105px; transform: rotate(-13deg); }
+.achivement__spaces--6 .achivement__spaces__stamp:nth-child(4) { top: 0px; left: 159px; transform: rotate(10deg); }
+.achivement__spaces--6 .achivement__spaces__stamp:nth-child(5) { top: 51px; left: 211px; transform: rotate(-8deg); }
+.achivement__spaces--6 .achivement__spaces__stamp:nth-child(6) { top: 0px; left: 265px; transform: rotate(8deg); }
