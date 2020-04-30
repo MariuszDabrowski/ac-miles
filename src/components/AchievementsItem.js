@@ -84,7 +84,9 @@ function AchievementsItem(props) {
   // ------
   
   return (
-    <div className={`achievement achievement--${props.data['Internal Category'].toLowerCase()}`} onClick={props.toggleCarousel}>
+    <div
+    className={`achievement achievement--${props.data['Internal Category'].toLowerCase()}`}
+    onClick={() => props.setCarouselIndex(props.index)}>
       <div className="achievement__title">{ props.data.Name }</div>
       <div className={`achivement__spaces achivement__spaces--${props.data['Num of Tiers']}`}>
         {stamps}

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import Flickity from 'flickity';
 import './Carousel.css';
 import '../css/flickity.css';
@@ -10,17 +10,22 @@ import CarouselItem from './CarouselItem';
 // ---------
 
 function Carousel(props) {
-  let carouselElement = useRef();
-
   useEffect(() => {
-    new Flickity(carouselElement.current, {
+    new Flickity('.carousel', {
       cellSelector: '.card-wrapper',
-      pageDots: false
+      pageDots: false,
+      initialIndex: props.carouselIndex,
+      on: {
+        ready: function() {
+          const carousel = document.querySelector('.carousel');
+          carousel.classList.remove('carousel--hidden');
+        }
+      }
     });
-  }, [])
+  }, [props.carouselIndex]);
 
   return (
-    <div className="carousel" ref={carouselElement}>
+    <div className="carousel carousel--hidden">
       { achievementsData.map(item => <CarouselItem key={item['Unique Entry ID']} data={item} />) }
       
       <div className="button" onClick={props.toggleCarousel}>

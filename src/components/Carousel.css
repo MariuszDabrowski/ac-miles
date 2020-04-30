@@ -8,6 +8,10 @@
   background: #bac8ef;
 }
 
+.carousel--hidden {
+  opacity: 0;
+}
+
 .carousel .button {
   position: absolute;
   bottom: 40px;

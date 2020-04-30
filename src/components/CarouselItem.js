@@ -1,5 +1,6 @@
 import React from 'react';
 import './CarouselItem.css';
+import achievementDescriptions from '../data/achievementDescriptions.json';
 
 // ------
 // Stamps
@@ -92,6 +93,7 @@ function CarouselItem(props) {
       <div className="card">
         <div className="card__title">{props.data.Name}</div>
         <div className="card__description">
+          {achievementDescriptions[props.data['Internal ID']].description}
           <div className="card__description__nook"></div>
         </div>
         <div className={`card-badges card-badges--${props.data['Num of Tiers']}`}>
