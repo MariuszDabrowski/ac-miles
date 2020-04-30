@@ -32,16 +32,79 @@
 .card__description {
   height: 247px;
   width: 782px;
-  background: green;
-  margin-bottom: 35px;
+  position: relative;
+}
+
+.card__description::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: url('../img/card-description-bg.svg') center no-repeat;
+  background-size: 100%;
+  opacity: 0.3;
 }
 
 .card__description__nook {
   
 }
 
-.card__badges {
-  width: 40px;
-  height: 40px;
-  background: black;
+.card-badges {
+  height: 215px;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
+
+.card-badges--1 .card-badges__track { height: 147px; }
+.card-badges--2 .card-badges__track { height: 137px; }
+.card-badges--3 .card-badges__track { height: 137px; }
+.card-badges--4 .card-badges__track { height: 137px; }
+.card-badges--5 .card-badges__track { height: 137px; }
+.card-badges--6 .card-badges__track { height: 127px; }
+
+.card-badges__track {
+  height: 100%;
+}
+
+.card-badges__stamp {
+  height: 145px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.card-badges--1 .card-badges__stamp { height: 155px; }
+.card-badges--6 .card-badges__stamp { height: 130px; }
+
+.card-badges--1 .card-badges__stamp--1 { transform: translate(-51%, -51%) rotate(0deg); }
+
+.card-badges--2 .card-badges__stamp--1 { transform: translate(-110%, -52%) rotate(-3deg); }
+.card-badges--2 .card-badges__stamp--2 { transform: translate(11%, -51%) rotate(0deg); }
+
+.card-badges--3 .card-badges__stamp--1 { transform: translate(-163%, -50%) rotate(13deg); }
+.card-badges--3 .card-badges__stamp--2 { transform: translate(-55%, -50%) rotate(-8deg); }
+.card-badges--3 .card-badges__stamp--3 { transform: translate(64%, -50%) rotate(5deg); }
+
+.card-badges--4 .card-badges__stamp--1 { transform: translate(-220%, -52%) rotate(9deg); }
+.card-badges--4 .card-badges__stamp--2 { transform: translate(-105%, -49%) rotate(-7deg); }
+.card-badges--4 .card-badges__stamp--3 { transform: translate(10%, -52%) rotate(4deg); }
+.card-badges--4 .card-badges__stamp--4 { transform: translate(116%, -49%) rotate(-3deg); }
+
+.card-badges--5 .card-badges__stamp--1 { transform: translate(-258%, -50%) rotate(8deg); }
+.card-badges--5 .card-badges__stamp--2 { transform: translate(-157%, -50%) rotate(-5deg); }
+.card-badges--5 .card-badges__stamp--3 { transform: translate(-52%, -50%) rotate(3deg); }
+.card-badges--5 .card-badges__stamp--4 { transform: translate(57%, -50%) rotate(11deg); }
+.card-badges--5 .card-badges__stamp--5 { transform: translate(159%, -50%) rotate(-9deg); }
+
+.card-badges--6 .card-badges__stamp--1 { transform: translate(-312%, -50%) rotate(10deg); }
+.card-badges--6 .card-badges__stamp--2 { transform: translate(-208%, -52%) rotate(-6deg); }
+.card-badges--6 .card-badges__stamp--3 { transform: translate(-103%, -50%) rotate(7deg); }
+.card-badges--6 .card-badges__stamp--4 { transform: translate(-2%, -52%) rotate(-1deg); }
+.card-badges--6 .card-badges__stamp--5 { transform: translate(104%, -50%) rotate(6deg); }
+.card-badges--6 .card-badges__stamp--6 { transform: translate(209%, -52%) rotate(-10deg); }

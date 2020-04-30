@@ -21,7 +21,7 @@ function Carousel(props) {
 
   return (
     <div className="carousel" ref={carouselElement}>
-      { achievementsData.map(item => <CarouselItem key={item['Unique Entry ID']} />) }
+      { achievementsData.map(item => <CarouselItem key={item['Unique Entry ID']} data={item} />) }
       
       <div className="button" onClick={props.toggleCarousel}>
         <div className="button__icon">B</div>
