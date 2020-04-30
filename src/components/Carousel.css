@@ -1,3 +1,17 @@
 .carousel {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+  background: #bac8ef;
+}
+
+.carousel .button {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+  cursor: pointer;
 }

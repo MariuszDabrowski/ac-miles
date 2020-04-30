@@ -8,17 +8,24 @@ import './App.css';
 // Component
 // ---------
 
-function App() {
-  return (
-    <>
+class App extends React.Component {
+  state = {
+    carouselActive: true
+  }
 
-      <div className="cursor"></div>
-      <Carousel />
-      <Header />
-      <Achievements />
+  toggleCarousel = () => {
+    this.setState({ carouselActive: (this.state.carouselActive) ? false : true });
+  }
 
-    </>
-  );
+  render() {
+    return (
+      <>
+        { this.state.carouselActive && <Carousel toggleCarousel={this.toggleCarousel} /> }
+        <Header />
+        <Achievements toggleCarousel={this.toggleCarousel} />
+      </>
+    );
+  }
 }
 
 export default App;

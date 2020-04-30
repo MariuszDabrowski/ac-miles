@@ -9,7 +9,7 @@ import '../css/simplebar.css';
 // Component
 // ---------
 
-function Achievements() {
+function Achievements(props) {
   const scrollbarAchievements = useRef();
   const scrollbarMimic = useRef();
   const mimicScrollContentElement = useRef();
@@ -87,7 +87,7 @@ function Achievements() {
 
       <SimpleBar ref={scrollbarAchievements} autoHide={false} className="achievements-wrapper">
           <div className="achievements" ref={achievementsElement}>
-            { achievementsData.map(item => <AchievementsItem key={item['Unique Entry ID']} data={item} />) }
+            { achievementsData.map(item => <AchievementsItem key={item['Unique Entry ID']} data={item} toggleCarousel={props.toggleCarousel} />) }
           </div>
       </SimpleBar>
     </>

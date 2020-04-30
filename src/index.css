@@ -10,9 +10,46 @@ html {
 
 body {
   margin: 0;
-  padding: 0 50px 0 0;
-  background: #c2cff2 url('./img/paper-bg.png') center repeat;
   height: 100vh;
   overflow: hidden;
   font-family: 'Nunito', sans-serif;
+}
+
+.root {
+  height: 100vh;
+  background: #c2cff2 url('./img/paper-bg.png') center repeat;
+}
+
+/* ------- */
+/* Buttons */
+/* ------- */
+
+.button {
+  background: #f5f7e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 12px 7px 7px;
+  border-radius: 29px;
+}
+
+.button__icon {
+  font-size: 20px;
+  font-weight: 700;
+  width: 31px;
+  height: 31px;
+  background: #877861;
+  color: #f5f7e1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+  line-height: 0;
+  padding: 2px 0 0 2px;
+}
+
+.button__text {
+  font-size: 20px;
+  color: #877861;
 }
