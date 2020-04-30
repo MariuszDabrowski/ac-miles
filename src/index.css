@@ -10,7 +10,7 @@ html {
 
 body {
   margin: 0;
-  padding: 130px 50px 0 0;
+  padding: 0 50px 0 0;
   background: #c2cff2 url('./img/paper-bg.png') center repeat;
   height: 100vh;
   overflow: hidden;
