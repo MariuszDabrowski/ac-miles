@@ -20,11 +20,9 @@ function Achievements() {
   // ------------------------------------------
 
   useEffect(() => {
-    scrollbarAchievements.current.recalculate();
     mimicScrollContentElement.current.style.height = `${achievementsElement.current.clientHeight}px`;
 
     setupScrollbar();
-    // Do something on scrollbar resize
   });
 
   // ----------------------------------

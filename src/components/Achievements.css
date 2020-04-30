@@ -22,7 +22,6 @@
   top: 144px;
   right: 50px;
   width: 12px;
-  /* height: calc(100% - 144px - 127px); */
-  height: 500px;
+  height: calc(100% - 144px - 127px);
   z-index: 40;
 }

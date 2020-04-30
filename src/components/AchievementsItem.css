@@ -92,10 +92,10 @@
 .achivement__spaces--4 .achivement__spaces__stamp:nth-child(4) { top: 2px; left: 204px; transform: rotate(-3deg); }
 
 .achivement__spaces--5 .achivement__spaces__stamp { width: 80px; }
-.achivement__spaces--5 .achivement__spaces__stamp:nth-child(1) { top: 48px; left: -1px; transform: rotate(9deg); }
+.achivement__spaces--5 .achivement__spaces__stamp:nth-child(1) { top: 48px; left: -1px; transform: rotate(-9deg); }
 .achivement__spaces--5 .achivement__spaces__stamp:nth-child(2) { top: 3px; left: 59px; transform: rotate(6deg); }
-.achivement__spaces--5 .achivement__spaces__stamp:nth-child(3) { top: 48px; left: 123px; transform: rotate(-13deg); }
-.achivement__spaces--5 .achivement__spaces__stamp:nth-child(4) { top: 0px; left: 186px; transform: rotate(10deg); }
+.achivement__spaces--5 .achivement__spaces__stamp:nth-child(3) { top: 48px; left: 123px; transform: rotate(-2deg); }
+.achivement__spaces--5 .achivement__spaces__stamp:nth-child(4) { top: 0px; left: 186px; transform: rotate(9deg); }
 .achivement__spaces--5 .achivement__spaces__stamp:nth-child(5) { top: 51px; left: 242px; transform: rotate(-8deg); }
 
 .achivement__spaces--6 .achivement__spaces__stamp { width: 70px; }
