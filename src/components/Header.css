@@ -1,0 +1,9 @@
+.header {
+  height: 125px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../img/banner-bg-rounded.svg') center repeat-x;
+  z-index: 100;
+}
