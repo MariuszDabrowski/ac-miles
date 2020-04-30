@@ -1,0 +1,18 @@
+html {
+  box-sizing: border-box;
+  /* cursor: none; */
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0 50px 0 0;
+  background: #c2cff2 url('./img/paper-bg.png') center repeat;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Nunito', sans-serif;
+}
