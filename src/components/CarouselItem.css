@@ -9,15 +9,51 @@
 .card {
   width: 985px;
   height: 596px;
-  background: #fbe4d4 url('../img/bg-event-large.png') center top no-repeat;
   background-size: cover;
-  border: 18px solid #fcfdef;
+  border: 18px solid #fefff1;
   transform: rotate(-1.9deg);
   box-shadow: 0 6px 8px rgba(0,0,0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.card::before,
+.card::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.card--event::before { background: #fbe4d4 url('../img/paper-bg.png') center repeat;}
+.card--fish::before { background: #bceae0 url('../img/paper-bg.png') center repeat;}
+.card--communication::before { background: #f9f5b8 url('../img/paper-bg.png') center repeat;}
+.card--insect::before { background: #f8f9b5 url('../img/paper-bg.png') center repeat;}
+.card--diy::before { background: #f9f2c6 url('../img/paper-bg.png') center repeat;}
+.card--hha::before { background: #faf3bf url('../img/paper-bg.png') center repeat;}
+.card--plant::before { background: #e5fac2 url('../img/paper-bg.png') center repeat;}
+.card--smartphone::before { background: #bfdef0 url('../img/paper-bg.png') center repeat;}
+.card--money::before { background: #faf9b8 url('../img/paper-bg.png') center repeat;}
+.card--negative::before { background: #ded9f7 url('../img/paper-bg.png') center repeat;}
+.card--landmaking::before { background: #d7efd0 url('../img/paper-bg.png') center repeat;}
+.card--mydesign::before { background: #fde4e0 url('../img/paper-bg.png') center repeat;}
+
+.card--event::after { background: url('../img/bg-event-large.png') center top no-repeat; }
+.card--fish::after {  }
+.card--communication::after {  }
+.card--insect::after {  }
+.card--diy::after {  }
+.card--hha::after {  }
+.card--plant::after {  }
+.card--smartphone::after {  }
+.card--money::after {  }
+.card--negative::after {  }
+.card--landmaking::after {  }
+.card--mydesign::after {  }
 
 .card__title {
   height: 70px;
@@ -33,6 +69,12 @@
   height: 247px;
   width: 782px;
   position: relative;
+  color: #715a3b;
+  font-size: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 88px 0 88px;
 }
 
 .card__description::before {
@@ -49,7 +91,15 @@
 }
 
 .card__description__nook {
-  
+  width: 81px;
+  height: 76px;
+  background: red;
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  background: url('../img/nook-face.svg') center no-repeat;
+  background-size: 100%;
+  transform: rotate(10deg);
 }
 
 .card-badges {

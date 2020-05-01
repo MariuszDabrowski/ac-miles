@@ -90,7 +90,7 @@ function CarouselItem(props) {
 
   return (
     <div className="card-wrapper">
-      <div className="card">
+      <div className={`card card--${props.data['Internal Category'].toLowerCase()}`}>
         <div className="card__title">{props.data.Name}</div>
         <div className="card__description">
           {achievementDescriptions[props.data['Internal ID']].description}

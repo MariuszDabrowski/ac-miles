@@ -10,7 +10,7 @@ import './App.css';
 
 class App extends React.Component {
   state = {
-    carouselActive: false,
+    carouselActive: true,
     carouselIndex: 0
   }
 
