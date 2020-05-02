@@ -26,7 +26,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
 }
 
 .card--event::before { background: #fbe4d4 url('../img/paper-bg.png') center repeat;}
@@ -120,7 +120,7 @@
   height: 100%;
 }
 
-.card-badges__stamp {
+.card-badges .stamp {
   height: 145px;
   position: absolute;
   top: 50%;
@@ -129,32 +129,44 @@
   z-index: 10;
 }
 
-.card-badges--1 .card-badges__stamp { height: 155px; }
-.card-badges--6 .card-badges__stamp { height: 130px; }
+.card-badges--1 .stamp { height: 155px; }
+.card-badges--6 .stamp { height: 130px; }
 
-.card-badges--1 .card-badges__stamp--1 { transform: translate(-51%, -51%) rotate(0deg); }
+.card-badges--1 .stamp--1 { transform: translate(-51%, -51%) rotate(0deg); }
 
-.card-badges--2 .card-badges__stamp--1 { transform: translate(-110%, -52%) rotate(-3deg); }
-.card-badges--2 .card-badges__stamp--2 { transform: translate(11%, -51%) rotate(0deg); }
+.card-badges--2 .stamp--1 { transform: translate(-110%, -52%) rotate(-3deg); }
+.card-badges--2 .stamp--2 { transform: translate(11%, -51%) rotate(0deg); }
 
-.card-badges--3 .card-badges__stamp--1 { transform: translate(-163%, -50%) rotate(13deg); }
-.card-badges--3 .card-badges__stamp--2 { transform: translate(-55%, -50%) rotate(-8deg); }
-.card-badges--3 .card-badges__stamp--3 { transform: translate(64%, -50%) rotate(5deg); }
+.card-badges--3 .stamp--1 { transform: translate(-163%, -50%) rotate(13deg); }
+.card-badges--3 .stamp--2 { transform: translate(-55%, -50%) rotate(-8deg); }
+.card-badges--3 .stamp--3 { transform: translate(64%, -50%) rotate(5deg); }
 
-.card-badges--4 .card-badges__stamp--1 { transform: translate(-220%, -52%) rotate(9deg); }
-.card-badges--4 .card-badges__stamp--2 { transform: translate(-105%, -49%) rotate(-7deg); }
-.card-badges--4 .card-badges__stamp--3 { transform: translate(10%, -52%) rotate(4deg); }
-.card-badges--4 .card-badges__stamp--4 { transform: translate(116%, -49%) rotate(-3deg); }
+.card-badges--4 .stamp--1 { transform: translate(-220%, -52%) rotate(9deg); }
+.card-badges--4 .stamp--2 { transform: translate(-105%, -49%) rotate(-7deg); }
+.card-badges--4 .stamp--3 { transform: translate(10%, -52%) rotate(4deg); }
+.card-badges--4 .stamp--4 { transform: translate(116%, -49%) rotate(-3deg); }
 
-.card-badges--5 .card-badges__stamp--1 { transform: translate(-258%, -50%) rotate(8deg); }
-.card-badges--5 .card-badges__stamp--2 { transform: translate(-157%, -50%) rotate(-5deg); }
-.card-badges--5 .card-badges__stamp--3 { transform: translate(-52%, -50%) rotate(3deg); }
-.card-badges--5 .card-badges__stamp--4 { transform: translate(57%, -50%) rotate(11deg); }
-.card-badges--5 .card-badges__stamp--5 { transform: translate(159%, -50%) rotate(-9deg); }
+.card-badges--5 .stamp--1 { transform: translate(-258%, -50%) rotate(8deg); }
+.card-badges--5 .stamp--2 { transform: translate(-157%, -50%) rotate(-5deg); }
+.card-badges--5 .stamp--3 { transform: translate(-52%, -50%) rotate(3deg); }
+.card-badges--5 .stamp--4 { transform: translate(57%, -50%) rotate(11deg); }
+.card-badges--5 .stamp--5 { transform: translate(159%, -50%) rotate(-9deg); }
 
-.card-badges--6 .card-badges__stamp--1 { transform: translate(-312%, -50%) rotate(10deg); }
-.card-badges--6 .card-badges__stamp--2 { transform: translate(-208%, -52%) rotate(-6deg); }
-.card-badges--6 .card-badges__stamp--3 { transform: translate(-103%, -50%) rotate(7deg); }
-.card-badges--6 .card-badges__stamp--4 { transform: translate(-2%, -52%) rotate(-1deg); }
-.card-badges--6 .card-badges__stamp--5 { transform: translate(104%, -50%) rotate(6deg); }
-.card-badges--6 .card-badges__stamp--6 { transform: translate(209%, -52%) rotate(-10deg); }
+.card-badges--6 .stamp--1 { transform: translate(-312%, -50%) rotate(10deg); }
+.card-badges--6 .stamp--2 { transform: translate(-208%, -52%) rotate(-6deg); }
+.card-badges--6 .stamp--3 { transform: translate(-103%, -50%) rotate(7deg); }
+.card-badges--6 .stamp--4 { transform: translate(-2%, -52%) rotate(-1deg); }
+.card-badges--6 .stamp--5 { transform: translate(104%, -50%) rotate(6deg); }
+.card-badges--6 .stamp--6 { transform: translate(209%, -52%) rotate(-10deg); }
+
+.card-badges .stamp__image {
+  height: 100%;
+  display: block;
+}
+
+.card-badges .stamp__date {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

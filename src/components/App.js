@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from './Carousel';
 import Header from './Header';
 import Achievements from './Achievements';
+import generateStamps from '../helpers/generateStamps';
 import './App.css';
 
 // ---------
@@ -10,8 +11,13 @@ import './App.css';
 
 class App extends React.Component {
   state = {
-    carouselActive: true,
-    carouselIndex: 0
+    carouselActive: false,
+    carouselIndex: 0,
+    stamps: null
+  }
+
+  componentDidMount() {
+    this.setState({ stamps: generateStamps() });
   }
 
   toggleCarousel = (index) => {
@@ -25,9 +31,22 @@ class App extends React.Component {
   render() {
     return (
       <>
-        { this.state.carouselActive && <Carousel toggleCarousel={this.toggleCarousel} carouselIndex={this.state.carouselIndex} /> }
+        {this.state.stamps &&
+          <Carousel
+          toggleCarousel={this.toggleCarousel}
+          carouselIndex={this.state.carouselIndex}
+          visibility={this.state.carouselActive}
+          stamps={this.state.stamps} />
+        }
+        
         <Header />
-        <Achievements toggleCarousel={this.toggleCarousel} setCarouselIndex={this.setCarouselIndex} />
+        
+        {this.state.stamps &&
+          <Achievements
+          toggleCarousel={this.toggleCarousel}
+          setCarouselIndex={this.setCarouselIndex}
+          stamps={this.state.stamps} />
+        }
       </>
     );
   }

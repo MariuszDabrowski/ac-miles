@@ -9,7 +9,10 @@
 }
 
 .carousel--hidden {
-  opacity: 0;
+  /* Time to go learn more React and fix this, don't judge me */
+  position: absolute !important;
+  top: -9999px;
+  left: -9999px;
 }
 
 .carousel .button {

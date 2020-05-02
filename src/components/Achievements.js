@@ -87,7 +87,17 @@ function Achievements(props) {
 
       <SimpleBar ref={scrollbarAchievements} autoHide={false} className="achievements-wrapper">
           <div className="achievements" ref={achievementsElement}>
-            { achievementsData.map((item, index) => <AchievementsItem key={item['Unique Entry ID']} data={item} toggleCarousel={() => props.toggleCarousel(index)} index={index} setCarouselIndex={props.setCarouselIndex} />) }
+            { achievementsData.map((item, index) => {
+              return (
+                <AchievementsItem
+                key={item['Unique Entry ID']}
+                data={item}
+                toggleCarousel={() => props.toggleCarousel(index)}
+                index={index}
+                stamps={(props.stamps) ? props.stamps[item['Internal ID']] : null}
+                setCarouselIndex={props.setCarouselIndex} />
+              )
+            })}
           </div>
       </SimpleBar>
     </>
