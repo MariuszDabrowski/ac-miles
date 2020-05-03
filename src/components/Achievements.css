@@ -25,3 +25,15 @@
   height: calc(100% - 144px - 127px);
   z-index: 40;
 }
+
+.mimic-scroll::after {
+  content: '';
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 42px;
+  background: url('../img/scroll-icon.svg') center no-repeat;
+  background-size: 100%;
+}

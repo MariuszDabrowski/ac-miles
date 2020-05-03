@@ -50,6 +50,7 @@ class AchievementsItem extends React.Component {
       <div
       className={`achievement achievement--${this.props.data['Internal Category'].toLowerCase()}`}
       onClick={() => this.props.setCarouselIndex(this.props.index)}>
+        { this.props.data['Version'] === this.props.version && <div className="achievement__new">New!</div> }
         <div className="achievement__title">{ this.props.data.Name }</div>
         <div className={`achivement__spaces achivement__spaces--${this.props.data['Num of Tiers']}`}>
           {/* {stamps} */}

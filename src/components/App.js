@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from './Carousel';
+import NookMiles from './NookMiles';
 import Header from './Header';
 import Achievements from './Achievements';
 import generateStamps from '../helpers/generateStamps';
@@ -13,7 +14,8 @@ class App extends React.Component {
   state = {
     carouselActive: false,
     carouselIndex: 0,
-    stamps: null
+    stamps: null,
+    version: '1.2.0'
   }
 
   componentDidMount() {
@@ -39,13 +41,15 @@ class App extends React.Component {
           stamps={this.state.stamps} />
         }
         
+        <NookMiles />
         <Header />
         
         {this.state.stamps &&
           <Achievements
           toggleCarousel={this.toggleCarousel}
           setCarouselIndex={this.setCarouselIndex}
-          stamps={this.state.stamps} />
+          stamps={this.state.stamps}
+          version={this.state.version} />
         }
       </>
     );

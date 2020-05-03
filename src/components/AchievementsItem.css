@@ -55,6 +55,23 @@
 .achievement--landmaking { background: #d7efd0 url('../img/paper-bg.png') center repeat; }
 .achievement--mydesign { background: #fde4e0 url('../img/paper-bg.png') center repeat; }
 
+.achievement__new {
+  width: 80px;
+  height: 34px;
+  background: url('../img/new-tab.png') center no-repeat;
+  background-size: 100%;
+  position: absolute;
+  bottom: 8px;
+  left: -20px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffecee;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .achievement__title {
   font-size: 26px;
   font-weight: 600;

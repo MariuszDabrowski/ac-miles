@@ -95,7 +95,8 @@ function Achievements(props) {
                 toggleCarousel={() => props.toggleCarousel(index)}
                 index={index}
                 stamps={(props.stamps) ? props.stamps[item['Internal ID']] : null}
-                setCarouselIndex={props.setCarouselIndex} />
+                setCarouselIndex={props.setCarouselIndex}
+                version={props.version} />
               )
             })}
           </div>
