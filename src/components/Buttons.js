@@ -12,14 +12,18 @@ function Buttons(props) {
 
       {props.carouselActive &&        
         <button className="button button--b" onClick={props.toggleCarousel}>
-          <span className="button__icon">B</span>
+          <span className="button__icon">
+            <span className="button__icon__text">B</span>
+          </span>
           <span className="button__text">Back</span>
           <img className="button__bg" src={buttonBg} alt=""/>
         </button>
       }
 
       <a href="#" className="button button--g" onClick={props.toggleCarousel}>
-        <span className="button__icon">G</span>
+        <span className="button__icon">
+          <span className="button__icon__text">G</span>
+        </span>
         <span className="button__text">Github</span>
         <img className="button__bg" src={buttonBg} alt=""/>
       </a>

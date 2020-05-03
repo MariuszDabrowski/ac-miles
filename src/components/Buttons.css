@@ -46,10 +46,15 @@
   justify-content: center;
   margin-right: 6px;
   transition: background 0.2s;
+  position: relative;
 }
 
-.button--g .button__icon { padding: 3px 0 0 0; }
-.button--b .button__icon { padding: 1px 0 0 0; }
+.button__icon__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .button:hover .button__icon { background: #435fa3; }
 
