@@ -31,6 +31,16 @@
 
 .achievement--event:before { background-image: url('../img/bg-event.png'); }
 .achievement--fish:before { background-image: url('../img/bg-fish.png'); }
+.achievement--communication:before { background-image: url('../img/bg-communication.png'); }
+.achievement--insect:before { background-image: url('../img/bg-insect.png'); }
+.achievement--diy:before { background-image: url('../img/bg-diy.png'); }
+.achievement--hha:before { background-image: url('../img/bg-hha.png'); }
+.achievement--plant:before { background-image: url('../img/bg-plant.png'); }
+.achievement--smartphone:before { background-image: url('../img/bg-smartphone.png'); }
+.achievement--money:before { background-image: url('../img/bg-money.png'); }
+.achievement--negative:before { background-image: url('../img/bg-negative.png'); }
+.achievement--landmaking:before { background-image: url('../img/bg-landmaking.png'); }
+.achievement--mydesign:before { background-image: url('../img/bg-mydesign.png'); }
 
 .achievement--event { background: #fbe4d2 url('../img/paper-bg.png') center repeat; }
 .achievement--fish { background: #bceae0 url('../img/paper-bg.png') center repeat; }
@@ -60,7 +70,7 @@
   position: relative;
 }
 
-.achivement__spaces--1 { width: 120px; margin-bottom: 8px; }
+.achivement__spaces--1 { width: 110px; margin-bottom: 8px; }
 .achivement__spaces--2 { width: 218px; margin-bottom: 8px; }
 .achivement__spaces--3 { width: 310px; margin-bottom: 14px; }
 .achivement__spaces--4 { width: 280px; margin-bottom: 8px; }
@@ -74,8 +84,8 @@
   display: block;
 }
 
-.achivement__spaces--1 .stamp { width: 126px; top: 50%; left: 50%; transform: translate(-51%, -51%); }
-.achievement--mydesign .achivement__spaces--1 .stamp { width: 126px; top: 50%; left: 50%; transform: translate(-48%, -54%) rotate(-13deg); }
+.achivement__spaces--1 .stamp { width: 116px; top: 50%; left: 50%; transform: translate(-51%, -51%); }
+.achievement--mydesign .achivement__spaces--1 .stamp { width: 116px; top: 50%; left: 50%; transform: translate(-48%, -54%) rotate(-13deg); }
 
 .achivement__spaces--2 .stamp { width: 100px; }
 .achivement__spaces--2 .stamp:nth-child(1) { top: 0px; left: 4px; }

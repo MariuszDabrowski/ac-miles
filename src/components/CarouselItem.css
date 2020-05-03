@@ -29,31 +29,37 @@
   z-index: -2;
 }
 
-.card--event::before { background: #fbe4d4 url('../img/paper-bg.png') center repeat;}
-.card--fish::before { background: #bceae0 url('../img/paper-bg.png') center repeat;}
-.card--communication::before { background: #f9f5b8 url('../img/paper-bg.png') center repeat;}
-.card--insect::before { background: #f8f9b5 url('../img/paper-bg.png') center repeat;}
-.card--diy::before { background: #f9f2c6 url('../img/paper-bg.png') center repeat;}
-.card--hha::before { background: #faf3bf url('../img/paper-bg.png') center repeat;}
-.card--plant::before { background: #e5fac2 url('../img/paper-bg.png') center repeat;}
-.card--smartphone::before { background: #bfdef0 url('../img/paper-bg.png') center repeat;}
-.card--money::before { background: #faf9b8 url('../img/paper-bg.png') center repeat;}
-.card--negative::before { background: #ded9f7 url('../img/paper-bg.png') center repeat;}
-.card--landmaking::before { background: #d7efd0 url('../img/paper-bg.png') center repeat;}
-.card--mydesign::before { background: #fde4e0 url('../img/paper-bg.png') center repeat;}
+.card::after {
+  top: 5px;
+  left: 4px;
+}
+
+/* .card--event::before { background: #fbe4d4 url('../img/paper-bg.png') center repeat;} */
+.card--event::before { background: #fbe4d4;}
+.card--fish::before { background: #bceae0;}
+.card--communication::before { background: #f9f5b8;}
+.card--insect::before { background: #f8f9b5;}
+.card--diy::before { background: #f9f2c6;}
+.card--hha::before { background: #faf3bf;}
+.card--plant::before { background: #e5fac2;}
+.card--smartphone::before { background: #bfdef0;}
+.card--money::before { background: #faf9b8;}
+.card--negative::before { background: #ded9f7;}
+.card--landmaking::before { background: #d7efd0;}
+.card--mydesign::before { background: #fde4e0;}
 
 .card--event::after { background: url('../img/bg-event-large.png') center top no-repeat; }
-.card--fish::after {  }
-.card--communication::after {  }
-.card--insect::after {  }
-.card--diy::after {  }
-.card--hha::after {  }
-.card--plant::after {  }
-.card--smartphone::after {  }
-.card--money::after {  }
-.card--negative::after {  }
-.card--landmaking::after {  }
-.card--mydesign::after {  }
+.card--fish::after { background: url('../img/bg-fish-large.png') center top no-repeat; }
+.card--communication::after { background: url('../img/bg-communication-large.png') center top no-repeat; }
+.card--insect::after { background: url('../img/bg-insect-large.png') center top no-repeat; }
+.card--diy::after { background: url('../img/bg-diy-large.png') center top no-repeat; }
+.card--hha::after { background: url('../img/bg-hha-large.png') center top no-repeat; }
+.card--plant::after { background: url('../img/bg-plant-large.png') center top no-repeat; }
+.card--smartphone::after { background: url('../img/bg-smartphone-large.png') center top no-repeat; }
+.card--money::after { background: url('../img/bg-money-large.png') center top no-repeat; }
+.card--negative::after { background: url('../img/bg-negative-large.png') center top no-repeat; }
+.card--landmaking::after { background: url('../img/bg-landmaking-large.png') center top no-repeat; }
+.card--mydesign::after { background: url('../img/bg-mydesign-large.png') center top no-repeat; }
 
 .card__title {
   height: 70px;
@@ -74,7 +80,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 88px 0 88px;
+  padding: 0 75px;
 }
 
 .card__description::before {
@@ -87,7 +93,7 @@
   z-index: -1;
   background: url('../img/card-description-bg.svg') center no-repeat;
   background-size: 100%;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 .card__description__nook {
