@@ -63,7 +63,7 @@
 
 .card__title {
   height: 70px;
-  margin-bottom: 29px;
+  margin-bottom: 35px;
   display: flex;
   align-items: flex-end;
   font-size: 32px;
@@ -109,10 +109,10 @@
 }
 
 .card-badges {
-  height: 215px;
   display: flex;
   align-items: center;
   position: relative;
+  flex-grow: 1;
 }
 
 .card-badges--1 .card-badges__track { height: 147px; }
