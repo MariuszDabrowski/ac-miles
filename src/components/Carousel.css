@@ -15,14 +15,6 @@
   left: -9999px;
 }
 
-.carousel .button {
-  position: absolute;
-  bottom: 40px;
-  right: 40px;
-  z-index: 1000;
-  cursor: pointer;
-}
-
 /* -------------------- */
 /* Prev and next arrows */
 /* -------------------- */

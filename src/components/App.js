@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from './Carousel';
 import NookMiles from './NookMiles';
 import Header from './Header';
+import Buttons from './Buttons';
 import Achievements from './Achievements';
 import generateStamps from '../helpers/generateStamps';
 import './App.css';
@@ -35,7 +36,6 @@ class App extends React.Component {
       <>
         {this.state.stamps &&
           <Carousel
-          toggleCarousel={this.toggleCarousel}
           carouselIndex={this.state.carouselIndex}
           visibility={this.state.carouselActive}
           stamps={this.state.stamps} />
@@ -51,6 +51,10 @@ class App extends React.Component {
           stamps={this.state.stamps}
           version={this.state.version} />
         }
+
+        <Buttons
+        carouselActive={this.state.carouselActive}
+        toggleCarousel={this.toggleCarousel} />
       </>
     );
   }

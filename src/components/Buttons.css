@@ -1,0 +1,63 @@
+.buttons {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+  display: flex;
+}
+
+/* ------ */
+/* Button */
+/* ------ */
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px 6px 8px;
+  cursor: pointer;
+  margin-left: 6px;
+  position: relative;
+  text-decoration: none;
+  border: 0;
+  background: transparent;
+  outline: none;
+}
+
+.button__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.button__icon {
+  font-size: 24px;
+  font-weight: 600;
+  width: 36px;
+  height: 36px;
+  background: #877861;
+  color: #f5f7e1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+  transition: background 0.2s;
+}
+
+.button--g .button__icon { padding: 3px 0 0 0; }
+.button--b .button__icon { padding: 1px 0 0 0; }
+
+.button:hover .button__icon { background: #435fa3; }
+
+.button__text {
+  font-size: 26px;
+  color: #877861;
+  padding-top: 2px;
+  display: block;
+}
+
+.button--b .button__text { padding-top: 0; }

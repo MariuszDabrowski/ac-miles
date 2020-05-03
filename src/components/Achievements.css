@@ -22,7 +22,7 @@
   top: 144px;
   right: 50px;
   width: 12px;
-  height: calc(100% - 144px - 127px);
+  height: calc(100% - 320px);
   z-index: 40;
 }
 
