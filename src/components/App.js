@@ -28,7 +28,7 @@ class App extends React.Component {
   checkURL = () => {
     const slideId = Number(window.location.search.slice(1).split('=')[1]);
 
-    if (slideId && typeof slideId === 'number' && slideId >= 0 && slideId < achievementsData.length) {
+    if ((slideId || slideId === 0) && typeof slideId === 'number' && slideId >= 0 && slideId < achievementsData.length) {
       this.setCarouselIndex(slideId, this.toggleCarousel);
     }
   }
@@ -55,7 +55,8 @@ class App extends React.Component {
           <Carousel
           carouselIndex={this.state.carouselIndex}
           visibility={this.state.carouselActive}
-          stamps={this.state.stamps} />
+          stamps={this.state.stamps}
+          version={this.state.version} />
         }
         
         <NookMiles />

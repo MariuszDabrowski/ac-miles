@@ -61,15 +61,25 @@
   background: url('../img/new-tab.png') center no-repeat;
   background-size: 100%;
   position: absolute;
-  bottom: 8px;
-  left: -20px;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffecee;
-  font-size: 20px;
   font-weight: 700;
+}
+
+.achievement .achievement__new {
+  bottom: 8px;
+  left: -20px;
+  font-size: 20px;
+}
+
+.card .achievement__new {
+  top: -8px;
+  left: -32px;
+  font-size: 24px;
+  padding-right: 4px;
 }
 
 .achievement__title {
@@ -104,9 +114,9 @@
 .achievement__spaces--1 .stamp-wrapper { width: 116px; top: 50%; left: 50%; transform: translate(-51%, -51%); }
 .achievement--mydesign .achievement__spaces--1 .stamp-wrapper { width: 116px; top: 50%; left: 50%; transform: translate(-48%, -54%) rotate(-13deg); }
 
-.achievement__spaces--2 .stamp-wrapper { width: 100px; }
-.achievement__spaces--2 .stamp-wrapper--1 { top: 0px; left: 4px; }
-.achievement__spaces--2 .stamp-wrapper--2 { top: 0px; right: 4px; }
+.achievement__spaces--2 .stamp-wrapper { width: 111px; }
+.achievement__spaces--2 .stamp-wrapper--1 { top: 0px; left: -1px; }
+.achievement__spaces--2 .stamp-wrapper--2 { top: 0px; right: -1px; }
 
 .achievement__spaces--3 .stamp-wrapper { width: 96px; }
 .achievement__spaces--3 .stamp-wrapper--1 { top: 2px; left: 0; transform: rotate(12deg); }

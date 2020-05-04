@@ -53,6 +53,7 @@ class CarouselItem extends React.Component {
     return (
       <div className="card-wrapper">
         <div className={`card card--${this.props.data['Internal Category'].toLowerCase()}`}>
+          { this.props.data['Version'] === this.props.version && <div className="achievement__new">New!</div> }
           <div className="card__title">{this.props.data.Name}</div>
           <div className="card__description">
             {achievementDescriptions[this.props.data['Internal ID']].description}

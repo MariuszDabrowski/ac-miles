@@ -91,7 +91,8 @@ class Carousel extends React.Component {
             <CarouselItem
             key={item['Unique Entry ID']}
             stamps={this.props.stamps[item['Internal ID']]}
-            data={item} />
+            data={item}
+            version={this.props.version} />
           );
         })}
         <div
