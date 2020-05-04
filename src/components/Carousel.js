@@ -29,8 +29,9 @@ class Carousel extends React.Component {
       setGallerySize: false,
     });
 
-    flickity.on('change', (index) => {
+    flickity.on('select', (index) => {
       this.arrowClasses(index, flickity.slides.length - 1);
+      window.history.replaceState({}, '', `?achievement=${index}`)
     });
 
     this.setState({ flickity: flickity });

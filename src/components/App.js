@@ -5,6 +5,7 @@ import Header from './Header';
 import Buttons from './Buttons';
 import Achievements from './Achievements';
 import generateStamps from '../helpers/generateStamps';
+import achievementsData from '../data/achievements.json';
 import './App.css';
 
 // ---------
@@ -21,27 +22,30 @@ class App extends React.Component {
 
   componentDidMount() {
     this.setState({ stamps: generateStamps() });
-    this.loadingAnimation();
+    this.checkURL();
   }
 
-  loadingAnimation = () => {
-    const root = document.querySelector('.root');
-    
-    root.addEventListener('transitionend', () => {
-      root.classList.add('root--loaded');
-    });
+  checkURL = () => {
+    const slideId = Number(window.location.search.slice(1).split('=')[1]);
 
-    setTimeout(() => {
-      root.classList.add('root--ready');
-    }, 0);
+    if (slideId && typeof slideId === 'number' && slideId >= 0 && slideId < achievementsData.length) {
+      this.setCarouselIndex(slideId, this.toggleCarousel);
+    }
   }
 
   toggleCarousel = (index) => {
+    if (this.state.carouselActive) {
+      window.history.replaceState({}, '', window.location.pathname)
+    }
+
     this.setState({ carouselActive: (this.state.carouselActive) ? false : true });
   }
 
-  setCarouselIndex = (index) => {
-    this.setState({ carouselIndex: index }, this.toggleCarousel);
+  setCarouselIndex = (index, cb) => {
+    this.setState(
+      { carouselIndex: index },
+      this.toggleCarousel, () => { if (cb) cb(); }
+    );
   }
 
   render() {
