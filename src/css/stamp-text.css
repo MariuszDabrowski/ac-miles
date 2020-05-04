@@ -1,0 +1,29 @@
+.date-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 700;
+}
+
+.date-svg--event { fill: #ffffee; font-size: 21px; letter-spacing: -1px; }
+.date-svg--fish { fill: #3c9bbb; font-size: 23px; font-weight: 600; }
+.date-svg--insect { fill: #ffffee; font-size: 23px; font-weight: 600; }
+.date-svg--communication { fill: #ffffee; font-size: 22px; letter-spacing: -1px; }
+.date-svg--diy { fill: #ffffee; font-size: 22px; }
+.date-svg--hha { fill: #ffffee; font-size: 23px; }
+.date-svg--plant { fill: #ffffee; font-size: 22px; letter-spacing: -1px; }
+.date-svg--smartphone { fill: #ffffee; font-size: 23px; }
+.date-svg--money { fill: #ffffee; font-size: 21px; letter-spacing: -1px; }
+.date-svg--negative { fill: #ffffee; font-size: 21px; letter-spacing: -1px; }
+.date-svg--landmaking { fill: #ffffee; font-size: 23px; }
+.date-svg--mydesign { fill: #ffffee; font-size: 24px; }
+
+.date-svg rect,
+.date-svg path { fill: none; }
+.date-svg textPath { text-anchor: middle; }
+
+.card-badges--6 .date-svg,
+.achievement__spaces--6 .date-svg {
+  font-size: 19px;
+  top: -1px;
+}
