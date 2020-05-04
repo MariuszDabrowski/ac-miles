@@ -21,6 +21,19 @@ class App extends React.Component {
 
   componentDidMount() {
     this.setState({ stamps: generateStamps() });
+    this.loadingAnimation();
+  }
+
+  loadingAnimation = () => {
+    const root = document.querySelector('.root');
+    
+    root.addEventListener('transitionend', () => {
+      root.classList.add('root--loaded');
+    });
+
+    setTimeout(() => {
+      root.classList.add('root--ready');
+    }, 0);
   }
 
   toggleCarousel = (index) => {

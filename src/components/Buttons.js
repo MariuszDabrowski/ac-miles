@@ -20,7 +20,7 @@ function Buttons(props) {
         </button>
       }
 
-      <a href="#" className="button button--g" onClick={props.toggleCarousel}>
+      <a href="http://github.com" target="_blank" rel="noopener noreferrer" className="button button--g">
         <span className="button__icon">
           <span className="button__icon__text">G</span>
         </span>

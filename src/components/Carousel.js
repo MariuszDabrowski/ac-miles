@@ -42,12 +42,12 @@ class Carousel extends React.Component {
 
   componentDidUpdate = () => {
     const carousel = document.querySelector('.carousel');
-    
-    carousel.focus();
-
-    this.state.flickity.select(this.props.carouselIndex, false, true);
 
     if (this.props.visibility === true) {
+      carousel.focus();
+  
+      this.state.flickity.select(this.props.carouselIndex, false, true);
+
       carousel.classList.remove('carousel--hidden');
       this.arrowClasses(this.state.flickity.selectedIndex, this.state.flickity.slides.length - 1);
     } else {
@@ -83,7 +83,7 @@ class Carousel extends React.Component {
 
   render = () => {
     return (
-      <div className={`carousel`}>
+      <div className={`carousel carousel--hidden`}>
         {/* // stamps={this.props.stamps[item['Internal ID']]}  */}
         { achievementsData.map(item => {
           return (
