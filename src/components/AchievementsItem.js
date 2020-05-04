@@ -1,5 +1,6 @@
 import React from 'react';
 import './AchievementsItem.css';
+import getTitleIcon from '../helpers/titleIcons';
 
 // -------------
 // Awards tracks
@@ -57,7 +58,7 @@ class AchievementsItem extends React.Component {
       className={`achievement achievement--${this.props.data['Internal Category'].toLowerCase()}`}
       onClick={() => this.props.setCarouselIndex(this.props.index)}>
         { this.props.data['Version'] === this.props.version && <div className="achievement__new">New!</div> }
-        <div className="achievement__title">{ this.props.data.Name }</div>
+        <div className="achievement__title">{ getTitleIcon(this.props.data.Name) || this.props.data.Name }</div>
         <div className={`achievement__spaces achievement__spaces--${this.props.data['Num of Tiers']}`}>
           {/* {stamps} */}
           {this.props.stamps}

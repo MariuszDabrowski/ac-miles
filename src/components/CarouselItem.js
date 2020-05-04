@@ -1,5 +1,6 @@
 import React from 'react';
 import './CarouselItem.css';
+import getTitleIcon from '../helpers/titleIcons';
 import achievementDescriptions from '../data/achievementDescriptions.json';
 
 // -------------
@@ -54,9 +55,9 @@ class CarouselItem extends React.Component {
       <div className="card-wrapper">
         <div className={`card card--${this.props.data['Internal Category'].toLowerCase()}`}>
           { this.props.data['Version'] === this.props.version && <div className="achievement__new">New!</div> }
-          <div className="card__title">{this.props.data.Name}</div>
+          <div className="card__title">{ getTitleIcon(this.props.data.Name) || this.props.data.Name }</div>
           <div className="card__description">
-            {achievementDescriptions[this.props.data['Internal ID']].description}
+            <div dangerouslySetInnerHTML={{ __html: achievementDescriptions[this.props.data['Internal ID']].description }}></div>
             <div className="card__description__nook"></div>
           </div>
           <div className={`card-badges card-badges--${this.props.data['Num of Tiers']}`}>

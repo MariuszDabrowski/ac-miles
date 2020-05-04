@@ -21,7 +21,7 @@
   },
   "4": {
     "title": "Bugs Don't Bug Me",
-    "description": "You can earn miles for filling out your Critterpedia! Can you find every bug and unlock every entry? Yes, yes, you can! And please do consider supporting <span className="color-orange">Blathers</span> by donating bugs to the museum."
+    "description": "You can earn miles for filling out your Critterpedia! Can you find every bug and unlock every entry? Yes, yes, you can! And please do consider supporting <span class=\"color-orange\">Blathers</span> by donating bugs to the museum."
   },
   "55": {
     "title": "Have a Nice DIY!",
@@ -149,7 +149,7 @@
   },
   "16": {
     "title": "Shop to It",
-    "description": "Living on a remote island doesn't mean you have to go without life's luxuries. Shop to your heart's content with <span className="color-blue">Nook Shopping</span> and you'll earn Nook Miles!"
+    "description": "Living on a remote island doesn't mean you have to go without life's luxuries. Shop to your heart's content with <span class=\"color-blue\">Nook Shopping</span> and you'll earn Nook Miles!"
   },
   "15": {
     "title": "Growing Collection",
@@ -213,7 +213,7 @@
   },
   "24": {
     "title": "Taking the Sting Out",
-    "description": "Getting stung by wasps hurts! Getting stung again before you can recover makes you faint! But at least you get some miles for that. I don't want you to be uncomfortable though, so take some <span className="color-blue">medicine</span> to heal up!"
+    "description": "Getting stung by wasps hurts! Getting stung again before you can recover makes you faint! But at least you get some miles for that. I don't want you to be uncomfortable though, so take some <span class=\"color-blue\">medicine</span> to heal up!"
   },
   "27": {
     "title": "Faint of Heart",
@@ -257,7 +257,7 @@
   },
   "88": {
     "title": "Island Designer",
-    "description": "At Nook Inc. we encourage the use of the <span className="color-blue">Island Designer</span> app to liven up the island. We're giving away miles the first time you use a permit for a path, river, or cliff!"
+    "description": "At Nook Inc. we encourage the use of the <span class=\"color-blue\">Island Designer</span> app to liven up the island. We're giving away miles the first time you use a permit for a path, river, or cliff!"
   },
   "44": {
     "title": "Wispy Island Secrets",
@@ -285,7 +285,7 @@
   },
   "46": {
     "title": "Happy Birthday!",
-    "description": "Happy birthday to you!<br>"
+    "description": "Happy birthday to you!"
   },
   "41": {
     "title": "Fishing Tourney!",

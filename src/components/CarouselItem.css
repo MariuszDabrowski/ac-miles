@@ -211,3 +211,10 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* --------------------- */
+/* Text highlight colors */
+/* --------------------- */
+
+.color-orange { color: #e27618; }
+.color-blue { color: #009ea7; }
