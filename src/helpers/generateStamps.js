@@ -51,12 +51,24 @@ function generateStamps() {
 
     for (let i = 0; i < achievement['Num of Tiers']; i++) {
       stamps[achievement['Internal ID']].push(
-        <div className={`stamp stamp--${i + 1}`} key={`${achievement['Unique Entry ID']}-${i}`}>
-          <img
-          src={stampImages[`${achievement['Internal Category'].toLowerCase()}`]}
-          alt=""
-          className="stamp__image" />
-          {getDateSVG(achievement['Internal Category'].toLowerCase())}
+        <div className={`stamp-wrapper stamp-wrapper--${i + 1}`} key={`${achievement['Unique Entry ID']}-${i}`}>
+          <div className={`stamp  stamp--${i + 1}`}>
+            <img
+            src={stampImages[`${achievement['Internal Category'].toLowerCase()}`]}
+            alt=""
+            className="stamp__image" />
+            {getDateSVG(achievement['Internal Category'].toLowerCase())}
+          </div>
+          {
+          achievement['Num of Tiers'] === 1 &&
+          Number(achievement['Tier 1']) > 1 &&
+            <div className={`stamp-wrapper__tier stamp-wrapper__tier--${achievement['Internal Category'].toLowerCase()}`}>{Number(achievement[`Tier ${i + 1}`]).toLocaleString('EN-US')}</div>
+          }
+          {
+          achievement['Num of Tiers'] > 1 &&
+          Number(achievement[`Tier ${i + 1}`]) > 0 &&
+            <div className={`stamp-wrapper__tier stamp-wrapper__tier--${achievement['Internal Category'].toLowerCase()}`}>{Number(achievement[`Tier ${i + 1}`]).toLocaleString('EN-US')}</div>
+          }
         </div>
       );
     }

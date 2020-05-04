@@ -83,65 +83,90 @@
   z-index: 10;
 }
 
-.achivement__spaces {
+.achievement__spaces {
   position: relative;
 }
 
-.achivement__spaces--1 { width: 110px; margin-bottom: 8px; }
-.achivement__spaces--2 { width: 218px; margin-bottom: 8px; }
-.achivement__spaces--3 { width: 310px; margin-bottom: 14px; }
-.achivement__spaces--4 { width: 280px; margin-bottom: 8px; }
-.achivement__spaces--5 { width: 322px; margin-bottom: 8px; }
-.achivement__spaces--6 { width: 334px; margin-bottom: 12px; }
+.achievement__spaces--1 { width: 110px; margin-bottom: 8px; }
+.achievement__spaces--2 { width: 218px; margin-bottom: 8px; }
+.achievement__spaces--3 { width: 310px; margin-bottom: 14px; }
+.achievement__spaces--4 { width: 280px; margin-bottom: 8px; }
+.achievement__spaces--5 { width: 322px; margin-bottom: 8px; }
+.achievement__spaces--6 { width: 334px; margin-bottom: 12px; }
 
-.achivement__spaces-svg { width: 100%; height: 100%; }
+.achievement__spaces-svg { width: 100%; height: 100%; }
 
-.achivement__spaces .stamp {
+.achievement__spaces .stamp-wrapper {
   position: absolute;
   display: block;
 }
 
-.achivement__spaces--1 .stamp { width: 116px; top: 50%; left: 50%; transform: translate(-51%, -51%); }
-.achievement--mydesign .achivement__spaces--1 .stamp { width: 116px; top: 50%; left: 50%; transform: translate(-48%, -54%) rotate(-13deg); }
+.achievement__spaces--1 .stamp-wrapper { width: 116px; top: 50%; left: 50%; transform: translate(-51%, -51%); }
+.achievement--mydesign .achievement__spaces--1 .stamp-wrapper { width: 116px; top: 50%; left: 50%; transform: translate(-48%, -54%) rotate(-13deg); }
 
-.achivement__spaces--2 .stamp { width: 100px; }
-.achivement__spaces--2 .stamp:nth-child(1) { top: 0px; left: 4px; }
-.achivement__spaces--2 .stamp:nth-child(2) { top: 0px; right: 4px; }
+.achievement__spaces--2 .stamp-wrapper { width: 100px; }
+.achievement__spaces--2 .stamp-wrapper--1 { top: 0px; left: 4px; }
+.achievement__spaces--2 .stamp-wrapper--2 { top: 0px; right: 4px; }
 
-.achivement__spaces--3 .stamp { width: 96px; }
-.achivement__spaces--3 .stamp:nth-child(1) { top: 2px; left: 0; transform: rotate(12deg); }
-.achivement__spaces--3 .stamp:nth-child(2) { top: 5px; left: 108px; transform: rotate(-5deg); }
-.achivement__spaces--3 .stamp:nth-child(3) { top: 3px; left: 213px; transform: rotate(2deg) }
+.achievement__spaces--3 .stamp-wrapper { width: 96px; }
+.achievement__spaces--3 .stamp-wrapper--1 { top: 2px; left: 0; transform: rotate(12deg); }
+.achievement__spaces--3 .stamp-wrapper--2 { top: 5px; left: 108px; transform: rotate(-5deg); }
+.achievement__spaces--3 .stamp-wrapper--3 { top: 3px; left: 213px; transform: rotate(2deg) }
 
-.achivement__spaces--4 .stamp { width: 72px; }
-.achivement__spaces--4 .stamp:nth-child(1) { top: 56px; left: 2px; transform: rotate(9deg); }
-.achivement__spaces--4 .stamp:nth-child(2) { top: 7px; left: 70px; transform: rotate(-10deg); }
-.achivement__spaces--4 .stamp:nth-child(3) { top: 54px; left: 142px; transform: rotate(3deg); }
-.achivement__spaces--4 .stamp:nth-child(4) { top: 2px; left: 204px; transform: rotate(-3deg); }
+.achievement__spaces--4 .stamp-wrapper { width: 72px; }
+.achievement__spaces--4 .stamp-wrapper--1 { top: 56px; left: 2px; transform: rotate(9deg); }
+.achievement__spaces--4 .stamp-wrapper--2 { top: 7px; left: 70px; transform: rotate(-10deg); }
+.achievement__spaces--4 .stamp-wrapper--3 { top: 54px; left: 142px; transform: rotate(3deg); }
+.achievement__spaces--4 .stamp-wrapper--4 { top: 2px; left: 204px; transform: rotate(-3deg); }
 
-.achivement__spaces--5 .stamp { width: 80px; }
-.achivement__spaces--5 .stamp:nth-child(1) { top: 48px; left: -1px; transform: rotate(-9deg); }
-.achivement__spaces--5 .stamp:nth-child(2) { top: 3px; left: 59px; transform: rotate(6deg); }
-.achivement__spaces--5 .stamp:nth-child(3) { top: 48px; left: 123px; transform: rotate(-2deg); }
-.achivement__spaces--5 .stamp:nth-child(4) { top: 0px; left: 186px; transform: rotate(9deg); }
-.achivement__spaces--5 .stamp:nth-child(5) { top: 51px; left: 242px; transform: rotate(-8deg); }
+.achievement__spaces--5 .stamp-wrapper { width: 80px; }
+.achievement__spaces--5 .stamp-wrapper--1 { top: 48px; left: -1px; transform: rotate(-9deg); }
+.achievement__spaces--5 .stamp-wrapper--2 { top: 3px; left: 59px; transform: rotate(6deg); }
+.achievement__spaces--5 .stamp-wrapper--3 { top: 48px; left: 123px; transform: rotate(-2deg); }
+.achievement__spaces--5 .stamp-wrapper--4 { top: 0px; left: 186px; transform: rotate(9deg); }
+.achievement__spaces--5 .stamp-wrapper--5 { top: 51px; left: 242px; transform: rotate(-8deg); }
 
-.achivement__spaces--6 .stamp { width: 70px; }
-.achivement__spaces--6 .stamp:nth-child(1) { top: 51px; left: -2px; transform: rotate(-9deg); }
-.achivement__spaces--6 .stamp:nth-child(2) { top: 0px; left: 51px; transform: rotate(6deg); }
-.achivement__spaces--6 .stamp:nth-child(3) { top: 51px; left: 105px; transform: rotate(-13deg); }
-.achivement__spaces--6 .stamp:nth-child(4) { top: 0px; left: 159px; transform: rotate(10deg); }
-.achivement__spaces--6 .stamp:nth-child(5) { top: 51px; left: 211px; transform: rotate(-8deg); }
-.achivement__spaces--6 .stamp:nth-child(6) { top: 0px; left: 265px; transform: rotate(8deg); }
+.achievement__spaces--6 .stamp-wrapper { width: 70px; }
+.achievement__spaces--6 .stamp-wrapper--1 { top: 51px; left: -2px; transform: rotate(-9deg); }
+.achievement__spaces--6 .stamp-wrapper--2 { top: 0px; left: 51px; transform: rotate(6deg); }
+.achievement__spaces--6 .stamp-wrapper--3 { top: 51px; left: 105px; transform: rotate(-13deg); }
+.achievement__spaces--6 .stamp-wrapper--4 { top: 0px; left: 159px; transform: rotate(10deg); }
+.achievement__spaces--6 .stamp-wrapper--5 { top: 51px; left: 211px; transform: rotate(-8deg); }
+.achievement__spaces--6 .stamp-wrapper--6 { top: 0px; left: 265px; transform: rotate(8deg); }
 
-.achivement__spaces .stamp__image {
+.achievement__spaces .stamp__image {
   width: 100%;
   display: block;
 }
 
-.achivement__spaces .stamp__date {
+.achievement__spaces .stamp__date {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* ------------------ */
+/* Stamp wrapper tier */
+/* ------------------ */
+
+.stamp-wrapper__tier {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.stamp-wrapper__tier--event { color: #f5a280; text-shadow: -2px -2px 0 #ffe0de, 2px -2px 0 #ffe0de, -2px 2px 0 #ffe0de, 2px 2px 0 #ffe0de; }
+.stamp-wrapper__tier--fish { color: #2cc6c4; text-shadow: -2px -2px 0 #c0eae8, 2px -2px 0 #c0eae8, -2px 2px 0 #c0eae8, 2px 2px 0 #c0eae8; }
+.stamp-wrapper__tier--communication { color: #eda80f; text-shadow: -2px -2px 0 #fbf2b0, 2px -2px 0 #fbf2b0, -2px 2px 0 #fbf2b0, 2px 2px 0 #fbf2b0; }
+.stamp-wrapper__tier--insect { color: #a2c312; text-shadow: -2px -2px 0 #f4ffb1, 2px -2px 0 #f4ffb1, -2px 2px 0 #f4ffb1, 2px 2px 0 #f4ffb1; }
+.stamp-wrapper__tier--diy { color: #ba9f3e; text-shadow: -2px -2px 0 #fbf2c7, 2px -2px 0 #fbf2c7, -2px 2px 0 #fbf2c7, 2px 2px 0 #fbf2c7; }
+.stamp-wrapper__tier--hha { color: #d1bd4a; text-shadow: -2px -2px 0 #f4edb7, 2px -2px 0 #f4edb7, -2px 2px 0 #f4edb7, 2px 2px 0 #f4edb7; }
+.stamp-wrapper__tier--plant { color: #70b86e; text-shadow: -2px -2px 0 #edfbc8, 2px -2px 0 #edfbc8, -2px 2px 0 #edfbc8, 2px 2px 0 #edfbc8; }
+.stamp-wrapper__tier--smartphone { color: #8982c4; text-shadow: -2px -2px 0 #beddef, 2px -2px 0 #beddef, -2px 2px 0 #beddef, 2px 2px 0 #beddef; }
+.stamp-wrapper__tier--money { color: #b7b30c; text-shadow: -2px -2px 0 #f8fa9d, 2px -2px 0 #f8fa9d, -2px 2px 0 #f8fa9d, 2px 2px 0 #f8fa9d; }
+.stamp-wrapper__tier--negative { color: #7b5189; text-shadow: -2px -2px 0 #cacdf3, 2px -2px 0 #cacdf3, -2px 2px 0 #cacdf3, 2px 2px 0 #cacdf3; }
+.stamp-wrapper__tier--landmaking { color: #43a18d; text-shadow: -2px -2px 0 #c3ecc2, 2px -2px 0 #c3ecc2, -2px 2px 0 #c3ecc2, 2px 2px 0 #c3ecc2; }
+.stamp-wrapper__tier--mydesign { color: #ef5e78; text-shadow: -2px -2px 0 #ffe4e2, 2px -2px 0 #ffe4e2, -2px 2px 0 #ffe4e2, 2px 2px 0 #ffe4e2; }
+
+.achievement__spaces .stamp-wrapper__tier { display: none; }

@@ -52,11 +52,11 @@ class AchievementsItem extends React.Component {
       onClick={() => this.props.setCarouselIndex(this.props.index)}>
         { this.props.data['Version'] === this.props.version && <div className="achievement__new">New!</div> }
         <div className="achievement__title">{ this.props.data.Name }</div>
-        <div className={`achivement__spaces achivement__spaces--${this.props.data['Num of Tiers']}`}>
+        <div className={`achievement__spaces achievement__spaces--${this.props.data['Num of Tiers']}`}>
           {/* {stamps} */}
           {this.props.stamps}
           <img
-          className="achivement__spaces-svg"
+          className="achievement__spaces-svg"
           alt=""
           src={awardTracks[this.props.data['Num of Tiers']]} />
         </div>
