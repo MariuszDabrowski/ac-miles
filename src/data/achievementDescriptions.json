@@ -9,7 +9,7 @@
   },
   "3": {
     "title": "Island Ichthyologist",
-    "description": "Fill in your Critterpedia with fish and you can earn miles along the way. Can you categorize each and every type of fish that swims in your island's waters, hm?"
+    "description": "Fill in your Critterpedia with fish and earn miles along the way. Can you categorize each and every type of fish that swims in your island's waters, hm?"
   },
   "68": {
     "title": "Island Togetherness",
@@ -21,7 +21,7 @@
   },
   "4": {
     "title": "Bugs Don't Bug Me",
-    "description": "You can earn miles for filling out your Critterpedia! Can you find every bug and unlock every entry? Yes, yes, you can! And please consider supporting Blathers by donating bugs to the museum."
+    "description": "You can earn miles for filling out your Critterpedia! Can you find every bug and unlock every entry? Yes, yes, you can! And please do consider supporting <span className="color-orange">Blathers</span> by donating bugs to the museum."
   },
   "55": {
     "title": "Have a Nice DIY!",
@@ -41,11 +41,11 @@
   },
   "67": {
     "title": "Rough-hewn",
-    "description": "Island development is a Nook Inc. goal. We need a lot of materials to make that happen, so we're giving away Nook Miles based on how much wood you've chopped from trees."
+    "description": "Island development is Nook Inc.'s goal. We need a lot of materials to make that happen, so we're giving away Nook Miles based on how much wood you've chopped from trees."
   },
   "49": {
     "title": "Trashed Tools",
-    "description": "Using a tool until it breaks if proof of your hard work! In praise of your good deeds, you're getting Nook Miles based on how many tools you've broken."
+    "description": "Using a tool until it breaks is proof of your hard work! In praise of your good deeds, you're getting Nook Miles based on how many tools you've broken."
   },
   "57": {
     "title": "Rock-Splitting Champ",
@@ -65,7 +65,7 @@
   },
   "6": {
     "title": "Flower Power",
-    "description": "Planting flowers makes your island more beautiful and can earn you miles. So...grow wild! Yes, yes!"
+    "description": "Planting flowers makes our island more beautiful and can earn you miles. So...grow wild! Yes, yes!"
   },
   "23": {
     "title": "Flower Tender",
@@ -77,7 +77,7 @@
   },
   "70": {
     "title": "Pick of the Bunch",
-    "description": "You'll get Nook Miles based on the amount of fruit you've sold. Remember: If you sell our island's specialty fruit on other islands, you might be able to get a better price!"
+    "description": "You'll get Nook Miles based on the amount of fruit you've sold. Remember: If you sell our island's specialty fruits on other islands, you might be able to get a better price!"
   },
   "7": {
     "title": "Fruit Roots",
@@ -97,15 +97,15 @@
   },
   "32": {
     "title": "Trash Fishin'",
-    "description": "You work extra hard to keep out island clean, even going so far as to fish up trash out of our lovely waters. So you're getting some Nook Miles for keeping the island extra tidy, yes, yes!"
+    "description": "You work extra hard to keep our island clean, even going so far as to fish up trash out of our lovely waters. So you're getting some Nook Miles for keeping the island extra tidy, yes, yes!"
   },
   "2": {
     "title": "Cast Master",
-    "description": "Cast your line carefully if you want to reel in this reward - you'll need to nab a bunch of fish in a row without a single one getting away to earn these miles."
+    "description": "Cast your line carefully if you want to reel in this reward—you'll need to nab a bunch of fish in a row without a single one getting away to earn these miles."
   },
   "82": {
     "title": "Dream House",
-    "description": "A home that you build yourself gives you greater livability - it's on a whole other level! I'll give Nook Miles to those who build or expand their home to taste the good life."
+    "description": "A home that you build yourself gives you greater livability—it's on a whole other level! I'll give Nook Miles to those who build or expand their home to taste the good life."
   },
   "40": {
     "title": "Decorated Decorator",
@@ -149,7 +149,7 @@
   },
   "16": {
     "title": "Shop to It",
-    "description": "Living on a remote island doesn't mean you have to go without life's luxuries. Shop to your heart's content with Nook Shopping and you'll earn Nook Miles!"
+    "description": "Living on a remote island doesn't mean you have to go without life's luxuries. Shop to your heart's content with <span className="color-blue">Nook Shopping</span> and you'll earn Nook Miles!"
   },
   "15": {
     "title": "Growing Collection",
@@ -177,7 +177,7 @@
   },
   "9": {
     "title": "Miles for Stalkholders",
-    "description": "I have Nook Miles to give any resident who purchases turnips. Buy them low, sell them high, and make a handsome profit! They’ll rot in a week, though, so be careful."
+    "description": "I have Nook Miles to give any resident who purchases turnips. Buy them low, sell them high, and make a handsome profit! They'll rot in a week, though, so be careful."
   },
   "10": {
     "title": "Cornering the Stalk Market",
@@ -185,7 +185,7 @@
   },
   "34": {
     "title": "No More Loan Payments!",
-    "description": "You see how this works? You pay off your loan, get some Nook Miles! Thank you for doing business with Nook Inc.!"
+    "description": "You see how this works? You pay off your loan, you get some Nook Miles! Thank you for doing business with Nook Inc.!"
   },
   "83": {
     "title": "Bulletin-Board Benefit",
@@ -205,7 +205,7 @@
   },
   "71": {
     "title": "Netting Better!",
-    "description": "It's so impressive when someone can catch five wasps in a row - so impressive, in fact, that you'll earn some Nook Miles if you can do it!"
+    "description": "It's so impressive when someone can catch five wasps in a row—so impressive, in fact, that you'll earn some Nook Miles if you can do it!"
   },
   "51": {
     "title": "Pit-y Party",
@@ -213,7 +213,7 @@
   },
   "24": {
     "title": "Taking the Sting Out",
-    "description": "Getting stung by wasps hurts! Getting stung again before you can recover makes you faint! But at least you get some miles for that. I don't want you to be uncomfortable though, so take some medicine to heal up!"
+    "description": "Getting stung by wasps hurts! Getting stung again before you can recover makes you faint! But at least you get some miles for that. I don't want you to be uncomfortable though, so take some <span className="color-blue">medicine</span> to heal up!"
   },
   "27": {
     "title": "Faint of Heart",
@@ -249,7 +249,7 @@
   },
   "64": {
     "title": "Exterior Decorator",
-    "description": "You can display furniture outside, right? Well, here's a little incentive for you to show off what you've got - you'll earn Nook Miles based on the number of furniture items you set up outside.<br><i>(This stamp might be the result of a translation error, because it says you can earn more Nook Miles, yet it only has 1 stamp. However, this is unconfirmed.)</i>"
+    "description": "You can display furniture outside, right? Well, here's a little incentive for you to show off what you've got—you'll earn Nook Miles based on the number of furniture items you set up outside."
   },
   "86": {
     "title": "[IslandName] Icons",
@@ -257,7 +257,7 @@
   },
   "88": {
     "title": "Island Designer",
-    "description": "At Nook Inc. we encourage the use of the Island Designer app to liven up the island. We're giving away miles the first time you use a permit for a path, river, or cliff!"
+    "description": "At Nook Inc. we encourage the use of the <span className="color-blue">Island Designer</span> app to liven up the island. We're giving away miles the first time you use a permit for a path, river, or cliff!"
   },
   "44": {
     "title": "Wispy Island Secrets",
@@ -265,7 +265,7 @@
   },
   "43": {
     "title": "Gulliver's Travails",
-    "description": "When you come across someone in trouble on the beach, you help them, setting a fine example for all the island residents. Such kindness [sic] will surely find its way back to you."
+    "description": "When you come across someone in trouble on the beach, you help them, setting a fine example for all the island residents. Such kindness will surely find its way back to you."
   },
   "17": {
     "title": "K.K. Mania",
@@ -289,11 +289,11 @@
   },
   "41": {
     "title": "Fishing Tourney!",
-    "description": "Please participate in the Fishing Tourney, which is held every spring, summer, fall, and winter! I'll give you nook miles as a reward the first time you participate each season."
+    "description": "Please participate in the Fishing Tourney, which is held every spring, summer, fall, and winter! I'll give you Nook Miles as a reward the first time you participate each season."
   },
   "42": {
     "title": "Bug-Off!",
-    "description": "What's the summer event to look forward  to? That's right...the Bug-Off! Nook Inc. will give you Nook Miles for participating, so by all means, join the fun!"
+    "description": "What's the summer event to look forward to? That's right...the Bug-Off! Nook Inc. will give you Nook Miles for participating, so by all means, join the fun!"
   },
   "48": {
     "title": "Countdown Celebration",
@@ -317,7 +317,7 @@
   },
   "79": {
     "title": "Shady Shakedown",
-    "description": "Rumor has it that someone on this island likes to hide furniture in trees. Yes, yes! I'll give you Nook Miles based on the number of furniture items you shake out of trees. So get out of there and shake!"
+    "description": "Rumor has it that someone on this island likes to hide furniture in trees. Yes, yes! I'll give you Nook Miles based on the number of furniture items you shake out of trees. So get out there and shake!"
   },
   "39": {
     "title": "Golden Milestone",
@@ -329,7 +329,7 @@
   },
   "19": {
     "title": "Host the Most",
-    "description": "To encourage you to invite plenty of guests to the island, we're offering miles as an incentive. The more the merrier - and that goes for Nook Miles too!"
+    "description": "To encourage you to invite plenty of guests to the island, we're offering miles as an incentive. The more the merrier—and that goes for Nook Miles too!"
   },
   "21": {
     "title": "Active Island Resident",
