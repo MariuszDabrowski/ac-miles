@@ -62,7 +62,7 @@ function generateStamps() {
           {
           achievement['Num of Tiers'] === 1 &&
           Number(achievement['Tier 1']) > 1 &&
-            <div className={`stamp-wrapper__tier stamp-wrapper__tier--${achievement['Internal Category'].toLowerCase()}`}>{Number(achievement[`Tier ${i + 1}`]).toLocaleString('EN-US')}</div>
+            <div className={`stamp-wrapper__tier stamp-wrapper__tier--1 stamp-wrapper__tier--${achievement['Internal Category'].toLowerCase()}`}>{Number(achievement[`Tier ${i + 1}`]).toLocaleString('EN-US')}</div>
           }
           {
           achievement['Num of Tiers'] > 1 &&

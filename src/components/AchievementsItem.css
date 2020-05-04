@@ -156,13 +156,15 @@
   font-weight: 700;
 }
 
+.stamp-wrapper__tier--1 { margin-top: -4px; }
+
 .stamp-wrapper__tier--event { color: #f5a280; text-shadow: -2px -2px 0 #ffe0de, 2px -2px 0 #ffe0de, -2px 2px 0 #ffe0de, 2px 2px 0 #ffe0de; }
 .stamp-wrapper__tier--fish { color: #2cc6c4; text-shadow: -2px -2px 0 #c0eae8, 2px -2px 0 #c0eae8, -2px 2px 0 #c0eae8, 2px 2px 0 #c0eae8; }
 .stamp-wrapper__tier--communication { color: #eda80f; text-shadow: -2px -2px 0 #fbf2b0, 2px -2px 0 #fbf2b0, -2px 2px 0 #fbf2b0, 2px 2px 0 #fbf2b0; }
 .stamp-wrapper__tier--insect { color: #a2c312; text-shadow: -2px -2px 0 #f4ffb1, 2px -2px 0 #f4ffb1, -2px 2px 0 #f4ffb1, 2px 2px 0 #f4ffb1; }
 .stamp-wrapper__tier--diy { color: #ba9f3e; text-shadow: -2px -2px 0 #fbf2c7, 2px -2px 0 #fbf2c7, -2px 2px 0 #fbf2c7, 2px 2px 0 #fbf2c7; }
 .stamp-wrapper__tier--hha { color: #d1bd4a; text-shadow: -2px -2px 0 #f4edb7, 2px -2px 0 #f4edb7, -2px 2px 0 #f4edb7, 2px 2px 0 #f4edb7; }
-.stamp-wrapper__tier--plant { color: #70b86e; text-shadow: -2px -2px 0 #edfbc8, 2px -2px 0 #edfbc8, -2px 2px 0 #edfbc8, 2px 2px 0 #edfbc8; }
+.stamp-wrapper__tier--plant { color: #70b86e; text-shadow: -2px -2px 0 #caeaaa, 2px -2px 0 #caeaaa, -2px 2px 0 #caeaaa, 2px 2px 0 #caeaaa; }
 .stamp-wrapper__tier--smartphone { color: #8982c4; text-shadow: -2px -2px 0 #beddef, 2px -2px 0 #beddef, -2px 2px 0 #beddef, 2px 2px 0 #beddef; }
 .stamp-wrapper__tier--money { color: #b7b30c; text-shadow: -2px -2px 0 #f8fa9d, 2px -2px 0 #f8fa9d, -2px 2px 0 #f8fa9d, 2px 2px 0 #f8fa9d; }
 .stamp-wrapper__tier--negative { color: #7b5189; text-shadow: -2px -2px 0 #cacdf3, 2px -2px 0 #cacdf3, -2px 2px 0 #cacdf3, 2px 2px 0 #cacdf3; }
