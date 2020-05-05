@@ -151,7 +151,7 @@ function generateStamps() {
   const stamps = {}
   
   achievementsData.forEach(achievement => {
-
+    
     // ----------------------------------------------------------------
     // Generate the amount of stamp images we need for this achievement
     // ----------------------------------------------------------------
@@ -169,7 +169,7 @@ function generateStamps() {
               src={customStampsMap[`${achievement['Internal ID']}`].stamps[i]}
               alt=""
               className="stamp__image" />
-              {getDateSVG(customStampsMap[`${achievement['Internal ID']}`].curve, customStampsMap[`${achievement['Internal ID']}`].dateColor)}
+              {getDateSVG(customStampsMap[`${achievement['Internal ID']}`].curve, customStampsMap[`${achievement['Internal ID']}`].dateColor, achievement, i)}
             </>
             :
             <>
@@ -177,7 +177,7 @@ function generateStamps() {
               src={stampImages[`${achievement['Internal Category'].toLowerCase()}`]}
               alt=""
               className="stamp__image" />
-              {getDateSVG(achievement['Internal Category'].toLowerCase())}
+              {getDateSVG(achievement['Internal Category'].toLowerCase(), null, achievement, i)}
             </>
             }
           </div>
