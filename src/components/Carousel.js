@@ -30,8 +30,11 @@ class Carousel extends React.Component {
     });
 
     flickity.on('select', (index) => {
-      this.arrowClasses(index, flickity.slides.length - 1);
-      window.history.replaceState({}, '', `?achievement=${index}`)
+      if (this.props.visibility) {
+        console.log('SELECT');
+        this.arrowClasses(index, flickity.slides.length - 1);
+        window.history.replaceState({}, '', `?achievement=${index}`)
+      }
     });
 
     this.setState({ flickity: flickity });

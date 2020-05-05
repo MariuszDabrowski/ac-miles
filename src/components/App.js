@@ -108,7 +108,6 @@ class App extends React.Component {
         
         {this.state.stamps &&
           <Achievements
-          toggleCarousel={this.toggleCarousel}
           setCarouselIndex={this.setCarouselIndex}
           stamps={this.state.stamps}
           version={this.state.version} />

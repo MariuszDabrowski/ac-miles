@@ -92,7 +92,6 @@ function Achievements(props) {
                 <AchievementsItem
                 key={item['Unique Entry ID']}
                 data={item}
-                toggleCarousel={() => props.toggleCarousel(index)}
                 index={index}
                 stamps={(props.stamps) ? props.stamps[item['Internal ID']] : null}
                 setCarouselIndex={props.setCarouselIndex}
