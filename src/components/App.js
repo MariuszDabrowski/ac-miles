@@ -13,6 +13,11 @@ import './App.css';
 // ---------
 
 class App extends React.Component {
+  
+  // -----
+  // State
+  // -----
+
   state = {
     carouselActive: false,
     carouselIndex: 0,
@@ -20,10 +25,37 @@ class App extends React.Component {
     version: '1.2.0'
   }
 
+  // -------------------
+  // Component did mount
+  // -------------------
+
   componentDidMount() {
     this.setState({ stamps: generateStamps() });
     this.checkURL();
+    this.setupKeyboardShortcuts();
   }
+
+  // ------------------------
+  // Setup keyboard shortcuts
+  // ------------------------
+
+  setupKeyboardShortcuts = () => {
+    // 71 G, 27 Esc, 66 B
+
+    window.addEventListener('keydown', (e) => {
+      if (e.keyCode === 71) {
+        window.open('https://github.com/');
+      }
+
+      if ((e.keyCode === 27 || e.keyCode === 66) && this.state.carouselActive) {
+        this.toggleCarousel();
+      }
+    });
+  }
+
+  // ---------
+  // Check URL
+  // ---------
 
   checkURL = () => {
     const slideId = Number(window.location.search.slice(1).split('=')[1]);
@@ -33,7 +65,11 @@ class App extends React.Component {
     }
   }
 
-  toggleCarousel = (index) => {
+  // ---------------
+  // Toggle carousel
+  // ---------------
+  
+  toggleCarousel = () => {
     if (this.state.carouselActive) {
       window.history.replaceState({}, '', window.location.pathname)
     }
@@ -41,12 +77,20 @@ class App extends React.Component {
     this.setState({ carouselActive: (this.state.carouselActive) ? false : true });
   }
 
+  // ------------------
+  // Set carousel index
+  // ------------------
+
   setCarouselIndex = (index, cb) => {
     this.setState(
       { carouselIndex: index },
       this.toggleCarousel, () => { if (cb) cb(); }
     );
   }
+
+  // ------
+  // Render
+  // ------
 
   render() {
     return (
