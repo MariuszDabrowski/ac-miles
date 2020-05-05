@@ -1,11 +1,11 @@
 .nook-miles {
   position: absolute;
-  top: 20px;
-  right: 34px;
+  top: 2rem;
+  right: 3.4rem;
   z-index: 1000;
   background: url('../img/nook-miles-bg.svg') center no-repeat;
-  width: 190px;
-  height: 107px;
+  width: 19rem;
+  height: 10.7rem;
   transform: rotate(3deg);
   display: flex;
   flex-direction: column;
@@ -13,13 +13,13 @@
 }
 
 .nook-miles__icon {
-  width: 66px;
-  height: 32px;
-  margin-bottom: 5px;
+  width: 6.6rem;
+  height: 3.2rem;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 22px 0 0 3px;
+  padding: 2.2rem 0 0 0.3rem;
 }
 
 .nook-miles__icon img {
@@ -28,13 +28,13 @@
 }
 
 .nook-miles__count {
-  width: 177px;
-  height: 64px;
+  width: 17.7rem;
+  height: 6.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #bfdcfe;
-  font-size: 34px;
-  padding-top: 5px;
+  font-size: 3.4rem;
+  padding-top: 0.5rem;
   font-weight: 700;
 }

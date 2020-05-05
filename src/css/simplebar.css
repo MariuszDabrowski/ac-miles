@@ -81,10 +81,10 @@
   box-sizing: inherit !important;
   height: 100%;
   width: 100%;
-  max-width: 1px;
+  max-width: 0.1rem;
   position: relative;
   float: left;
-  max-height: 1px;
+  max-height: 0.1rem;
   overflow: hidden;
   z-index: -1;
   padding: 0;
@@ -104,8 +104,8 @@
   left: 0;
   height: 1000%;
   width: 1000%;
-  min-height: 1px;
-  min-width: 1px;
+  min-height: 0.1rem;
+  min-width: 0.1rem;
   overflow: hidden;
   pointer-events: none;
   z-index: -1;
@@ -120,14 +120,14 @@
   overflow: hidden;
   background: #f1f5f4;
   background: linear-gradient(to right, #c2cff2 25%, #f4f4f6 25% 75%, #c2cff2 75%);
-  border-radius: 16px;
+  border-radius: 1.6rem;
 }
 
 .simplebar-track::after,
 .simplebar-track::before {
   content: '';
-  width: 12px;
-  height: 12px;
+  width: 1.2rem;
+  height: 1.2rem;
   background: #f1f5f4;
   position: absolute;
   left: 50%;
@@ -152,7 +152,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  min-height: 10px;
+  min-height: 1rem;
   z-index: 10;
 }
 
@@ -160,7 +160,7 @@
   position: absolute;
   content: '';
   background: #4d65bd;
-  border-radius: 7px;
+  border-radius: 0.7rem;
   left: 0;
   right: 0;
   opacity: 0;
@@ -175,7 +175,7 @@
 
 .simplebar-track.simplebar-vertical {
   top: 0;
-  width: 12px;
+  width: 1.2rem;
 }
 
 .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
@@ -185,22 +185,22 @@
 
 .simplebar-track.simplebar-horizontal {
   left: 0;
-  height: 11px;
+  height: 1.1rem;
 }
 
 .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
   height: 100%;
-  left: 2px;
-  right: 2px;
+  left: 0.2rem;
+  right: 0.2rem;
 }
 
 .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
   right: auto;
   left: 0;
-  top: 2px;
-  height: 7px;
+  top: 0.2rem;
+  height: 0.7rem;
   min-height: 0;
-  min-width: 10px;
+  min-width: 1rem;
   width: auto;
 }
 
@@ -215,8 +215,8 @@
   position: fixed;
   opacity: 0;
   visibility: hidden;
-  height: 500px;
-  width: 500px;
+  height: 50rem;
+  width: 50rem;
   overflow-y: hidden;
   overflow-x: scroll;
 }

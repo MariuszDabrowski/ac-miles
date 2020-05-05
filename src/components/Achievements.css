@@ -8,8 +8,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 130px 100px 113px 50px;
-  max-width: 1370px;
+  padding: 13rem 10rem 11.3rem 5rem;
+  max-width: 137rem;
   margin: 0 auto;
 }
 
@@ -19,21 +19,21 @@
 
 .mimic-scroll {
   position: absolute !important;
-  top: 144px;
-  right: 50px;
-  width: 12px;
-  height: calc(100% - 320px);
+  top: 14.4rem;
+  right: 5rem;
+  width: 1.2rem;
+  height: calc(100% - 32rem);
   z-index: 40;
 }
 
 .mimic-scroll::after {
   content: '';
   position: absolute;
-  top: calc(100% + 12px);
+  top: calc(100% + 1.2rem);
   left: 50%;
   transform: translateX(-50%);
-  width: 42px;
-  height: 42px;
+  width: 4.2rem;
+  height: 4.2rem;
   background: url('../img/scroll-icon.svg') center no-repeat;
   background-size: 100%;
 }

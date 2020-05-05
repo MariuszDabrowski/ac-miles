@@ -23,13 +23,13 @@
 /* -------------------- */
 
 .carousel__button {
-  width: 142px;
-  height: 254px;
+  width: 14.2rem;
+  height: 25.4rem;
   position: absolute;
   top: 50%;
   z-index: 200;
   cursor: pointer;
-  padding: 40px;
+  padding: 4rem;
 }
 
 .carousel__button svg {

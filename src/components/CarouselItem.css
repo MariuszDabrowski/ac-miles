@@ -7,12 +7,12 @@
 }
 
 .card {
-  width: 985px;
-  height: 596px;
+  width: 98.5rem;
+  height: 59.6rem;
   background-size: cover;
   border: 18px solid #fefff1;
   transform: rotate(-1.9deg);
-  box-shadow: 0 6px 8px rgba(0,0,0, 0.1);
+  box-shadow: 0 0.6rem 0.8rem rgba(0,0,0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,8 +36,8 @@
 }
 
 .card::after {
-  top: 5px;
-  left: 4px;
+  top: 0.5rem;
+  left: 0.4rem;
 }
 
 /* .card--event::before { background: #fbe4d4 url('../img/paper-bg.png') center repeat;} */
@@ -68,25 +68,25 @@
 .card--mydesign::after { background: url('../img/bg-mydesign-large.png') center top no-repeat; }
 
 .card__title {
-  height: 70px;
-  margin-bottom: 35px;
+  height: 7rem;
+  margin-bottom: 3.5rem;
   display: flex;
   align-items: flex-end;
-  font-size: 32px;
+  font-size: 3.2rem;
   color: #5f5228;
   font-weight: 700;
 }
 
 .card__description {
-  height: 247px;
-  width: 782px;
+  height: 24.7rem;
+  width: 78.2rem;
   position: relative;
   color: #715a3b;
-  font-size: 31px;
+  font-size: 3.1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 75px;
+  padding: 0 7.5rem;
 }
 
 .card__description::before {
@@ -103,12 +103,12 @@
 }
 
 .card__description__nook {
-  width: 81px;
-  height: 76px;
+  width: 8.1rem;
+  height: 7.6rem;
   background: red;
   position: absolute;
   bottom: 0;
-  right: -10px;
+  right: -1rem;
   background: url('../img/nook-face.svg') center no-repeat;
   background-size: 100%;
   transform: rotate(10deg);
@@ -121,19 +121,19 @@
   flex-grow: 1;
 }
 
-.card-badges--1 .card-badges__track { height: 147px; }
-.card-badges--2 .card-badges__track { height: 137px; }
-.card-badges--3 .card-badges__track { height: 137px; }
-.card-badges--4 .card-badges__track { height: 137px; }
-.card-badges--5 .card-badges__track { height: 137px; }
-.card-badges--6 .card-badges__track { height: 127px; }
+.card-badges--1 .card-badges__track { height: 14.7rem; }
+.card-badges--2 .card-badges__track { height: 13.7rem; }
+.card-badges--3 .card-badges__track { height: 13.7rem; }
+.card-badges--4 .card-badges__track { height: 13.7rem; }
+.card-badges--5 .card-badges__track { height: 13.7rem; }
+.card-badges--6 .card-badges__track { height: 12.7rem; }
 
 .card-badges__track {
   height: 100%;
 }
 
 .card-badges .stamp-wrapper {
-  height: 145px;
+  height: 14.5rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -143,8 +143,8 @@
 
 .card-badges .stamp { height: 100%; }
 
-.card-badges--1 .stamp-wrapper { height: 155px; }
-.card-badges--6 .stamp-wrapper { height: 130px; }
+.card-badges--1 .stamp-wrapper { height: 15.5rem; }
+.card-badges--6 .stamp-wrapper { height: 13rem; }
 
 .card-badges--1 .stamp-wrapper--1 { transform: translate(-50%, -50%); }
 

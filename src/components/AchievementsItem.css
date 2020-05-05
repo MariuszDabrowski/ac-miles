@@ -1,10 +1,10 @@
 .achievement {
-  width: 362px;
-  height: 216px;
-  border: 10px solid #fefef2;
+  width: 36.2rem;
+  height: 21.6rem;
+  border: 1rem solid #fefef2;
   background: #fde6d6;
-  margin: 14px;
-  box-shadow: 0 2px 5px rgba(0,0,0, 0.1);
+  margin: 1.4rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0,0,0, 0.1);
   background: #ced6ed;
   display: flex;
   flex-direction: column;
@@ -18,12 +18,12 @@
 .achievement:before {
   content: '';
   position: absolute;
-  top: 2px;
-  left: 2px;
+  top: 0.2rem;
+  left: 0.2rem;
   width: 100%;
   height: 104%;
   background-size: cover;
-  background-position: 0 -8px;
+  background-position: 0 -0.8rem;
 }
 
 .achievement:hover {
@@ -57,8 +57,8 @@
 .achievement--mydesign { background: #fde4e0 url('../img/paper-bg.png') center repeat; }
 
 .achievement__new {
-  width: 80px;
-  height: 34px;
+  width: 8rem;
+  height: 3.4rem;
   background: url('../img/new-tab.png') center no-repeat;
   background-size: 100%;
   position: absolute;
@@ -71,25 +71,25 @@
 }
 
 .achievement .achievement__new {
-  bottom: 8px;
-  left: -20px;
-  font-size: 20px;
+  bottom: 0.8rem;
+  left: -2rem;
+  font-size: 2rem;
 }
 
 .card .achievement__new {
-  top: -8px;
-  left: -32px;
-  font-size: 24px;
-  padding-right: 4px;
+  top: -0.8rem;
+  left: -3.2rem;
+  font-size: 2.4rem;
+  padding-right: 0.4rem;
 }
 
 .achievement__title {
-  font-size: 26px;
+  font-size: 2.6rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.05rem;
   color: #72631e;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 1rem;
   margin-bottom: auto;
   z-index: 10;
 }
@@ -98,12 +98,12 @@
   position: relative;
 }
 
-.achievement__spaces--1 { width: 110px; margin-bottom: 8px; }
-.achievement__spaces--2 { width: 218px; margin-bottom: 8px; }
-.achievement__spaces--3 { width: 310px; margin-bottom: 14px; }
-.achievement__spaces--4 { width: 280px; margin-bottom: 8px; }
-.achievement__spaces--5 { width: 322px; margin-bottom: 8px; }
-.achievement__spaces--6 { width: 334px; margin-bottom: 4px; }
+.achievement__spaces--1 { width: 11rem; margin-bottom: 0.8rem; }
+.achievement__spaces--2 { width: 21.8rem; margin-bottom: 0.8rem; }
+.achievement__spaces--3 { width: 31rem; margin-bottom: 1.4rem; }
+.achievement__spaces--4 { width: 28rem; margin-bottom: 0.8rem; }
+.achievement__spaces--5 { width: 32.2rem; margin-bottom: 0.8rem; }
+.achievement__spaces--6 { width: 33.4rem; margin-bottom: 0.4rem; }
 
 .achievement__spaces-svg { width: 100%; height: 100%; }
 
@@ -112,38 +112,38 @@
   display: block;
 }
 
-.achievement__spaces--1 .stamp-wrapper { width: 116px; top: 50%; left: 50%; transform: translate(-51%, -51%); }
-.achievement--mydesign .achievement__spaces--1 .stamp-wrapper { width: 116px; top: 50%; left: 50%; transform: translate(-48%, -54%) rotate(-13deg); }
+.achievement__spaces--1 .stamp-wrapper { width: 11.6rem; top: 50%; left: 50%; transform: translate(-51%, -51%); }
+.achievement--mydesign .achievement__spaces--1 .stamp-wrapper { width: 11.6rem; top: 50%; left: 50%; transform: translate(-48%, -54%) rotate(-13deg); }
 
-.achievement__spaces--2 .stamp-wrapper { width: 111px; }
-.achievement__spaces--2 .stamp-wrapper--1 { top: 0px; left: -1px; }
-.achievement__spaces--2 .stamp-wrapper--2 { top: 0px; right: -1px; }
+.achievement__spaces--2 .stamp-wrapper { width: 11.1rem; }
+.achievement__spaces--2 .stamp-wrapper--1 { top: 0; left: -0.1rem; }
+.achievement__spaces--2 .stamp-wrapper--2 { top: 0; right: -0.1rem; }
 
-.achievement__spaces--3 .stamp-wrapper { width: 96px; }
-.achievement__spaces--3 .stamp-wrapper--1 { top: 2px; left: 0; transform: rotate(12deg); }
-.achievement__spaces--3 .stamp-wrapper--2 { top: 5px; left: 108px; transform: rotate(-5deg); }
-.achievement__spaces--3 .stamp-wrapper--3 { top: 3px; left: 213px; transform: rotate(2deg) }
+.achievement__spaces--3 .stamp-wrapper { width: 9.6rem; }
+.achievement__spaces--3 .stamp-wrapper--1 { top: 0.2rem; left: 0; transform: rotate(12deg); }
+.achievement__spaces--3 .stamp-wrapper--2 { top: 0.5rem; left: 10.8rem; transform: rotate(-5deg); }
+.achievement__spaces--3 .stamp-wrapper--3 { top: 0.3rem; left: 21.3rem; transform: rotate(2deg) }
 
-.achievement__spaces--4 .stamp-wrapper { width: 72px; }
-.achievement__spaces--4 .stamp-wrapper--1 { top: 56px; left: 2px; transform: rotate(9deg); }
-.achievement__spaces--4 .stamp-wrapper--2 { top: 7px; left: 70px; transform: rotate(-10deg); }
-.achievement__spaces--4 .stamp-wrapper--3 { top: 54px; left: 142px; transform: rotate(3deg); }
-.achievement__spaces--4 .stamp-wrapper--4 { top: 2px; left: 204px; transform: rotate(-3deg); }
+.achievement__spaces--4 .stamp-wrapper { width: 7.2rem; }
+.achievement__spaces--4 .stamp-wrapper--1 { top: 5.6rem; left: 0.2rem; transform: rotate(9deg); }
+.achievement__spaces--4 .stamp-wrapper--2 { top: 0.7rem; left: 7rem; transform: rotate(-10deg); }
+.achievement__spaces--4 .stamp-wrapper--3 { top: 5.4rem; left: 14.2rem; transform: rotate(3deg); }
+.achievement__spaces--4 .stamp-wrapper--4 { top: 0.2rem; left: 20.4rem; transform: rotate(-3deg); }
 
-.achievement__spaces--5 .stamp-wrapper { width: 80px; }
-.achievement__spaces--5 .stamp-wrapper--1 { top: 48px; left: -1px; transform: rotate(-9deg); }
-.achievement__spaces--5 .stamp-wrapper--2 { top: 3px; left: 59px; transform: rotate(6deg); }
-.achievement__spaces--5 .stamp-wrapper--3 { top: 48px; left: 123px; transform: rotate(-2deg); }
-.achievement__spaces--5 .stamp-wrapper--4 { top: 0px; left: 186px; transform: rotate(9deg); }
-.achievement__spaces--5 .stamp-wrapper--5 { top: 51px; left: 242px; transform: rotate(-8deg); }
+.achievement__spaces--5 .stamp-wrapper { width: 8rem; }
+.achievement__spaces--5 .stamp-wrapper--1 { top: 4.8rem; left: -0.1rem; transform: rotate(-9deg); }
+.achievement__spaces--5 .stamp-wrapper--2 { top: 0.3rem; left: 5.9rem; transform: rotate(6deg); }
+.achievement__spaces--5 .stamp-wrapper--3 { top: 4.8rem; left: 12.3rem; transform: rotate(-2deg); }
+.achievement__spaces--5 .stamp-wrapper--4 { top: 0; left: 18.6rem; transform: rotate(9deg); }
+.achievement__spaces--5 .stamp-wrapper--5 { top: 5.1rem; left: 24.2rem; transform: rotate(-8deg); }
 
-.achievement__spaces--6 .stamp-wrapper { width: 70px; }
-.achievement__spaces--6 .stamp-wrapper--1 { top: 51px; left: -2px; transform: rotate(-9deg); }
-.achievement__spaces--6 .stamp-wrapper--2 { top: 0px; left: 51px; transform: rotate(6deg); }
-.achievement__spaces--6 .stamp-wrapper--3 { top: 51px; left: 105px; transform: rotate(-13deg); }
-.achievement__spaces--6 .stamp-wrapper--4 { top: 0px; left: 159px; transform: rotate(10deg); }
-.achievement__spaces--6 .stamp-wrapper--5 { top: 51px; left: 211px; transform: rotate(-8deg); }
-.achievement__spaces--6 .stamp-wrapper--6 { top: 0px; left: 265px; transform: rotate(8deg); }
+.achievement__spaces--6 .stamp-wrapper { width: 7rem; }
+.achievement__spaces--6 .stamp-wrapper--1 { top: 5.1rem; left: -0.2rem; transform: rotate(-9deg); }
+.achievement__spaces--6 .stamp-wrapper--2 { top: 0; left: 5.1rem; transform: rotate(6deg); }
+.achievement__spaces--6 .stamp-wrapper--3 { top: 5.1rem; left: 10.5rem; transform: rotate(-13deg); }
+.achievement__spaces--6 .stamp-wrapper--4 { top: 0; left: 15.9rem; transform: rotate(10deg); }
+.achievement__spaces--6 .stamp-wrapper--5 { top: 5.1rem; left: 21.1rem; transform: rotate(-8deg); }
+.achievement__spaces--6 .stamp-wrapper--6 { top: 0; left: 26.5rem; transform: rotate(8deg); }
 
 .achievement__spaces .stamp__image {
   width: 100%;
@@ -163,23 +163,23 @@
 
 .stamp-wrapper__tier {
   text-align: center;
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: 700;
 }
 
-.stamp-wrapper__tier--1 { margin-top: -4px; }
+.stamp-wrapper__tier--1 { margin-top: -0.4rem; }
 
-.stamp-wrapper__tier--event { color: #f5a280; text-shadow: -2px -2px 0 #ffe0de, 2px -2px 0 #ffe0de, -2px 2px 0 #ffe0de, 2px 2px 0 #ffe0de; }
-.stamp-wrapper__tier--fish { color: #2cc6c4; text-shadow: -2px -2px 0 #c0eae8, 2px -2px 0 #c0eae8, -2px 2px 0 #c0eae8, 2px 2px 0 #c0eae8; }
-.stamp-wrapper__tier--communication { color: #eda80f; text-shadow: -2px -2px 0 #fbf2b0, 2px -2px 0 #fbf2b0, -2px 2px 0 #fbf2b0, 2px 2px 0 #fbf2b0; }
-.stamp-wrapper__tier--insect { color: #a2c312; text-shadow: -2px -2px 0 #f4ffb1, 2px -2px 0 #f4ffb1, -2px 2px 0 #f4ffb1, 2px 2px 0 #f4ffb1; }
-.stamp-wrapper__tier--diy { color: #ba9f3e; text-shadow: -2px -2px 0 #fbf2c7, 2px -2px 0 #fbf2c7, -2px 2px 0 #fbf2c7, 2px 2px 0 #fbf2c7; }
-.stamp-wrapper__tier--hha { color: #d1bd4a; text-shadow: -2px -2px 0 #f4edb7, 2px -2px 0 #f4edb7, -2px 2px 0 #f4edb7, 2px 2px 0 #f4edb7; }
-.stamp-wrapper__tier--plant { color: #70b86e; text-shadow: -2px -2px 0 #caeaaa, 2px -2px 0 #caeaaa, -2px 2px 0 #caeaaa, 2px 2px 0 #caeaaa; }
-.stamp-wrapper__tier--smartphone { color: #8982c4; text-shadow: -2px -2px 0 #beddef, 2px -2px 0 #beddef, -2px 2px 0 #beddef, 2px 2px 0 #beddef; }
-.stamp-wrapper__tier--money { color: #b7b30c; text-shadow: -2px -2px 0 #f8fa9d, 2px -2px 0 #f8fa9d, -2px 2px 0 #f8fa9d, 2px 2px 0 #f8fa9d; }
-.stamp-wrapper__tier--negative { color: #7b5189; text-shadow: -2px -2px 0 #cacdf3, 2px -2px 0 #cacdf3, -2px 2px 0 #cacdf3, 2px 2px 0 #cacdf3; }
-.stamp-wrapper__tier--landmaking { color: #43a18d; text-shadow: -2px -2px 0 #c3ecc2, 2px -2px 0 #c3ecc2, -2px 2px 0 #c3ecc2, 2px 2px 0 #c3ecc2; }
-.stamp-wrapper__tier--mydesign { color: #ef5e78; text-shadow: -2px -2px 0 #ffe4e2, 2px -2px 0 #ffe4e2, -2px 2px 0 #ffe4e2, 2px 2px 0 #ffe4e2; }
+.stamp-wrapper__tier--event { color: #f5a280; text-shadow: -0.2rem -0.2rem 0 #ffe0de, 0.2rem -0.2rem 0 #ffe0de, -0.2rem 0.2rem 0 #ffe0de, 0.2rem 0.2rem 0 #ffe0de; }
+.stamp-wrapper__tier--fish { color: #2cc6c4; text-shadow: -0.2rem -0.2rem 0 #c0eae8, 0.2rem -0.2rem 0 #c0eae8, -0.2rem 0.2rem 0 #c0eae8, 0.2rem 0.2rem 0 #c0eae8; }
+.stamp-wrapper__tier--communication { color: #eda80f; text-shadow: -0.2rem -0.2rem 0 #fbf2b0, 0.2rem -0.2rem 0 #fbf2b0, -0.2rem 0.2rem 0 #fbf2b0, 0.2rem 0.2rem 0 #fbf2b0; }
+.stamp-wrapper__tier--insect { color: #a2c312; text-shadow: -0.2rem -0.2rem 0 #f4ffb1, 0.2rem -0.2rem 0 #f4ffb1, -0.2rem 0.2rem 0 #f4ffb1, 0.2rem 0.2rem 0 #f4ffb1; }
+.stamp-wrapper__tier--diy { color: #ba9f3e; text-shadow: -0.2rem -0.2rem 0 #fbf2c7, 0.2rem -0.2rem 0 #fbf2c7, -0.2rem 0.2rem 0 #fbf2c7, 0.2rem 0.2rem 0 #fbf2c7; }
+.stamp-wrapper__tier--hha { color: #d1bd4a; text-shadow: -0.2rem -0.2rem 0 #f4edb7, 0.2rem -0.2rem 0 #f4edb7, -0.2rem 0.2rem 0 #f4edb7, 0.2rem 0.2rem 0 #f4edb7; }
+.stamp-wrapper__tier--plant { color: #70b86e; text-shadow: -0.2rem -0.2rem 0 #caeaaa, 0.2rem -0.2rem 0 #caeaaa, -0.2rem 0.2rem 0 #caeaaa, 0.2rem 0.2rem 0 #caeaaa; }
+.stamp-wrapper__tier--smartphone { color: #8982c4; text-shadow: -0.2rem -0.2rem 0 #beddef, 0.2rem -0.2rem 0 #beddef, -0.2rem 0.2rem 0 #beddef, 0.2rem 0.2rem 0 #beddef; }
+.stamp-wrapper__tier--money { color: #b7b30c; text-shadow: -0.2rem -0.2rem 0 #f8fa9d, 0.2rem -0.2rem 0 #f8fa9d, -0.2rem 0.2rem 0 #f8fa9d, 0.2rem 0.2rem 0 #f8fa9d; }
+.stamp-wrapper__tier--negative { color: #7b5189; text-shadow: -0.2rem -0.2rem 0 #cacdf3, 0.2rem -0.2rem 0 #cacdf3, -0.2rem 0.2rem 0 #cacdf3, 0.2rem 0.2rem 0 #cacdf3; }
+.stamp-wrapper__tier--landmaking { color: #43a18d; text-shadow: -0.2rem -0.2rem 0 #c3ecc2, 0.2rem -0.2rem 0 #c3ecc2, -0.2rem 0.2rem 0 #c3ecc2, 0.2rem 0.2rem 0 #c3ecc2; }
+.stamp-wrapper__tier--mydesign { color: #ef5e78; text-shadow: -0.2rem -0.2rem 0 #ffe4e2, 0.2rem -0.2rem 0 #ffe4e2, -0.2rem 0.2rem 0 #ffe4e2, 0.2rem 0.2rem 0 #ffe4e2; }
 
 .achievement__spaces .stamp-wrapper__tier { display: none; }
