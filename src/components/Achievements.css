@@ -8,9 +8,15 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 13rem 10rem 11.3rem 5rem;
+  padding: 15rem 0 10rem;
   max-width: 137rem;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .achievements {
+    padding: 13rem 10rem 11.3rem 5rem;
+  }
 }
 
 /* --------------- */
@@ -24,6 +30,7 @@
   width: 1.2rem;
   height: calc(100% - 32rem);
   z-index: 40;
+  display: none;
 }
 
 .mimic-scroll::after {
@@ -41,4 +48,10 @@
 .mimic-scroll__content {
   height: 400px;
   width: 100px;
+}
+
+@media (min-width: 768px) {
+  .mimic-scroll {
+    display: block;
+  }
 }

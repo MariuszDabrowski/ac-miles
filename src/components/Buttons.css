@@ -1,9 +1,16 @@
 .buttons {
   position: absolute;
-  bottom: 4rem;
-  right: 4rem;
+  bottom: 2.6rem;
+  right: 2.6rem;
   z-index: 1000;
   display: flex;
+}
+
+@media (min-width: 768px) {
+  .buttons {
+    bottom: 4rem;
+    right: 4rem;
+  }
 }
 
 /* ------ */

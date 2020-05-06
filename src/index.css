@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-size: 37%; /* 768 */
+  font-size: 30%;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -18,6 +18,10 @@ body {
 .root {
   height: 100vh;
   background: #c2cff2 url('./img/paper-bg.png') center repeat;
+}
+
+@media (min-width: 768px) {
+  html { font-size: 37%; }
 }
 
 @media (min-width: 1024px) {

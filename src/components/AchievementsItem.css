@@ -33,7 +33,11 @@
 @media(hover: hover) {
   .achievement:hover {
     transform: rotate(-2deg) scale(1.07);
-  } 
+  }
+
+  .browser-edge .achievement:hover {
+    transform: rotate(0deg) scale(1);
+  }
 }
 
 .disable-hover .achievements { pointer-events: none; }
@@ -85,8 +89,8 @@
 }
 
 .card .achievement__new {
-  top: -0.8rem;
-  left: -3.2rem;
+  top: 1rem;
+  left: 1rem;
   font-size: 2.4rem;
   padding-right: 0.4rem;
 }
@@ -115,13 +119,20 @@
 
 .achievement__spaces-svg { width: 100%; height: 100%; }
 
+@media (min-width: 768px) {
+  .card .achievement__new {
+    top: -0.8rem;
+    left: -3.2rem;
+  }
+}
+
 /* ------------------ */
 /* Stamp wrapper tier */
 /* ------------------ */
 
 .stamp-wrapper__tier {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 5.2rem;
   font-weight: 700;
 }
 
@@ -141,3 +152,9 @@
 .stamp-wrapper__tier--mydesign { color: #ef5e78; text-shadow: -0.2rem -0.2rem 0 #ffe4e2, 0.2rem -0.2rem 0 #ffe4e2, -0.2rem 0.2rem 0 #ffe4e2, 0.2rem 0.2rem 0 #ffe4e2; }
 
 .achievement__spaces .stamp-wrapper__tier { display: none; }
+
+@media (min-width: 768px) {
+  .stamp-wrapper__tier {
+    font-size: 2.2rem;
+  }
+}

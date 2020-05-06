@@ -4,18 +4,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .card {
-  width: 98.5rem;
-  height: 59.6rem;
+  width: 100%;
+  height: 100%;
   background-size: cover;
-  border: 18px solid #fefff1;
-  transform: rotate(-1.9deg);
-  box-shadow: 0 0.6rem 0.8rem rgba(0,0,0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   transition: transform 0.6s;
 }
 
@@ -38,7 +37,8 @@
 .card::after {
   top: 0.5rem;
   left: 0.4rem;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* .card--event::before { background: #fbe4d4 url('../img/paper-bg.png') center repeat;} */
@@ -79,15 +79,14 @@
 }
 
 .card__description {
-  height: 24.7rem;
-  width: 78.2rem;
   position: relative;
   color: #715a3b;
   font-size: 3.1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 7.5rem;
+  padding: 0 4rem;
+  margin-bottom: 0.5rem;
 }
 
 .card__description::before {
@@ -98,8 +97,6 @@
   top: 0;
   left: 0;
   z-index: -1;
-  background: url('../img/card-description-bg.svg') center no-repeat;
-  background-size: 100%;
   opacity: 0.4;
 }
 
@@ -113,13 +110,14 @@
   background: url('../img/nook-face.svg') center no-repeat;
   background-size: 100%;
   transform: rotate(10deg);
+  display: none;
 }
 
 .card-badges {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
-  flex-grow: 1;
+  transform: scale(0.48);
 }
 
 .card-badges--1 .card-badges__track { height: 14.7rem; }
@@ -131,6 +129,44 @@
 
 .card-badges__track {
   height: 100%;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 98.5rem;
+    height: 59.6rem;
+    transform: rotate(-1.9deg);
+    box-shadow: 0 0.6rem 0.8rem rgba(0,0,0, 0.1);
+    border: 18px solid #fefff1;
+    padding-top: 0;
+    justify-content: flex-start;
+  }
+
+  .card::after {
+    background-size: contain;
+  }
+
+  .card__description {
+    height: 24.7rem;
+    width: 78.2rem;
+    padding: 0 7.5rem;
+    margin-bottom: 0;
+  }
+
+  .card__description::before {
+    background: url('../img/card-description-bg.svg') center no-repeat;
+    background-size: 100%;
+  }
+
+  .card__description__nook {
+    display: block;
+  }
+
+  .card-badges {
+    align-items: center;
+    flex-grow: 1;
+    transform: scale(1);
+  }
 }
 
 /* --------------------- */

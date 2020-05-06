@@ -21,13 +21,29 @@ class Carousel extends React.Component {
   // -------------------
 
   componentDidMount = () => {
-    const flickity = new Flickity('.carousel', {
+    // Flickity options, defaults
+    var options = {
+      draggable: false
+    };
+
+    // enable prev/next buttons at 768px
+    if ( matchMedia('screen and (min-width: 768px)').matches ) {
+      options.draggable = true;
+    }
+
+    if (/Edge/.test(navigator.userAgent)) {
+      document.body.classList.add('browser-edge');
+      options.draggable = false;
+      options.accessibility = false;
+    }
+
+    const flickity = new Flickity('.carousel', Object.assign({}, {
       cellSelector: '.card-wrapper',
       pageDots: false,
       initialIndex: this.props.carouselIndex,
       prevNextButtons: false,
       setGallerySize: false,
-    });
+    }, options));
 
     flickity.on('select', (index) => {
       if (this.props.visibility) {

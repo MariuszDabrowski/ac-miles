@@ -30,6 +30,17 @@
   z-index: 200;
   cursor: pointer;
   padding: 4rem;
+  display: none;
+}
+
+.browser-edge .carousel__button {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .carousel__button {
+    display: block;
+  }
 }
 
 .carousel__button svg {

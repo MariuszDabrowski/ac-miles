@@ -44,12 +44,14 @@ function Achievements(props) {
       // When scrolling the page add a class to allow us to disable hovers for performance
       // ---------------------------------------------------------------------------------
 
-      clearTimeout(diableHoversTimeout);
-      document.body.classList.add('disable-hover');
+      if (!/Edge/.test(navigator.userAgent)) {
+        clearTimeout(diableHoversTimeout);
+        document.body.classList.add('disable-hover');
 
-      diableHoversTimeout = setTimeout(function(){
-          document.body.classList.remove('disable-hover');
-      }, 100);
+        diableHoversTimeout = setTimeout(function(){
+            document.body.classList.remove('disable-hover');
+        }, 100);
+      }
 
       // ----------------------------------------------------------------------------------
       // When scrolling the achievements panel, scroll our scrollbar to match it's position
