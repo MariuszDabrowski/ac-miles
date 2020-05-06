@@ -16,6 +16,7 @@ const dateIncrement = [
 const customDates = {
   0: [[3, 20, 2020]], // - angling for perfection
   1: [[3, 20, 2020]], // - you've got the bug
+  10: [[3, 30, 2020]], // - cornering the stalk market
   11: [[3, 20, 2020]], // - bell ringer
   13: [[3, 20, 2020]], // - seller of unwanted stuff
   16: [[3, 20, 2020]], // - shop to it
@@ -29,6 +30,7 @@ const customDates = {
   55: [[3, 20, 2020]], // - have a nice DIY
   57: [[3, 20, 2020]], // - rock splitting champ
   58: [[3, 20, 2020]], // - nook miles for miles
+  60: [[3, 21, 2020]], // - paydirt
   67: [[3, 20, 2020]], // - rough hewn
   68: [[3, 20, 2020], [3, 29, 2020], [4, 8, 2020], [4, 18, 2020], [5, 8, 2020]], // island togetherness
   70: [[3, 20, 2020]], // - pick of the bunch
@@ -38,7 +40,7 @@ const customDates = {
   79: [[3, 20, 2020]], // - shady shakedown
   90: [[4, 27, 2020]],// faked out
   91: [[4, 26, 2020], [9, 11, 2020], [3, 13, 2021]], // true patron of the arts
-  92: [[4, 23, 2020], [4, 23, 2020], [4, 23, 2020]], // shrubbery hubbuberry
+  92: [[4, 23, 2020], [4, 23, 2020], [4, 23, 2020]], // shrubbery hubbubberry
 };
 
 const sessionDates = {};
