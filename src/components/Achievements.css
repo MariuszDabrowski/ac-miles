@@ -37,3 +37,8 @@
   background: url('../img/scroll-icon.svg') center no-repeat;
   background-size: 100%;
 }
+
+.mimic-scroll__content {
+  height: 400px;
+  width: 100px;
+}

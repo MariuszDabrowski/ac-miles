@@ -15,6 +15,10 @@
   cursor: pointer;
 }
 
+@-moz-document url-prefix() { 
+  .achievement { will-change: transform;}
+}
+
 .achievement:before {
   content: '';
   position: absolute;
@@ -26,8 +30,10 @@
   background-position: 0 -0.8rem;
 }
 
-.achievement:hover {
-  transform: rotate(-2deg) scale(1.07);
+@media(hover: hover) {
+  .achievement:hover {
+    transform: rotate(-2deg) scale(1.07);
+  } 
 }
 
 .disable-hover .achievements { pointer-events: none; }

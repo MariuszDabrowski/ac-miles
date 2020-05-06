@@ -56,7 +56,9 @@
   transform: translate(-50%, -50%);
 }
 
-.button:hover .button__icon { background: #435fa3; }
+@media(hover: hover) {
+  .button:hover .button__icon { background: #435fa3; }
+}
 
 .button__text {
   font-size: 2.6rem;

@@ -4,6 +4,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: url('../img/banner-bg-rounded.svg') center repeat-x;
+  background: url('../img/banner-bg-rounded.png') center repeat-x;
+  background-size: contain;
   z-index: 100;
 }

@@ -21,6 +21,7 @@ function Achievements(props) {
 
   useEffect(() => {
     mimicScrollContentElement.current.style.height = `${achievementsElement.current.clientHeight}px`;
+    scrollbarMimic.current.recalculate();
 
     setupScrollbar();
   });

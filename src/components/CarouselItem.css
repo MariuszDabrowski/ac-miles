@@ -16,12 +16,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.6s;
 }
 
 .carousel--hidden .card {
   transform: scale(0.6) rotate(-1.9deg);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s;
 }
 
 .card::before,
@@ -38,6 +38,7 @@
 .card::after {
   top: 0.5rem;
   left: 0.4rem;
+  background-size: contain;
 }
 
 /* .card--event::before { background: #fbe4d4 url('../img/paper-bg.png') center repeat;} */
@@ -54,18 +55,18 @@
 .card--landmaking::before { background: #d7efd0;}
 .card--mydesign::before { background: #fde4e0;}
 
-.card--event::after { background: url('../img/bg-event-large.png') center top no-repeat; }
-.card--fish::after { background: url('../img/bg-fish-large.png') center top no-repeat; }
-.card--communication::after { background: url('../img/bg-communication-large.png') center top no-repeat; }
-.card--insect::after { background: url('../img/bg-insect-large.png') center top no-repeat; }
-.card--diy::after { background: url('../img/bg-diy-large.png') center top no-repeat; }
-.card--hha::after { background: url('../img/bg-hha-large.png') center top no-repeat; }
-.card--plant::after { background: url('../img/bg-plant-large.png') center top no-repeat; }
-.card--smartphone::after { background: url('../img/bg-smartphone-large.png') center top no-repeat; }
-.card--money::after { background: url('../img/bg-money-large.png') center top no-repeat; }
-.card--negative::after { background: url('../img/bg-negative-large.png') center top no-repeat; }
-.card--landmaking::after { background: url('../img/bg-landmaking-large.png') center top no-repeat; }
-.card--mydesign::after { background: url('../img/bg-mydesign-large.png') center top no-repeat; }
+.card--event::after { background-image: url('../img/bg-event-large.png'); }
+.card--fish::after { background-image: url('../img/bg-fish-large.png'); }
+.card--communication::after { background-image: url('../img/bg-communication-large.png'); }
+.card--insect::after { background-image: url('../img/bg-insect-large.png'); }
+.card--diy::after { background-image: url('../img/bg-diy-large.png'); }
+.card--hha::after { background-image: url('../img/bg-hha-large.png'); }
+.card--plant::after { background-image: url('../img/bg-plant-large.png'); }
+.card--smartphone::after { background-image: url('../img/bg-smartphone-large.png'); }
+.card--money::after { background-image: url('../img/bg-money-large.png'); }
+.card--negative::after { background-image: url('../img/bg-negative-large.png'); }
+.card--landmaking::after { background-image: url('../img/bg-landmaking-large.png'); }
+.card--mydesign::after { background-image: url('../img/bg-mydesign-large.png'); }
 
 .card__title {
   height: 7rem;

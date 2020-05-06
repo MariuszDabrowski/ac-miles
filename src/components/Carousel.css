@@ -39,8 +39,10 @@
   transition: fill 0.2s;
 }
 
-.carousel__button:hover svg {
-  fill: #435fa3;
+@media(hover: hover) {
+  .carousel__button:hover svg {
+    fill: #435fa3;
+  }
 }
 
 .carousel__button--prev { left: 0; animation: bobLeft 2.5s infinite ease-in-out; }

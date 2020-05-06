@@ -1,4 +1,4 @@
-let randomDate = (from = [2020, 2, 20], to = []) => {
+let randomDate = (from = [2020, 3, 20], to = []) => {
   // Convert months to zero based index
   from[1] -= 1;
   if (to.length) to[1] -= 1;

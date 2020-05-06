@@ -50,9 +50,11 @@ https://flickity.metafizzy.co
   color: #333;
 }
 
-.flickity-button:hover {
-  background: white;
-  cursor: pointer;
+@media(hover: hover) {
+  .flickity-button:hover {
+    background: white;
+    cursor: pointer;
+  }
 }
 
 .flickity-button:focus {
