@@ -19,22 +19,26 @@ const customDates = {
   3: [[3, 21, 2020]], // - island ichthyologist
   4: [[3, 21, 2020]], // - bugs don't bug me
   6: [[3, 24, 2020]], // - flower power
-  10: [[3, 30, 2020]], // - cornering the stalk market
+  9: [[3, 29, 2020]], // - miles for stalkholders
+  10: [[3, 30, 2020], [4, 11, 2020], [4, 18, 2020], [4, 25, 2020], [5, 2, 2020]], // - cornering the stalk market
   11: [[3, 20, 2020]], // - bell ringer
   12: [[3, 21, 2020]], // - first-time buyer
   13: [[3, 20, 2020]], // - seller of unwanted stuff
   14: [[3, 27, 2020]], // - furniture freshener
   15: [[3, 25, 2020]], // - growing collection
-  16: [[3, 20, 2020], [3, 24, 2020], [3, 30, 2020], [4, 9, 2020], [4, 29, 2020], // - shop to it
+  16: [[3, 20, 2020], [3, 24, 2020], [3, 30, 2020], [4, 9, 2020], [4, 29, 2020]], // - shop to it
   21: [[3, 23, 2020], [4, 9, 2020], [5, 9, 2020], [6, 28, 2020], [1, 14, 2021]], // active island resident
   23: [[3, 24, 2020]], // flower tender
+  25: [[7, 1, 2020]], // cicada memories
   26: [[4, 1, 2020]], // flea flicker
   32: [[3, 21, 2020]], // trash fishin'
   33: [[3, 20, 2020]], // - moving fees paid
+  34: [[3, 21, 2020]], // no more loan payments
   37: [[3, 20, 2020]], // - greedy weeder
   39: [[10, 16, 2020], [12, 1, 2020], [5, 1, 2020], [4, 12, 2020], [5, 31, 2020], [12, 2, 2020]], // - golden milestone
   41: [[4, 11, 2020], [7, 11, 2020], [10, 10, 2020], [1, 9, 2021]], // fishing tourney
   42: [[6, 27, 2020], [7, 25, 2020], [8, 22, 2020], [9, 26, 2020]], // bug-off
+  45: [[12, 1, 2020]], // - snowmaestro
   49: [[3, 20, 2020]], // - trashed tools
   53: [[3, 20, 2020]], // (island name) miles
   55: [[3, 20, 2020]], // - have a nice DIY
@@ -53,6 +57,8 @@ const customDates = {
   75: [[3, 20, 2020]], // - island shutterbug
   76: [[3, 20, 2020]], // - nookphone life
   79: [[3, 20, 2020]], // - shady shakedown
+  86: [[3, 31, 2020]], // - (island name) icons
+  88: [[4, 10, 2020]], // - island designer
   89: [[3, 24, 2020]], // - fun with fences
   90: [[4, 27, 2020]], // - faked out
   91: [[4, 26, 2020], [9, 11, 2020], [3, 13, 2021]], // true patron of the arts
