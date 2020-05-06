@@ -9,7 +9,7 @@ import nooki from '../img/nooki.svg';
 window.addEventListener('load', function () {
   setTimeout(() => {
     document.body.classList.add('site-loaded');
-  }, 1000);
+  }, 0);
 })
 
 function Loader() {

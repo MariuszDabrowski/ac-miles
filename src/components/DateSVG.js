@@ -70,6 +70,7 @@ const sessionDates = {};
 // -----------
 // Format date
 // -----------
+// FIX THIS CODE IT'S CONFUSING AS HECK!
 
 function getDate(date, achievement, badgeIndex) {
   let internalID = achievement['Internal ID'];
@@ -107,8 +108,6 @@ function getDate(date, achievement, badgeIndex) {
     month = ('0' + updatedDate[0]).slice(-2);
     day = ('0' + updatedDate[1]).slice(-2);
     year = String(updatedDate[2]).slice(-2);
-
-    sessionDates[internalID] = updatedDate;
   } else {
     // Return date passed
     month = ('0' + date[0]).slice(-2);
