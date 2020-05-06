@@ -31,7 +31,6 @@ class Carousel extends React.Component {
 
     flickity.on('select', (index) => {
       if (this.props.visibility) {
-        console.log('SELECT');
         this.arrowClasses(index, flickity.slides.length - 1);
         window.history.replaceState({}, '', `?achievement=${index}`)
       }
@@ -64,7 +63,6 @@ class Carousel extends React.Component {
   // -----------------------------------------------
 
   arrowClasses = (index, lastIndex) => {
-    // console.log('setting classes: ', index, lastIndex);
     const carousel = document.querySelector('.carousel');
 
     if (index === 0) {

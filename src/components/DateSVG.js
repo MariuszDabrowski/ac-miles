@@ -1,6 +1,6 @@
 import React from 'react';
-import '../css/stamp-text.css';
 import randomDate from '../helpers/randomDate.js';
+import './DateSVG.css';
 
 // Number of days each badge date is incremented from initial badge
 const dateIncrement = [
@@ -97,55 +97,55 @@ function getDate(date, achievement, badgeIndex) {
   return `${month}/${day}/${year}`;
 }
 
-// ---------------
-// Create date SVG
-// ---------------
+// ---------
+// Component
+// ---------
 
-function getDateSVG(category, dateColor, achievement, badgeIndex) {
-  let internalID = achievement['Internal ID'];
+function DateSVG(props) {
+  let internalID = props.achievement['Internal ID'];
   let path = null;
+  let id = `curve-${props.achievement['Internal ID']}-${props.badgeIndex}-${Math.ceil(Math.random() * 100000)}`;
   
   // Create a unique id for each element
 
-  if (category === 'event') {
-    path = <path id={`curve-${category}`} d="M36.8,71.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4"/>;
-  } else if (category === 'fish') {
-    path = <path id={`curve-${category}`} d="M26,117.4h92.1"/>;
-  } else if (category === 'insect') {
-    path = <path id={`curve-${category}`} d="M26,114.4h92.1"/>;
-  } else if (category === 'communication') {
-    path = <path id={`curve-${category}`} d="M36.8,81.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4"/>;
-  } else if (category === 'diy') {
-    path = <path id={`curve-${category}`} d="M26,120.4h92.1"/>;
-  } else if (category === 'hha') {
-    path = <path id={`curve-${category}`} d="M26,118.4h92.1"/>;
-  } else if (category === 'plant') {
-    path = <path id={`curve-${category}`} d="M36.8,74.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4"/>;
-  } else if (category === 'smartphone') {
-    path = <path id={`curve-${category}`} d="M26,122.4h92.1"/>;
-  } else if (category === 'money') {
-    path = <path id={`curve-${category}`} d="M36.8,71.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4"/>;
-  } else if (category === 'negative') {
-    path = <path id={`curve-${category}`} d="M36.8,71.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4"/>;
-  } else if (category === 'landmaking') {
-    path = <path id={`curve-${category}`} d="M26,123.4h92.1"/>;
-  } else if (category === 'mydesign') {
-    path = <path id={`curve-${category}`} d="M24,118.4h92.1"/>;
+  if (props.category === 'event') {
+    path = <path id={id} d="M36.8,71.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4"/>;
+  } else if (props.category === 'fish') {
+    path = <path id={id} d="M26,117.4h92.1"/>;
+  } else if (props.category === 'insect') {
+    path = <path id={id} d="M26,114.4h92.1"/>;
+  } else if (props.category === 'communication') {
+    path = <path id={id} d="M36.8,81.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4"/>;
+  } else if (props.category === 'diy') {
+    path = <path id={id} d="M26,120.4h92.1"/>;
+  } else if (props.category === 'hha') {
+    path = <path id={id} d="M26,118.4h92.1"/>;
+  } else if (props.category === 'plant') {
+    path = <path id={id} d="M36.8,74.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4"/>;
+  } else if (props.category === 'smartphone') {
+    path = <path id={id} d="M26,122.4h92.1"/>;
+  } else if (props.category === 'money') {
+    path = <path id={id} d="M36.8,71.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4"/>;
+  } else if (props.category === 'negative') {
+    path = <path id={id} d="M36.8,71.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4"/>;
+  } else if (props.category === 'landmaking') {
+    path = <path id={id} d="M26,123.4h92.1"/>;
+  } else if (props.category === 'mydesign') {
+    path = <path id={id} d="M24,118.4h92.1"/>;
   }
 
   return (
-    <svg className={`date-svg date-svg--${category}`} style={Object.assign({}, {enableBackground: 'new 0 0 144 144'}, (dateColor) ? {fill: dateColor} : {})} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 144 144" xmlSpace="preserve">
+    <svg className={`date-svg date-svg--${props.category}`} style={Object.assign({}, {enableBackground: 'new 0 0 144 144'}, (props.dateColor) ? {fill: props.dateColor} : {})} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 144 144" xmlSpace="preserve">
       <rect width="144" height="144"/>
       {path}
-      <text width="500">
+      <text>
         <textPath
-        alignmentBaseline="bottom"
-        href={`#curve-${category}`}
+        href={`#${id}`}
         startOffset="50%">
           {
             (customDates.hasOwnProperty(internalID)) ?
-            getDate(customDates[internalID], achievement, badgeIndex) :
-            getDate(randomDate(), achievement, badgeIndex)
+            getDate(customDates[internalID], props.achievement, props.badgeIndex) :
+            getDate(randomDate(), props.achievement, props.badgeIndex)
           }
         </textPath>
       </text>
@@ -153,4 +153,4 @@ function getDateSVG(category, dateColor, achievement, badgeIndex) {
   );
 }
 
-export default getDateSVG;
+export default DateSVG;

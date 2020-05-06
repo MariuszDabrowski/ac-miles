@@ -30,27 +30,33 @@ function Achievements(props) {
   // ----------------------------------
   
   function setupScrollbar() {
-    let scrollingMimic = false;
-    let scrollingAchievements = false;
-    let achievementScrollTimeout = null;
-    let mimicScrollTimeout = null;
+    let diableHoversTimeout;
+    const mimicScrollElement = document.querySelector('.mimic-scroll');
 
     // -----------------------------------
     // Achievement scrolling functionality
     // -----------------------------------
 
     scrollbarAchievements.current.contentWrapperEl.addEventListener('scroll', (e) => {
-      if (scrollingMimic) return;
+
+      // ---------------------------------------------------------------------------------
+      // When scrolling the page add a class to allow us to disable hovers for performance
+      // ---------------------------------------------------------------------------------
+
+      clearTimeout(diableHoversTimeout);
+      document.body.classList.add('disable-hover');
+
+      diableHoversTimeout = setTimeout(function(){
+          document.body.classList.remove('disable-hover');
+      }, 100);
+
+      // ----------------------------------------------------------------------------------
+      // When scrolling the achievements panel, scroll our scrollbar to match it's position
+      // ----------------------------------------------------------------------------------
 
       const scrollPercentage = e.target.scrollTop / (achievementsElement.current.clientHeight - document.body.clientHeight);
       const newScrollPos = (mimicScrollContentElement.current.clientHeight - scrollbarMimic.current.el.clientHeight) * scrollPercentage;
 
-      scrollingAchievements = true;
-
-      window.clearTimeout( achievementScrollTimeout );
-
-      // Set a timeout to run after scrolling ends
-      achievementScrollTimeout = setTimeout( () => { scrollingAchievements = false }, 66 );
       scrollbarMimic.current.contentWrapperEl.scrollTop = newScrollPos;
     });
 
@@ -59,19 +65,17 @@ function Achievements(props) {
     // -----------------------------
 
     scrollbarMimic.current.contentWrapperEl.addEventListener('scroll', (e) => {
-      if (scrollingAchievements) return;
-
-      const scrollPercentage = e.target.scrollTop / (mimicScrollContentElement.current.clientHeight - scrollbarMimic.current.el.clientHeight);
-      const newScrollPos = (achievementsElement.current.clientHeight - document.body.clientHeight) * scrollPercentage;
-
-      scrollingMimic = true;
-
-      window.clearTimeout( mimicScrollTimeout );
-
-      // Set a timeout to run after scrolling ends
-      mimicScrollTimeout = setTimeout( () => { scrollingMimic = false }, 66 );
-    
-      scrollbarAchievements.current.contentWrapperEl.scrollTop = newScrollPos;
+      // Only have the achievements panel mimic scroll when we drag the scrollbar
+      // Otherwise we'll run into situations where both scroll events are fighting against each other
+      // There are tricks around this using timeout, but they cause more problems than they fix
+      // The only downside to this solution is that if you use your scrollwheel over the scrollbar, the achievements panel won't scroll
+      // Because the scrollbar is only 10px in width, this is not a big concern
+      if (mimicScrollElement.classList.contains('simplebar-dragging')) {
+        const scrollPercentage = e.target.scrollTop / (mimicScrollContentElement.current.clientHeight - scrollbarMimic.current.el.clientHeight);
+        const newScrollPos = (achievementsElement.current.clientHeight - document.body.clientHeight) * scrollPercentage;
+      
+        scrollbarAchievements.current.contentWrapperEl.scrollTop = newScrollPos;
+      }
     });
   }
 

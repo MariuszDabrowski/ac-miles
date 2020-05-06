@@ -119,7 +119,7 @@
   pointer-events: none;
   overflow: hidden;
   background: #f1f5f4;
-  background: linear-gradient(to right, #c2cff2 25%, #f4f4f6 25% 75%, #c2cff2 75%);
+  background: linear-gradient(to right, #c2cff2 25%, #f4f4f6 25%, #f4f4f6 75%, #c2cff2 75%);
   border-radius: 1.6rem;
 }
 

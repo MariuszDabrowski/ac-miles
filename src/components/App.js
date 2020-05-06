@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from './Carousel';
 import NookMiles from './NookMiles';
 import Header from './Header';
+import Loader from './Loader';
 import Buttons from './Buttons';
 import Achievements from './Achievements';
 import generateStamps from '../helpers/generateStamps';
@@ -95,6 +96,8 @@ class App extends React.Component {
   render() {
     return (
       <>
+        <Loader />
+
         {this.state.stamps &&
           <Carousel
           carouselIndex={this.state.carouselIndex}
