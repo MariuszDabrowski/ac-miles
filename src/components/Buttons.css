@@ -80,7 +80,11 @@
 .button--b .button__text { padding-top: 0; }
 
 @media (min-width: 768px) {
-  .button { transform: scale(1); }
+  .button { transform: scale(1) translateX(0); }
+
+  .button__text {
+    font-size: 2.6rem;
+  }
 
   .button--g { display: flex; }
 }
