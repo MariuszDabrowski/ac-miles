@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 .card {
@@ -69,11 +68,10 @@
 .card--mydesign::after { background-image: url('../img/bg-mydesign-large.png'); }
 
 .card__title {
-  height: 7rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
   display: flex;
   align-items: flex-end;
-  font-size: 3.2rem;
   color: #5f5228;
   font-weight: 700;
 }
@@ -86,7 +84,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 4rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8rem;
 }
 
 .card__description::before {
@@ -116,7 +114,7 @@
   display: flex;
   align-items: flex-start;
   position: relative;
-  transform: scale(0.48);
+  transform: scale(0.8);
 }
 
 .card-badges--1 .card-badges__track { height: 14.7rem; }
@@ -143,6 +141,12 @@
 
   .card::after {
     background-size: contain;
+  }
+
+  .card__title {
+    height: 7rem;
+    margin-bottom: 3.5rem;
+    font-size: 3.2rem;
   }
 
   .card__description {

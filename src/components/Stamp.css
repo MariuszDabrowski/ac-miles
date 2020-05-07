@@ -28,7 +28,7 @@
 .stamp-reward--plant { background-color: #5CBB5F; }
 .stamp-reward--smartphone { background-color: #8A7BD0; }
 .stamp-reward--money { background-color: #B4AA28; }
-.stamp-reward--negative { background-color: #714C82; }
+.stamp-reward--negative { background-color: #7f73ba; }
 .stamp-reward--landmaking { background-color: #4fae6a; }
 .stamp-reward--mydesign { background-color: #eb8396; }
 
@@ -52,7 +52,7 @@
 .stamp-reward--plant::after { border-color: #5CBB5F; }
 .stamp-reward--smartphone::after { border-color: #8A7BD0; }
 .stamp-reward--money::after { border-color: #B4AA28; }
-.stamp-reward--negative::after { border-color: #714C82; }
+.stamp-reward--negative::after { border-color: #7f73ba; }
 .stamp-reward--landmaking::after { border-color: #4fae6a; }
 .stamp-reward--mydesign::after { border-color: #eb8396; }
 
@@ -60,6 +60,31 @@
   color: #f5f8e4;
   margin-right: 0.4rem;
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .stamp-reward::after {
+    border-width: 0.5rem;
+  }
+
+  .stamp-wrapper:nth-child(odd) .stamp-reward {
+    top: auto;
+    bottom: calc(100% + 2rem);
+  }
+
+  .stamp-wrapper:nth-child(even) .stamp-reward {
+    bottom: auto;
+    top: calc(100% + 9rem);
+  }
+
+  .stamp-wrapper:nth-child(even) .stamp-reward::after {
+    top: auto;
+    bottom: 100%;
+  }
+
+  .stamp-wrapper:nth-child(even) .stamp-reward::after {
+    height: 10rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -171,7 +196,7 @@
 .card-badges--5 .stamp-wrapper--1 { transform: translate(-260%, -50%); }
 .card-badges--5 .stamp-wrapper--2 { transform: translate(-155%, -50%); }
 .card-badges--5 .stamp-wrapper--3 { transform: translate(-51%, -50%); }
-.card-badges--5 .stamp-wrapper--4 { transform: translate(52%, -50%); }
+.card-badges--5 .stamp-wrapper--4 { transform: translate(48%, -50%); }
 .card-badges--5 .stamp-wrapper--5 { transform: translate(159%, -50%); }
 
 .card-badges--5 .stamp--1 { transform: translate(2%, 0%) rotate(8deg); }

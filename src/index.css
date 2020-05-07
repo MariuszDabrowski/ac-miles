@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 30%;
+  -webkit-text-size-adjust: none;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */

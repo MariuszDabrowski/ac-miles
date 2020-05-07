@@ -134,24 +134,26 @@
 
 .stamp-wrapper__tier {
   text-align: center;
-  font-size: 5.2rem;
+  font-size: 2.5rem;
   font-weight: 700;
+  position: relative;
+  z-index: 10;
 }
 
 .stamp-wrapper__tier--1 { margin-top: -0.4rem; }
 
-.stamp-wrapper__tier--event { color: #f5a280; text-shadow: -0.2rem -0.2rem 0 #ffe0de, 0.2rem -0.2rem 0 #ffe0de, -0.2rem 0.2rem 0 #ffe0de, 0.2rem 0.2rem 0 #ffe0de; }
-.stamp-wrapper__tier--fish { color: #2cc6c4; text-shadow: -0.2rem -0.2rem 0 #c0eae8, 0.2rem -0.2rem 0 #c0eae8, -0.2rem 0.2rem 0 #c0eae8, 0.2rem 0.2rem 0 #c0eae8; }
-.stamp-wrapper__tier--communication { color: #eda80f; text-shadow: -0.2rem -0.2rem 0 #fbf2b0, 0.2rem -0.2rem 0 #fbf2b0, -0.2rem 0.2rem 0 #fbf2b0, 0.2rem 0.2rem 0 #fbf2b0; }
-.stamp-wrapper__tier--insect { color: #a2c312; text-shadow: -0.2rem -0.2rem 0 #f4ffb1, 0.2rem -0.2rem 0 #f4ffb1, -0.2rem 0.2rem 0 #f4ffb1, 0.2rem 0.2rem 0 #f4ffb1; }
-.stamp-wrapper__tier--diy { color: #ba9f3e; text-shadow: -0.2rem -0.2rem 0 #fbf2c7, 0.2rem -0.2rem 0 #fbf2c7, -0.2rem 0.2rem 0 #fbf2c7, 0.2rem 0.2rem 0 #fbf2c7; }
-.stamp-wrapper__tier--hha { color: #d1bd4a; text-shadow: -0.2rem -0.2rem 0 #f4edb7, 0.2rem -0.2rem 0 #f4edb7, -0.2rem 0.2rem 0 #f4edb7, 0.2rem 0.2rem 0 #f4edb7; }
-.stamp-wrapper__tier--plant { color: #70b86e; text-shadow: -0.2rem -0.2rem 0 #caeaaa, 0.2rem -0.2rem 0 #caeaaa, -0.2rem 0.2rem 0 #caeaaa, 0.2rem 0.2rem 0 #caeaaa; }
-.stamp-wrapper__tier--smartphone { color: #8982c4; text-shadow: -0.2rem -0.2rem 0 #beddef, 0.2rem -0.2rem 0 #beddef, -0.2rem 0.2rem 0 #beddef, 0.2rem 0.2rem 0 #beddef; }
-.stamp-wrapper__tier--money { color: #b7b30c; text-shadow: -0.2rem -0.2rem 0 #f8fa9d, 0.2rem -0.2rem 0 #f8fa9d, -0.2rem 0.2rem 0 #f8fa9d, 0.2rem 0.2rem 0 #f8fa9d; }
-.stamp-wrapper__tier--negative { color: #7b5189; text-shadow: -0.2rem -0.2rem 0 #cacdf3, 0.2rem -0.2rem 0 #cacdf3, -0.2rem 0.2rem 0 #cacdf3, 0.2rem 0.2rem 0 #cacdf3; }
-.stamp-wrapper__tier--landmaking { color: #43a18d; text-shadow: -0.2rem -0.2rem 0 #c3ecc2, 0.2rem -0.2rem 0 #c3ecc2, -0.2rem 0.2rem 0 #c3ecc2, 0.2rem 0.2rem 0 #c3ecc2; }
-.stamp-wrapper__tier--mydesign { color: #ef5e78; text-shadow: -0.2rem -0.2rem 0 #ffe4e2, 0.2rem -0.2rem 0 #ffe4e2, -0.2rem 0.2rem 0 #ffe4e2, 0.2rem 0.2rem 0 #ffe4e2; }
+.stamp-wrapper__tier--event { color: #f5a280; text-shadow: -0.4rem -0.4rem 0 #ffe0de, 0.4rem -0.4rem 0 #ffe0de, -0.4rem 0.4rem 0 #ffe0de, 0.4rem 0.4rem 0 #ffe0de; }
+.stamp-wrapper__tier--fish { color: #2cc6c4; text-shadow: -0.4rem -0.4rem 0 #c0eae8, 0.4rem -0.4rem 0 #c0eae8, -0.4rem 0.4rem 0 #c0eae8, 0.4rem 0.4rem 0 #c0eae8; }
+.stamp-wrapper__tier--communication { color: #eda80f; text-shadow: -0.4rem -0.4rem 0 #fbf2b0, 0.4rem -0.4rem 0 #fbf2b0, -0.4rem 0.4rem 0 #fbf2b0, 0.4rem 0.4rem 0 #fbf2b0; }
+.stamp-wrapper__tier--insect { color: #a2c312; text-shadow: -0.4rem -0.4rem 0 #f4ffb1, 0.4rem -0.4rem 0 #f4ffb1, -0.4rem 0.4rem 0 #f4ffb1, 0.4rem 0.4rem 0 #f4ffb1; }
+.stamp-wrapper__tier--diy { color: #ba9f3e; text-shadow: -0.4rem -0.4rem 0 #fbf2c7, 0.4rem -0.4rem 0 #fbf2c7, -0.4rem 0.4rem 0 #fbf2c7, 0.4rem 0.4rem 0 #fbf2c7; }
+.stamp-wrapper__tier--hha { color: #d1bd4a; text-shadow: -0.4rem -0.4rem 0 #f4edb7, 0.4rem -0.4rem 0 #f4edb7, -0.4rem 0.4rem 0 #f4edb7, 0.4rem 0.4rem 0 #f4edb7; }
+.stamp-wrapper__tier--plant { color: #70b86e; text-shadow: -0.4rem -0.4rem 0 #caeaaa, 0.4rem -0.4rem 0 #caeaaa, -0.4rem 0.4rem 0 #caeaaa, 0.4rem 0.4rem 0 #caeaaa; }
+.stamp-wrapper__tier--smartphone { color: #8982c4; text-shadow: -0.4rem -0.4rem 0 #beddef, 0.4rem -0.4rem 0 #beddef, -0.4rem 0.4rem 0 #beddef, 0.4rem 0.4rem 0 #beddef; }
+.stamp-wrapper__tier--money { color: #b7b30c; text-shadow: -0.4rem -0.4rem 0 #f8fa9d, 0.4rem -0.4rem 0 #f8fa9d, -0.4rem 0.4rem 0 #f8fa9d, 0.4rem 0.4rem 0 #f8fa9d; }
+.stamp-wrapper__tier--negative { color: #7b5189; text-shadow: -0.4rem -0.4rem 0 #cacdf3, 0.4rem -0.4rem 0 #cacdf3, -0.4rem 0.4rem 0 #cacdf3, 0.4rem 0.4rem 0 #cacdf3; }
+.stamp-wrapper__tier--landmaking { color: #43a18d; text-shadow: -0.4rem -0.4rem 0 #c3ecc2, 0.4rem -0.4rem 0 #c3ecc2, -0.4rem 0.4rem 0 #c3ecc2, 0.4rem 0.4rem 0 #c3ecc2; }
+.stamp-wrapper__tier--mydesign { color: #ef5e78; text-shadow: -0.4rem -0.4rem 0 #ffe4e2, 0.4rem -0.4rem 0 #ffe4e2, -0.4rem 0.4rem 0 #ffe4e2, 0.4rem 0.4rem 0 #ffe4e2; }
 
 .achievement__spaces .stamp-wrapper__tier { display: none; }
 
@@ -159,4 +161,17 @@
   .stamp-wrapper__tier {
     font-size: 2.2rem;
   }
+
+  .stamp-wrapper__tier--event { color: #f5a280; text-shadow: -0.2rem -0.2rem 0 #ffe0de, 0.2rem -0.2rem 0 #ffe0de, -0.2rem 0.2rem 0 #ffe0de, 0.2rem 0.2rem 0 #ffe0de; }
+  .stamp-wrapper__tier--fish { color: #2cc6c4; text-shadow: -0.2rem -0.2rem 0 #c0eae8, 0.2rem -0.2rem 0 #c0eae8, -0.2rem 0.2rem 0 #c0eae8, 0.2rem 0.2rem 0 #c0eae8; }
+  .stamp-wrapper__tier--communication { color: #eda80f; text-shadow: -0.2rem -0.2rem 0 #fbf2b0, 0.2rem -0.2rem 0 #fbf2b0, -0.2rem 0.2rem 0 #fbf2b0, 0.2rem 0.2rem 0 #fbf2b0; }
+  .stamp-wrapper__tier--insect { color: #a2c312; text-shadow: -0.2rem -0.2rem 0 #f4ffb1, 0.2rem -0.2rem 0 #f4ffb1, -0.2rem 0.2rem 0 #f4ffb1, 0.2rem 0.2rem 0 #f4ffb1; }
+  .stamp-wrapper__tier--diy { color: #ba9f3e; text-shadow: -0.2rem -0.2rem 0 #fbf2c7, 0.2rem -0.2rem 0 #fbf2c7, -0.2rem 0.2rem 0 #fbf2c7, 0.2rem 0.2rem 0 #fbf2c7; }
+  .stamp-wrapper__tier--hha { color: #d1bd4a; text-shadow: -0.2rem -0.2rem 0 #f4edb7, 0.2rem -0.2rem 0 #f4edb7, -0.2rem 0.2rem 0 #f4edb7, 0.2rem 0.2rem 0 #f4edb7; }
+  .stamp-wrapper__tier--plant { color: #70b86e; text-shadow: -0.2rem -0.2rem 0 #caeaaa, 0.2rem -0.2rem 0 #caeaaa, -0.2rem 0.2rem 0 #caeaaa, 0.2rem 0.2rem 0 #caeaaa; }
+  .stamp-wrapper__tier--smartphone { color: #8982c4; text-shadow: -0.2rem -0.2rem 0 #beddef, 0.2rem -0.2rem 0 #beddef, -0.2rem 0.2rem 0 #beddef, 0.2rem 0.2rem 0 #beddef; }
+  .stamp-wrapper__tier--money { color: #b7b30c; text-shadow: -0.2rem -0.2rem 0 #f8fa9d, 0.2rem -0.2rem 0 #f8fa9d, -0.2rem 0.2rem 0 #f8fa9d, 0.2rem 0.2rem 0 #f8fa9d; }
+  .stamp-wrapper__tier--negative { color: #7b5189; text-shadow: -0.2rem -0.2rem 0 #cacdf3, 0.2rem -0.2rem 0 #cacdf3, -0.2rem 0.2rem 0 #cacdf3, 0.2rem 0.2rem 0 #cacdf3; }
+  .stamp-wrapper__tier--landmaking { color: #43a18d; text-shadow: -0.2rem -0.2rem 0 #c3ecc2, 0.2rem -0.2rem 0 #c3ecc2, -0.2rem 0.2rem 0 #c3ecc2, 0.2rem 0.2rem 0 #c3ecc2; }
+  .stamp-wrapper__tier--mydesign { color: #ef5e78; text-shadow: -0.2rem -0.2rem 0 #ffe4e2, 0.2rem -0.2rem 0 #ffe4e2, -0.2rem 0.2rem 0 #ffe4e2, 0.2rem 0.2rem 0 #ffe4e2; }
 }

@@ -1,10 +1,12 @@
 .title-with-icon {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
 }
 
 .title-icon {
   width: 2.4rem;
   margin-left: 1rem;
+  display: block;
 }
 
 .card .title-icon {

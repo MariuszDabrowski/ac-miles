@@ -12,12 +12,88 @@
 }
 
 .site-loaded .loader {
-  top: -9999px;
-  left: -9999px;
   opacity: 0;
-  transition: opacity 1s, top 0s 1s, left 0s 1s;
+  transition: opacity 1s;
+}
+
+.loader--hidden {
+  display: none;
+}
+
+.nooki-wrapper {
+  position: relative;
 }
 
 .nooki {
-  width: 100px;
+  width: 7rem;
+  position: relative;
+  animation: nookiBounce 0.5s infinite cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.nooki__tail {
+  width: 30%;
+  position: absolute;
+  top: 8%;
+  right: 94%;
+  animation: tailRotation 0.5s infinite cubic-bezier(0.45, 0, 0.55, 1);
+  transform-origin: 3rem 2rem;
+}
+
+.nooki__body {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.nooki__body__body,
+.nooki__body__eye,
+.nooki__foot-back,
+.nooki__foot-front,
+.nooki__tail__base {fill:#4D3F36;}
+.nooki__body__mask,
+.nooki__tail__highlight {fill:#E2C755;}
+.nooki__body__inner-ear{fill:#877B5D;}
+
+.nooki__foot-back {
+  width: 32%;
+  position: absolute;
+  top: 68%;
+  left: 8%;
+  animation: backFootAnim 0.5s infinite cubic-bezier(0.45, 0, 0.55, 1);
+  transform-origin: 1.6rem -1rem;
+}
+
+.nooki__foot-front {
+  width: 34%;
+  position: absolute;
+  top: 62%;
+  right: 20%;
+  animation: frontFootAnim 0.5s infinite cubic-bezier(0.45, 0, 0.55, 1);
+  transform-origin: 1rem -1.5rem;
+}
+
+@keyframes backFootAnim {
+  0% { transform: rotate(-35deg); }
+  55% { transform: rotate(35deg); }
+  65% { transform: rotate(35deg); }
+  100% { transform: rotate(-35deg); }
+}
+
+@keyframes frontFootAnim {
+  0% { transform: rotate(10deg); }
+  55% { transform: rotate(-20deg); }
+  65% { transform: rotate(-20deg); }
+  100% { transform: rotate(10deg); }
+}
+
+@keyframes tailRotation {
+  0% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
+}
+
+@keyframes nookiBounce {
+  0% { transform: translateY(2rem); }
+  50% { transform: translateY(0); }
+  100% { transform: translateY(2rem); }
 }
