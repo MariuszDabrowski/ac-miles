@@ -24,7 +24,7 @@ function Buttons(props) {
         <span className="button__icon">
           <span className="button__icon__text">G</span>
         </span>
-        <span className="button__text">Github</span>
+        <span className="button__text">GitHub</span>
         <img className="button__bg" src={buttonBg} alt=""/>
       </a>
 
