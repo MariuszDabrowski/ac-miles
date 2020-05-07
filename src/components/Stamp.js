@@ -7,8 +7,11 @@ import DateSVG from './DateSVG';
 
 class Stamp extends React.Component {
   render () {
+    let rewardValue = this.props.achievement[`Reward Tier ${this.props.i + 1}`];
+
     return (
       <div className={`stamp-wrapper stamp-wrapper--${this.props.i + 1}`} key={`${this.props.achievement['Unique Entry ID']}-${this.props.i}`}>
+        { rewardValue && <div className={`stamp-reward stamp-reward--${this.props.achievement['Internal Category'].toLowerCase()}`}><span className="stamp-reward__value">{ rewardValue.toLocaleString('US-EN') }</span>Miles</div> }
         <div className={`stamp  stamp--${this.props.i + 1}`}>
           {
           customStampsMap.hasOwnProperty(this.props.achievement['Internal ID']) ?

@@ -1,3 +1,67 @@
+/* ------------------- */
+/* Stamp reward bubble */
+/* ------------------- */
+
+.stamp-reward {
+  position: absolute;
+  bottom: calc(100% + 0.6rem);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4rem;
+  padding: 0.6rem 1.6rem 0.4rem;
+  font-size: 1.6rem;
+  color: rgba(245,248,228, 0.7);
+  display: flex;
+  white-space: nowrap;
+}
+
+.achievements .stamp-reward {
+  display: none;
+}
+
+.stamp-reward--event { background-color: #E89469; }
+.stamp-reward--fish { background-color: #33B3B4; }
+.stamp-reward--insect { background-color: #99BD2B; }
+.stamp-reward--communication { background-color: #f1a400; }
+.stamp-reward--diy { background-color: #C3963E; }
+.stamp-reward--hha { background-color: #C5B058; }
+.stamp-reward--plant { background-color: #5CBB5F; }
+.stamp-reward--smartphone { background-color: #8A7BD0; }
+.stamp-reward--money { background-color: #B4AA28; }
+.stamp-reward--negative { background-color: #714C82; }
+.stamp-reward--landmaking { background-color: #4fae6a; }
+.stamp-reward--mydesign { background-color: #eb8396; }
+
+.stamp-reward::after {
+  content: '';
+  width: 0;
+  height: 2rem;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 0.4rem dashed #399e5f;
+}
+
+.stamp-reward--event::after { border-color: #E89469; }
+.stamp-reward--fish::after { border-color: #33B3B4; }
+.stamp-reward--insect::after { border-color: #99BB2A; }
+.stamp-reward--communication::after { border-color: #f1a400; }
+.stamp-reward--diy::after { border-color: #C3963E; }
+.stamp-reward--hha::after { border-color: #C5B058; }
+.stamp-reward--plant::after { border-color: #5CBB5F; }
+.stamp-reward--smartphone::after { border-color: #8A7BD0; }
+.stamp-reward--money::after { border-color: #B4AA28; }
+.stamp-reward--negative::after { border-color: #714C82; }
+.stamp-reward--landmaking::after { border-color: #4fae6a; }
+.stamp-reward--mydesign::after { border-color: #eb8396; }
+
+.stamp-reward__value {
+  color: #f5f8e4;
+  margin-right: 0.4rem;
+  font-weight: 700;
+}
+
 /* ------------------------------- */
 /* Stamps on the main listing page */
 /* ------------------------------- */
@@ -80,9 +144,9 @@
 .card-badges--2 .stamp--1 { transform: translate(1%, -2%) rotate(-3deg); }
 .card-badges--2 .stamp--2 { transform: translate(0%, -1%) rotate(0deg); }
 
-.card-badges--3 .stamp-wrapper--1 { transform: translate(-167%, -50%); }
-.card-badges--3 .stamp-wrapper--2 { transform: translate(-50%, -50%); }
-.card-badges--3 .stamp-wrapper--3 { transform: translate(66%, -50%); }
+.card-badges--3 .stamp-wrapper--1 { transform: translate(-172%, -50%); }
+.card-badges--3 .stamp-wrapper--2 { transform: translate(-46%, -50%); }
+.card-badges--3 .stamp-wrapper--3 { transform: translate(68%, -50%); }
 
 .card-badges--3 .stamp--1 { transform: translate(4%, 0%) rotate(13deg); }
 .card-badges--3 .stamp--2 { transform: translate(-5%, 0%) rotate(-8deg); }

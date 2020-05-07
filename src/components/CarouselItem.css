@@ -103,9 +103,8 @@
 .card__description__nook {
   width: 8.1rem;
   height: 7.6rem;
-  background: red;
   position: absolute;
-  bottom: 0;
+  bottom: 2rem;
   right: -1rem;
   background: url('../img/nook-face.svg') center no-repeat;
   background-size: 100%;

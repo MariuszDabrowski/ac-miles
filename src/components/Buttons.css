@@ -64,7 +64,8 @@
 }
 
 @media(hover: hover) {
-  .button:hover .button__icon { background: #435fa3; }
+  .button:hover .button__icon,
+  .button:focus .button__icon { background: #435fa3; }
 }
 
 .button__text {
@@ -74,4 +75,9 @@
   display: block;
 }
 
+.button--g { display: none; }
 .button--b .button__text { padding-top: 0; }
+
+@media (min-width: 768px) {
+  .button--g { display: flex; }
+}
