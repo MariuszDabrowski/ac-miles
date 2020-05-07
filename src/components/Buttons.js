@@ -20,7 +20,7 @@ function Buttons(props) {
         </button>
       }
 
-      <a href="http://github.com" target="_blank" rel="noopener noreferrer" className="button button--g">
+      <a href="https://github.com/MariuszDabrowski/ac-miles" target="_blank" rel="noopener noreferrer" className="button button--g">
         <span className="button__icon">
           <span className="button__icon__text">G</span>
         </span>
