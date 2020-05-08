@@ -1,68 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## AC Miles
 
-## Available Scripts
+Achievement visualizer for [Animal Crossing: New Horizons](https://www.animal-crossing.com/new-horizons/).
 
-In the project directory, you can run:
+All achievements up the the latest `1.2.0a` version of the game are present.
 
-### `npm start`
+<img src="https://acmiles.com/site-thumb-1200x600.jpg" width="600">
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Fun facts about the site
 
-### `npm test`
+- The dates on the stamps are all dynamic and are generated to reflect how they would be achieved in the game to a certain degree of realism.
+- The Nook Miles counter in the top right hand corner let's you know how many miles you would recieve if you were to complete all nook miles challenges.
+- The new tab appears on achievements that are new to the latest version of the game.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+## Assets
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The assets are all based on the original assets found in [Animal Crossing: New Horizons](https://www.animal-crossing.com/new-horizons/). I did not design these assets. However I did spend many days recreating these assets from scratch. If you would like to to use these assets on your own website feel free to do so, I just ask that you please provide a link back to [AC Miles](https://acmiles.com) for all the effort.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Data
 
-### `npm run eject`
+The initial data for the achievements came from [this wonderful Google spreadsheet](https://docs.google.com/spreadsheets/d/13d_LAJPlxMa_DubPTuirkIV4DERBMXbrWQsmSh8ReK4/edit?usp=sharing) that is being maintained by many amazing community.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Running the project locally
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This project was created using [React Create App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) with 2 additional plugins.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. [Flickity](https://flickity.metafizzy.co/) - for the carousel functionality
+2. [Simplebar](https://github.com/Grsmto/simplebar) - for styling the custom scrollbar
 
-## Learn More
+#### To start the project locally:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Clone the project
+- `npm run install`
+- `npm run start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### To build the project:
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- `npm run build`
