@@ -1,29 +1,18 @@
 ## AC Miles
 
-Achievement visualizer for Animal Crossing: New Horizons.
+Achievement visualizer for [Animal Crossing: New Horizons](https://www.animal-crossing.com/new-horizons/).
 
-All achievements up the the latest `1.2.0a` version of the game are present. When future updates are released I will update the site to reflect the new achievements.
+All achievements up the the latest `1.2.0a` version of the game are present.
 
 <img src="https://acmiles.com/site-thumb-1200x600.jpg" width="600">
 
 <br>
 
-## Running the project locally
+## Fun facts about the site
 
-This project was created using [React Create App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) with 2 additional plugins.
-
-1. [Flickity](https://flickity.metafizzy.co/) - for the carousel functionality
-2. [Simplebar](https://github.com/Grsmto/simplebar) - for styling the custom scrollbar
-
-To start the project locally:
-
-- Clone the project
-- `npm run install`
-- `npm run dev`
-
-To build the project:
-
-- `npm run build`
+- The dates on the stamps are all dynamic and are generated to reflect how they would be achieved in the game to a certain degree of realism.
+- The Nook Miles counter in the top right hand corner let's you know how many miles you would recieve if you were to complete all nook miles challenges.
+- The new tab appears on achievements that are new to the latest version of the game.
 
 <br>
 
@@ -39,8 +28,19 @@ The initial data for the achievements came from [this wonderful Google spreadshe
 
 <br>
 
-## Fun facts about the site
+## Running the project locally
 
-- The dates on the stamps are all dynamic and are generated to reflect how they would be achieved in the game to a certain degree of realism.
-- The Nook Miles counter in the top right hand corner let's you know how many miles you would recieve if you were to complete all nook miles challenges.
-- The new tab appears on achievements that are new to the latest version of the game.
+This project was created using [React Create App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) with 2 additional plugins.
+
+1. [Flickity](https://flickity.metafizzy.co/) - for the carousel functionality
+2. [Simplebar](https://github.com/Grsmto/simplebar) - for styling the custom scrollbar
+
+#### To start the project locally:
+
+- Clone the project
+- `npm run install`
+- `npm run dev`
+
+#### To build the project:
+
+- `npm run build`
