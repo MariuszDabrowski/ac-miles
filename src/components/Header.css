@@ -8,3 +8,34 @@
   background-size: contain;
   z-index: 100;
 }
+
+.logo-wrapper {
+  width: 36rem;
+  height: 50px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  width: 8.4rem;
+  height: 8.4rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -4.5rem;
+  transform: translateY(-50%);
+  background: #eae5d0 url('../img/nooki-circle.svg') center bottom no-repeat;
+  opacity: 0.5;
+}
+
+@media (min-width: 376px) {
+  .logo-wrapper { width: 75rem; }
+  .logo { left: 3rem; }
+}
+
+@media (min-width: 562px) {
+  .logo-wrapper { width: 114.2rem; }
+  .logo { left: -1.2rem; }
+}

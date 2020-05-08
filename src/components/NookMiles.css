@@ -1,11 +1,11 @@
 .nook-miles {
   position: absolute;
   top: 2rem;
-  right: 50%;
+  right: 3.4rem;
   background: url('../img/nook-miles-bg.svg') center no-repeat;
   width: 19rem;
   height: 10.7rem;
-  transform: translateX(50%) rotate(3deg);
+  transform: rotate(3deg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,8 +14,6 @@
 
 @media (min-width: 768px) {
   .nook-miles {
-    right: 3.4rem;
-    transform: rotate(3deg);
     z-index: 1000;
   }
 }
