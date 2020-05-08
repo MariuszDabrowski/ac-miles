@@ -76,15 +76,18 @@ class App extends React.Component {
   // ---------------
   
   toggleCarousel = () => {
-    if (this.state.carouselActive) {
-      window.history.replaceState({}, '', window.location.pathname)
-    }
-
-    this.setState({ carouselActive: (this.state.carouselActive) ? false : true });
-
-    // If the user was using the keyboard to navigate, put the focus back to where it was before the carousel opened
     const hadFocus = document.querySelector('.had-focus-before-carousel');
-    if (hadFocus) hadFocus.focus();
+    const achievements = document.querySelector('.achievements');
+
+    if (this.state.carouselActive) window.history.replaceState({}, '', window.location.pathname);
+    this.setState({ carouselActive: (this.state.carouselActive) ? false : true }, () => {
+      // If the user was using the keyboard to navigate, put the focus back to where it was before the carousel opened
+      if (hadFocus) {
+        hadFocus.focus();
+      } else {
+        achievements.focus();
+      }
+    });
   }
 
   // ------------------

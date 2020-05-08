@@ -63,9 +63,12 @@ class AchievementsItem extends React.Component {
       }}
       onKeyDown={(e) => {
         if (e.key === 'Enter') {
+          const carousel = document.querySelector('.carousel');
           const previousFocusedDiv = document.querySelector('.had-focus-before-carousel');
           if (previousFocusedDiv) previousFocusedDiv.classList.remove('had-focus-before-carousel');
           e.target.classList.add('had-focus-before-carousel');
+          setTimeout(() => carousel.focus(), 0);
+          console.log(document.activeElement);
           this.props.setCarouselIndex(this.props.index);
         }
       }}
