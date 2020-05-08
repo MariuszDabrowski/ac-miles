@@ -63,26 +63,28 @@
 }
 
 @media (max-width: 768px) {
+  .stamp-reward {
+    padding: 0.6rem 2.5rem 0.4rem;
+  }
+  
   .stamp-reward::after {
     border-width: 0.5rem;
+    height: 10rem;
   }
 
   .stamp-wrapper:nth-child(odd) .stamp-reward {
     top: auto;
-    bottom: calc(100% + 2rem);
+    bottom: calc(100% + 7rem);
   }
 
   .stamp-wrapper:nth-child(even) .stamp-reward {
     bottom: auto;
-    top: calc(100% + 9rem);
+    top: calc(100% + 7rem);
   }
 
   .stamp-wrapper:nth-child(even) .stamp-reward::after {
     top: auto;
     bottom: 100%;
-  }
-
-  .stamp-wrapper:nth-child(even) .stamp-reward::after {
     height: 10rem;
   }
 }

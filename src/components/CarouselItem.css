@@ -84,7 +84,8 @@
   align-items: center;
   justify-content: center;
   padding: 0 4rem;
-  margin-bottom: 8rem;
+  margin-bottom: 14rem;
+  max-width: 80rem;
 }
 
 .card__description::before {
@@ -152,6 +153,7 @@
   .card__description {
     height: 24.7rem;
     width: 78.2rem;
+    max-width: none;
     padding: 0 7.5rem;
     margin-bottom: 0;
   }

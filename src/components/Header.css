@@ -10,8 +10,7 @@
 }
 
 .logo-wrapper {
-  width: 36rem;
-  height: 50px;
+  width: 75rem;
   position: absolute;
   top: 45%;
   left: 50%;
@@ -24,15 +23,10 @@
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  left: -4.5rem;
+  left: 3rem;
   transform: translateY(-50%);
   background: #eae5d0 url('../img/nooki-circle.svg') center bottom no-repeat;
   opacity: 0.5;
-}
-
-@media (min-width: 376px) {
-  .logo-wrapper { width: 75rem; }
-  .logo { left: 3rem; }
 }
 
 @media (min-width: 562px) {
