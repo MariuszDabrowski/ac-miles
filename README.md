@@ -39,7 +39,7 @@ This project was created using [React Create App](https://reactjs.org/docs/creat
 
 - Clone the project
 - `npm run install`
-- `npm run dev`
+- `npm run start`
 
 #### To build the project:
 
