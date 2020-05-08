@@ -29,7 +29,7 @@
   border: 0;
   background: transparent;
   outline: none;
-  transform: scale(1.2) translateX(-2rem);
+  transform: translate(-2rem, -2rem);
 }
 
 .button__bg {
