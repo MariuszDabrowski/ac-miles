@@ -56,7 +56,11 @@ class AchievementsItem extends React.Component {
     return (
       <div
       className={`achievement achievement--${this.props.data['Internal Category'].toLowerCase()}`}
-      onClick={() => this.props.setCarouselIndex(this.props.index)}
+      onClick={() => {
+        const previousFocusedDiv = document.querySelector('.had-focus-before-carousel');
+        if (previousFocusedDiv) previousFocusedDiv.classList.remove('had-focus-before-carousel');
+        this.props.setCarouselIndex(this.props.index)
+      }}
       onKeyDown={(e) => {
         if (e.key === 'Enter') {
           const previousFocusedDiv = document.querySelector('.had-focus-before-carousel');

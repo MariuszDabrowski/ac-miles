@@ -51,6 +51,11 @@ class App extends React.Component {
       if ((e.keyCode === 27 || e.keyCode === 66) && this.state.carouselActive) {
         this.toggleCarousel();
       }
+
+      // When in the carousel prevent the user from tabbing, they can use arrows + esc to navigate around
+      if (e.keyCode === 9 && this.state.carouselActive) {
+        e.preventDefault();
+      }
     });
   }
 
