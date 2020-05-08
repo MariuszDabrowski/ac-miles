@@ -18,7 +18,7 @@ class Stamp extends React.Component {
           <>
             <img
             src={customStampsMap[`${this.props.achievement['Internal ID']}`].stamps[this.props.i]}
-            alt=""
+            alt={`${this.props.achievement.Name} stamp`}
             className="stamp__image" />
   
             <DateSVG
@@ -31,7 +31,7 @@ class Stamp extends React.Component {
           <>
             <img
             src={stampImages[`${this.props.achievement['Internal Category'].toLowerCase()}`]}
-            alt=""
+            alt={`${this.props.achievement.Name} stamp`}
             className="stamp__image" />
   
             <DateSVG

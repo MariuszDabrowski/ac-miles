@@ -57,6 +57,14 @@ class AchievementsItem extends React.Component {
       <div
       className={`achievement achievement--${this.props.data['Internal Category'].toLowerCase()}`}
       onClick={() => this.props.setCarouselIndex(this.props.index)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter') {
+          const previousFocusedDiv = document.querySelector('.had-focus-before-carousel');
+          if (previousFocusedDiv) previousFocusedDiv.classList.remove('had-focus-before-carousel');
+          e.target.classList.add('had-focus-before-carousel');
+          this.props.setCarouselIndex(this.props.index);
+        }
+      }}
       tabIndex="0">
         { this.props.data['Version'] === this.props.version && <div className="achievement__new">New!</div> }
         <div className="achievement__title">{ getTitleIcon(this.props.data.Name) || this.props.data.Name }</div>
@@ -64,7 +72,7 @@ class AchievementsItem extends React.Component {
           {this.props.stamps}
           <img
           className="achievement__spaces-svg"
-          alt=""
+          alt={`${this.props.data.Name} stamp`}
           src={awardTracks[this.props.data['Num of Tiers']][isSequential]} />
         </div>
       </div>

@@ -43,7 +43,7 @@ class NookMiles extends React.Component {
     return (
       <div className="nook-miles">
         <div className="nook-miles__icon">
-          <img src={nookIcon} alt=""/>
+          <img src={nookIcon} alt="Nook miles icon"/>
         </div>
         <div className="nook-miles__count">{this.state.miles}</div>
       </div>

@@ -62,7 +62,7 @@ class CarouselItem extends React.Component {
           </div>
           <div className={`card-badges card-badges--${this.props.data['Num of Tiers']}`}>
             {this.props.stamps}
-            <img src={trackImage} alt="" className="card-badges__track" />
+            <img src={trackImage} alt={`${this.props.data.Name} achievements path`} className="card-badges__track" />
           </div>
         </div>
       </div>

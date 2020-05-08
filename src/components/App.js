@@ -76,6 +76,10 @@ class App extends React.Component {
     }
 
     this.setState({ carouselActive: (this.state.carouselActive) ? false : true });
+
+    // If the user was using the keyboard to navigate, put the focus back to where it was before the carousel opened
+    const hadFocus = document.querySelector('.had-focus-before-carousel');
+    if (hadFocus) hadFocus.focus();
   }
 
   // ------------------

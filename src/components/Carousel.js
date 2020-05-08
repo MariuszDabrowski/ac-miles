@@ -113,6 +113,7 @@ class Carousel extends React.Component {
           );
         })}
         <div
+        aria-label="Previous slide"
         className={`carousel__button carousel__button--prev`}
         onClick={() => (this.state.flickity) ? this.state.flickity.previous() : null}>
           <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 74.8 214.3" style={{ enableBackground: 'new 0 0 74.8 214.3' }} xmlSpace="preserve">
@@ -121,6 +122,7 @@ class Carousel extends React.Component {
         </div>
   
         <div
+        aria-label="Next slide"
         className={`carousel__button carousel__button--next`}
         onClick={() => (this.state.flickity) ? this.state.flickity.next() : null}>
           <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 74.8 214.3" style={{ enableBackground: 'new 0 0 74.8 214.3' }} xmlSpace="preserve">

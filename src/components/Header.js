@@ -7,11 +7,11 @@ import './Header.css';
 
 function Header() {
   return (
-    <div className="header">
+    <header className="header">
       <div className="logo-wrapper">
         <div className="logo"></div>
       </div>
-    </div>
+    </header>
   );
 }
 
