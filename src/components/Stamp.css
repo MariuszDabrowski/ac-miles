@@ -198,13 +198,13 @@
 .card-badges--5 .stamp-wrapper--1 { transform: translate(-260%, -50%); }
 .card-badges--5 .stamp-wrapper--2 { transform: translate(-155%, -50%); }
 .card-badges--5 .stamp-wrapper--3 { transform: translate(-51%, -50%); }
-.card-badges--5 .stamp-wrapper--4 { transform: translate(48%, -50%); }
+.card-badges--5 .stamp-wrapper--4 { transform: translate(52%, -50%); }
 .card-badges--5 .stamp-wrapper--5 { transform: translate(159%, -50%); }
 
 .card-badges--5 .stamp--1 { transform: translate(2%, 0%) rotate(8deg); }
 .card-badges--5 .stamp--2 { transform: translate(-2%, 0%) rotate(-5deg); }
 .card-badges--5 .stamp--3 { transform: translate(-1%, 0%) rotate(3deg); }
-.card-badges--5 .stamp--4 { transform: translate(5%, 0%) rotate(11deg); }
+.card-badges--5 .stamp--4 { transform: translate(2%, 0%) rotate(11deg); }
 .card-badges--5 .stamp--5 { transform: translate(0%, 0%) rotate(-9deg); }
 
 .card-badges--6 .stamp-wrapper--1 { transform: translate(-309%, -50%); }
