@@ -45,7 +45,7 @@ class App extends React.Component {
 
     window.addEventListener('keydown', (e) => {
       if (e.keyCode === 71) {
-        window.open('https://github.com/');
+        window.open('https://github.com/MariuszDabrowski/ac-miles');
       }
 
       if ((e.keyCode === 27 || e.keyCode === 66) && this.state.carouselActive) {
