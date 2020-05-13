@@ -4,6 +4,8 @@ Achievement visualizer for the game [Animal Crossing: New Horizons](https://www.
 
 Includes all achievements in the latest game update (version`1.2.0a`).
 
+A process outlining the steps I took to take this project from an idea phase to its final form can be [read here](https://codepen.io/MarioD/post/animal-crossing-the-web).
+
 <img src="https://acmiles.com/site-thumb-1200x600.jpg" width="600">
 
 <br>
