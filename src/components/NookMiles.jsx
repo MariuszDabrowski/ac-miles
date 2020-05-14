@@ -9,20 +9,31 @@ import achievementsData from '../data/achievements.json';
 
 class NookMiles extends React.Component {
   state = {
-    miles: 0
+    miles: 0,
   }
 
   componentDidMount() {
     this.getMilesCount();
   }
 
+  // Component never changes, prevent React from re-rendering it every time
+  shouldComponentUpdate() {
+    const { miles } = this.state;
+
+    if (!miles) {
+      return true;
+    }
+
+    return false;
+  }
+
   getMilesCount = () => {
     let miles = 0;
 
-    achievementsData.forEach(item => {
+    achievementsData.forEach((item) => {
       const tiers = item['Num of Tiers'];
 
-      for (let i = 0; i < tiers; i++) {
+      for (let i = 0; i < tiers; i += 1) {
         miles += Number(item[`Reward Tier ${i + 1}`]);
       }
     });
@@ -30,22 +41,15 @@ class NookMiles extends React.Component {
     this.setState({ miles: miles.toLocaleString('EN-US') });
   }
 
-  // Component never changes, prevent React from re-rendering it every time
-  shouldComponentUpdate(nextProps) {
-    if (!this.state.miles) {
-      return true;
-    }
-
-    return false;
-  }
-
   render() {
+    const { miles } = this.state;
+
     return (
       <div className="nook-miles">
         <div className="nook-miles__icon">
-          <img src={nookIcon} alt="Nook miles icon"/>
+          <img src={nookIcon} alt="Nook miles icon" />
         </div>
-        <div className="nook-miles__count">{this.state.miles}</div>
+        <div className="nook-miles__count">{miles}</div>
       </div>
     );
   }

@@ -31,6 +31,8 @@
   cursor: pointer;
   padding: 4rem;
   display: none;
+  background: transparent;
+  border: 0;
 }
 
 .browser-edge .carousel__button {

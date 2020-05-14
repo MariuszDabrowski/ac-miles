@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './AchievementsItem.css';
 import getTitleIcon from '../helpers/titleIcons';
 
@@ -29,25 +30,31 @@ const awardTracks = {
   4: { sequential: awardsTrack4Connected, nonSequential: awardsTrack4 },
   5: { sequential: awardsTrack5Connected, nonSequential: awardsTrack5 },
   6: { sequential: awardsTrack6Connected, nonSequential: awardsTrack6 },
-}
+};
 
 // ---------
 // Component
 // ---------
 
 class AchievementsItem extends React.Component {
-
   // Component never changes, prevent React from re-rendering it every time
-  shouldComponentUpdate(nextProps) {
+  shouldComponentUpdate() {
     return false;
   }
 
   // ------
   // Render
   // ------
-  
+
   render() {
-    const isSequential = (this.props.data['Sequential'] === 'Yes') ? 'sequential' : 'nonSequential';
+    const {
+      data,
+      setCarouselIndex,
+      index,
+      version,
+      stamps,
+    } = this.props;
+    const isSequential = (data.Sequential === 'Yes') ? 'sequential' : 'nonSequential';
 
     // ------
     // Return
@@ -55,36 +62,58 @@ class AchievementsItem extends React.Component {
 
     return (
       <div
-      className={`achievement achievement--${this.props.data['Internal Category'].toLowerCase()}`}
-      onClick={() => {
-        const previousFocusedDiv = document.querySelector('.had-focus-before-carousel');
-        if (previousFocusedDiv) previousFocusedDiv.classList.remove('had-focus-before-carousel');
-        this.props.setCarouselIndex(this.props.index)
-      }}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter') {
-          const carousel = document.querySelector('.carousel');
+        role="button"
+        className={`achievement achievement--${data['Internal Category'].toLowerCase()}`}
+        onClick={() => {
           const previousFocusedDiv = document.querySelector('.had-focus-before-carousel');
           if (previousFocusedDiv) previousFocusedDiv.classList.remove('had-focus-before-carousel');
-          e.target.classList.add('had-focus-before-carousel');
-          setTimeout(() => carousel.focus(), 0);
-          console.log(document.activeElement);
-          this.props.setCarouselIndex(this.props.index);
-        }
-      }}
-      tabIndex="0">
-        { this.props.data['Version'] === this.props.version && <div className="achievement__new">New!</div> }
-        <div className="achievement__title">{ getTitleIcon(this.props.data.Name) || this.props.data.Name }</div>
-        <div className={`achievement__spaces achievement__spaces--${this.props.data['Num of Tiers']}`}>
-          {this.props.stamps}
+          setCarouselIndex(index);
+        }}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            const carousel = document.querySelector('.carousel');
+            const previousFocusedDiv = document.querySelector('.had-focus-before-carousel');
+            if (previousFocusedDiv) previousFocusedDiv.classList.remove('had-focus-before-carousel');
+            e.target.classList.add('had-focus-before-carousel');
+            setTimeout(() => carousel.focus(), 0);
+            setCarouselIndex(index);
+          }
+        }}
+        tabIndex="0"
+      >
+        { data.Version === version && <div className="achievement__new">New!</div> }
+        <div className="achievement__title">{ getTitleIcon(data.Name) || data.Name }</div>
+        <div className={`achievement__spaces achievement__spaces--${data['Num of Tiers']}`}>
+          {stamps}
           <img
-          className="achievement__spaces-svg"
-          alt={`${this.props.data.Name} stamp`}
-          src={awardTracks[this.props.data['Num of Tiers']][isSequential]} />
+            className="achievement__spaces-svg"
+            alt={`${data.Name} stamp`}
+            src={awardTracks[data['Num of Tiers']][isSequential]}
+          />
         </div>
       </div>
     );
   }
 }
+
+// ----------
+// Prop types
+// ----------
+
+AchievementsItem.propTypes = {
+  data: PropTypes.shape({
+    Name: PropTypes.string.isRequired,
+    'Num of Tiers': PropTypes.number.isRequired,
+    Version: PropTypes.string.isRequired,
+    Sequential: PropTypes.string.isRequired,
+    'Internal Category': PropTypes.string.isRequired,
+  }).isRequired,
+  setCarouselIndex: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
+  version: PropTypes.string.isRequired,
+  stamps: PropTypes.arrayOf(
+    PropTypes.shape({}),
+  ).isRequired,
+};
 
 export default AchievementsItem;

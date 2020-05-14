@@ -43,19 +43,19 @@ import stampGoldenMilestoneShovel from '../img/stamp-golden-milestone-shovel.png
 // -----------------------------------------------------
 
 const stampImages = {
-  'communication': stampCommunication,
-  'diy': stampDIY,
-  'event': stampEvent,
-  'fish': stampFish,
-  'hha': stampHHA,
-  'insect': stampInsect,
-  'landmaking': stampLandMaking,
-  'money': stampMoney,
-  'mydesign': stampMyDesign,
-  'negative': stampNegative,
-  'plant': stampPlant,
-  'smartphone': stampSmartPhone,
-}
+  communication: stampCommunication,
+  diy: stampDIY,
+  event: stampEvent,
+  fish: stampFish,
+  hha: stampHHA,
+  insect: stampInsect,
+  landmaking: stampLandMaking,
+  money: stampMoney,
+  mydesign: stampMyDesign,
+  negative: stampNegative,
+  plant: stampPlant,
+  smartphone: stampSmartPhone,
+};
 
 // -----------------
 // Custom stamps map
@@ -71,20 +71,20 @@ const customStampsMap = {
       2: stampFruitRootsPear,
       3: stampFruitRootsPeach,
       4: stampPlant,
-      5: stampFruitRootsCoconut
+      5: stampFruitRootsCoconut,
     },
     dateColor: '#fbfcea',
-    curve: 'plant'
+    curve: 'plant',
   },
   // Shrubbery hubbery
   92: {
     stamps: {
       0: stampShrubberyHubbery,
       1: stampShrubberyHubbery,
-      2: stampShrubberyHubbery
+      2: stampShrubberyHubbery,
     },
     dateColor: '#fbfcea',
-    curve: 'plant'
+    curve: 'plant',
   },
   // Fishing tourney
   41: {
@@ -95,7 +95,7 @@ const customStampsMap = {
       3: stampFishingTourney,
     },
     dateColor: '#fd918e',
-    curve: 'fish'
+    curve: 'fish',
   },
   // (island name) icons
   86: {
@@ -104,7 +104,7 @@ const customStampsMap = {
       1: stampIslandNameIconsMelody,
     },
     dateColor: '#fbfcea',
-    curve: 'event'
+    curve: 'event',
   },
   // Golden milestone
   // (shovel, net, fishing rod, watering can, axe, and slingshot)
@@ -115,10 +115,10 @@ const customStampsMap = {
       2: stampGoldenMilestoneCan,
       3: stampGoldenMilestoneShot,
       4: stampGoldenMilestoneAxe,
-      5: stampGoldenMilestoneFishing
+      5: stampGoldenMilestoneFishing,
     },
     dateColor: '#fbfcea',
-    curve: 'hha'
+    curve: 'hha',
   },
   // Bug off
   42: {
@@ -129,7 +129,7 @@ const customStampsMap = {
       3: stampInsect,
     },
     dateColor: '#fbfcea',
-    curve: 'insect'
+    curve: 'insect',
   },
   // Island designer
   88: {
@@ -139,11 +139,11 @@ const customStampsMap = {
       2: stampIslandDesignerBrown,
     },
     dateColor: '#fbfcea',
-    curve: 'event'
-  }
-}
+    curve: 'event',
+  },
+};
 
 export {
   stampImages,
-  customStampsMap
+  customStampsMap,
 };

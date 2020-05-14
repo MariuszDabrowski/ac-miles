@@ -1,12 +1,13 @@
 import React from 'react';
-import randomDate from '../helpers/randomDate.js';
+import PropTypes from 'prop-types';
+import randomDate from '../helpers/randomDate';
 import './DateSVG.css';
 
 // Number of days each badge date is incremented from initial badge
 const dateIncrement = [
   [0, 1, 3, 7, 10, 20],
   [0, 3, 7, 10, 20, 30],
-  [0, 5, 10, 15, 20, 25]
+  [0, 5, 10, 15, 20, 25],
 ];
 
 // --------------------
@@ -72,46 +73,48 @@ const sessionDates = {};
 // -----------
 // FIX THIS CODE IT'S CONFUSING AS HECK!
 
-function getDate(date, achievement, badgeIndex) {
-  let internalID = achievement['Internal ID'];
+function getDate(dateParam, achievement, badgeIndex) {
+  let date = dateParam;
+  const internalID = achievement['Internal ID'];
   let month = null;
   let day = null;
   let year = null;
 
   // If the first item in our date parameter is an array we know we're dealing with a custom date (as opposed to a random date)
   if (Array.isArray(date[0])) {
+    const firstDate = date[0];
     // If the array length is greater than 1, we want to use those static dates to populate our badges
     if (date.length > 1) {
-      month = ('0' + date[badgeIndex][0]).slice(-2);
-      day = ('0' + date[badgeIndex][1]).slice(-2);
+      month = (`0${date[badgeIndex][0]}`).slice(-2);
+      day = (`0${date[badgeIndex][1]}`).slice(-2);
       year = String(date[badgeIndex][2]).slice(-2);
-      
+
       return `${month}/${day}/${year}`;
-    } else {
-      // If the array length is 1, we start at that date and do what we normally would do
-      date = date[0];
     }
+
+    // If the array length is 1, we start at that date and do what we normally would do
+    date = firstDate;
   }
 
   if (sessionDates.hasOwnProperty(internalID)) {
     // Increment date from previous step
-    const [ lastBadgeMonth, lastBadgeDay, lastBadgeYear ] = sessionDates[internalID];
+    const [lastBadgeMonth, lastBadgeDay, lastBadgeYear] = sessionDates[internalID];
     const nextDate = new Date(lastBadgeYear, lastBadgeMonth - 1, lastBadgeDay);
 
     nextDate.setDate(nextDate.getDate() + dateIncrement[achievement['Internal ID'] % 3][badgeIndex]);
     const updatedDate = [
       nextDate.getMonth() + 1,
       nextDate.getDate(),
-      nextDate.getFullYear()
-    ]
+      nextDate.getFullYear(),
+    ];
 
-    month = ('0' + updatedDate[0]).slice(-2);
-    day = ('0' + updatedDate[1]).slice(-2);
+    month = (`0${updatedDate[0]}`).slice(-2);
+    day = (`0${updatedDate[1]}`).slice(-2);
     year = String(updatedDate[2]).slice(-2);
   } else {
     // Return date passed
-    month = ('0' + date[0]).slice(-2);
-    day = ('0' + date[1]).slice(-2);
+    month = (`0${date[0]}`).slice(-2);
+    day = (`0${date[0]}`).slice(-2);
     year = String(date[2]).slice(-2);
 
     sessionDates[internalID] = date;
@@ -124,56 +127,91 @@ function getDate(date, achievement, badgeIndex) {
 // Component
 // ---------
 
-function DateSVG(props) {
-  let internalID = props.achievement['Internal ID'];
+function DateSVG({
+  achievement,
+  badgeIndex,
+  category,
+  dateColor,
+}) {
+  const internalID = achievement['Internal ID'];
   let path = null;
-  let id = `curve-${props.achievement['Internal ID']}-${props.badgeIndex}-${Math.ceil(Math.random() * 100000)}`;
-  
+  const id = `curve-${achievement['Internal ID']}-${badgeIndex}-${Math.ceil(Math.random() * 100000)}`;
+
   // Create a unique id for each element
 
-  if (props.category === 'event') {
-    path = <path id={id} d="M36.8,71.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4"/>;
-  } else if (props.category === 'fish') {
-    path = <path id={id} d="M26,117.4h92.1"/>;
-  } else if (props.category === 'insect') {
-    path = <path id={id} d="M26,114.4h92.1"/>;
-  } else if (props.category === 'communication') {
-    path = <path id={id} d="M36.8,81.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4"/>;
-  } else if (props.category === 'diy') {
-    path = <path id={id} d="M26,120.4h92.1"/>;
-  } else if (props.category === 'hha') {
-    path = <path id={id} d="M26,118.4h92.1"/>;
-  } else if (props.category === 'plant') {
-    path = <path id={id} d="M36.8,74.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4"/>;
-  } else if (props.category === 'smartphone') {
-    path = <path id={id} d="M26,122.4h92.1"/>;
-  } else if (props.category === 'money') {
-    path = <path id={id} d="M36.8,71.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4"/>;
-  } else if (props.category === 'negative') {
-    path = <path id={id} d="M36.8,71.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4"/>;
-  } else if (props.category === 'landmaking') {
-    path = <path id={id} d="M26,123.4h92.1"/>;
-  } else if (props.category === 'mydesign') {
-    path = <path id={id} d="M24,118.4h92.1"/>;
+  if (category === 'event') {
+    path = <path id={id} d="M36.8,71.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4" />;
+  } else if (category === 'fish') {
+    path = <path id={id} d="M26,117.4h92.1" />;
+  } else if (category === 'insect') {
+    path = <path id={id} d="M26,114.4h92.1" />;
+  } else if (category === 'communication') {
+    path = <path id={id} d="M36.8,81.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4" />;
+  } else if (category === 'diy') {
+    path = <path id={id} d="M26,120.4h92.1" />;
+  } else if (category === 'hha') {
+    path = <path id={id} d="M26,118.4h92.1" />;
+  } else if (category === 'plant') {
+    path = <path id={id} d="M36.8,74.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4" />;
+  } else if (category === 'smartphone') {
+    path = <path id={id} d="M26,122.4h92.1" />;
+  } else if (category === 'money') {
+    path = <path id={id} d="M36.8,71.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4" />;
+  } else if (category === 'negative') {
+    path = <path id={id} d="M36.8,71.7c0-19.5,15.8-35.4,35.4-35.4s35.4,15.8,35.4,35.4" />;
+  } else if (category === 'landmaking') {
+    path = <path id={id} d="M26,123.4h92.1" />;
+  } else if (category === 'mydesign') {
+    path = <path id={id} d="M24,118.4h92.1" />;
   }
 
   return (
-    <svg className={`date-svg date-svg--${props.category}`} style={Object.assign({}, {enableBackground: 'new 0 0 144 144'}, (props.dateColor) ? {fill: props.dateColor} : {})} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 144 144" xmlSpace="preserve">
-      <rect width="144" height="144"/>
+    <svg
+      className={`date-svg date-svg--${category}`}
+      style={{
+        enableBackground: 'new 0 0 144 144',
+        ...dateColor ? { fill: dateColor } : {},
+      }}
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      viewBox="0 0 144 144"
+      xmlSpace="preserve"
+    >
+      <rect width="144" height="144" />
       {path}
       <text>
         <textPath
-        href={`#${id}`}
-        startOffset="50%">
+          href={`#${id}`}
+          startOffset="50%"
+        >
           {
-            (customDates.hasOwnProperty(internalID)) ?
-            getDate(customDates[internalID], props.achievement, props.badgeIndex) :
-            getDate(randomDate(), props.achievement, props.badgeIndex)
+            (customDates.hasOwnProperty(internalID))
+              ? getDate(customDates[internalID], achievement, badgeIndex)
+              : getDate(randomDate(), achievement, badgeIndex)
           }
         </textPath>
       </text>
     </svg>
   );
 }
+
+// ----------
+// Prop types
+// ----------
+
+DateSVG.propTypes = {
+  achievement: PropTypes.shape({
+    'Internal ID': PropTypes.number.isRequired,
+  }).isRequired,
+  badgeIndex: PropTypes.number.isRequired,
+  category: PropTypes.string.isRequired,
+  dateColor: PropTypes.string,
+};
+
+DateSVG.defaultProps = {
+  dateColor: null,
+};
 
 export default DateSVG;

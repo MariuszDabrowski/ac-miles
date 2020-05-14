@@ -26,6 +26,10 @@ The assets are all based on the original assets found in [Animal Crossing: New H
 
 The initial data for the achievements came from [this wonderful Google Sheets data spreadsheet](https://docs.google.com/spreadsheets/d/13d_LAJPlxMa_DubPTuirkIV4DERBMXbrWQsmSh8ReK4) that is maintained by the amazing Animal Crossing: New Horizons community.
 
+When converting the data from the spreadsheet to JSON be careful of the following:
+
+- Sometimes 0 values will be converted to string. Look through the converted data to ensure "0" values are not present.
+
 <br>
 
 ## Running the project locally
@@ -34,6 +38,8 @@ This project was created using [React Create App](https://reactjs.org/docs/creat
 
 1. [Flickity](https://flickity.metafizzy.co/) - for the carousel functionality
 2. [Simplebar](https://github.com/Grsmto/simplebar) - for styling the custom scrollbar
+
+It uses [ESLint](https://eslint.org/) to keep the code uniform across all contributors following the [AirBnB Javascript style guide](https://github.com/airbnb/javascript) with a few minor rule changes.
 
 #### To start the project locally:
 

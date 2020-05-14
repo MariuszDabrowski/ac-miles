@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './CarouselItem.css';
 import getTitleIcon from '../helpers/titleIcons';
 import achievementDescriptions from '../data/achievementDescriptions.json';
@@ -30,22 +31,22 @@ const tracks = {
   4: { sequential: track4Connected, nonSequential: track4 },
   5: { sequential: track5Connected, nonSequential: track5 },
   6: { sequential: track6Connected, nonSequential: track6 },
-}
+};
 
 // ---------
 // Component
 // ---------
 
 class CarouselItem extends React.Component {
-
   // Component never changes, prevent React from re-rendering it every time
-  shouldComponentUpdate(nextProps) {
+  shouldComponentUpdate() {
     return false;
   }
 
   render() {
-    const isSequential = (this.props.data['Sequential'] === 'Yes') ? 'sequential' : 'nonSequential';
-    const trackImage = tracks[this.props.data['Num of Tiers']][isSequential];
+    const { data, version, stamps } = this.props;
+    const isSequential = (data.Sequential === 'Yes') ? 'sequential' : 'nonSequential';
+    const trackImage = tracks[data['Num of Tiers']][isSequential];
 
     // ------
     // Render
@@ -53,21 +54,40 @@ class CarouselItem extends React.Component {
 
     return (
       <div className="card-wrapper">
-        <div className={`card card--${this.props.data['Internal Category'].toLowerCase()}`}>
-          { this.props.data['Version'] === this.props.version && <div className="achievement__new">New!</div> }
-          <div className="card__title">{ getTitleIcon(this.props.data.Name) || this.props.data.Name }</div>
+        <div className={`card card--${data['Internal Category'].toLowerCase()}`}>
+          { data.Version === version && <div className="achievement__new">New!</div> }
+          <div className="card__title">{ getTitleIcon(data.Name) || data.Name }</div>
           <div className="card__description">
-            <div dangerouslySetInnerHTML={{ __html: achievementDescriptions[this.props.data['Internal ID']].description }}></div>
-            <div className="card__description__nook"></div>
+            <div dangerouslySetInnerHTML={{ __html: achievementDescriptions[data['Internal ID']].description }} />
+            <div className="card__description__nook" />
           </div>
-          <div className={`card-badges card-badges--${this.props.data['Num of Tiers']}`}>
-            {this.props.stamps}
-            <img src={trackImage} alt={`${this.props.data.Name} achievements path`} className="card-badges__track" />
+          <div className={`card-badges card-badges--${data['Num of Tiers']}`}>
+            {stamps}
+            <img src={trackImage} alt={`${data.Name} achievements path`} className="card-badges__track" />
           </div>
         </div>
       </div>
     );
   }
 }
+
+// ----------
+// Prop types
+// ----------
+
+CarouselItem.propTypes = {
+  data: PropTypes.shape({
+    Version: PropTypes.string.isRequired,
+    Name: PropTypes.string.isRequired,
+    'Internal ID': PropTypes.number.isRequired,
+    'Internal Category': PropTypes.string.isRequired,
+    'Num of Tiers': PropTypes.number.isRequired,
+    Sequential: PropTypes.string.isRequired,
+  }).isRequired,
+  version: PropTypes.string.isRequired,
+  stamps: PropTypes.arrayOf(
+    PropTypes.shape({}),
+  ).isRequired,
+};
 
 export default CarouselItem;

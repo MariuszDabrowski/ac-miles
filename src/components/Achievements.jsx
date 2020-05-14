@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import SimpleBar from 'simplebar-react'; // https://github.com/Grsmto/simplebar/tree/master/packages/simplebar-react
 import achievementsData from '../data/achievements.json';
 import AchievementsItem from './AchievementsItem';
@@ -9,27 +10,20 @@ import '../css/simplebar.css';
 // Component
 // ---------
 
-function Achievements(props) {
+function Achievements({
+  stamps,
+  version,
+  setCarouselIndex,
+}) {
   const scrollbarAchievements = useRef();
   const scrollbarMimic = useRef();
   const mimicScrollContentElement = useRef();
   const achievementsElement = useRef();
 
-  // ------------------------------------------
-  // Component did mount & Component did update
-  // ------------------------------------------
-
-  useEffect(() => {
-    mimicScrollContentElement.current.style.height = `${achievementsElement.current.clientHeight}px`;
-    scrollbarMimic.current.recalculate();
-
-    setupScrollbar();
-  });
-
   // ----------------------------------
   // Initialize scrollbar functionality
   // ----------------------------------
-  
+
   function setupScrollbar() {
     let diableHoversTimeout;
     const mimicScrollElement = document.querySelector('.mimic-scroll');
@@ -39,7 +33,6 @@ function Achievements(props) {
     // -----------------------------------
 
     scrollbarAchievements.current.contentWrapperEl.addEventListener('scroll', (e) => {
-
       // ---------------------------------------------------------------------------------
       // When scrolling the page add a class to allow us to disable hovers for performance
       // ---------------------------------------------------------------------------------
@@ -48,8 +41,8 @@ function Achievements(props) {
         clearTimeout(diableHoversTimeout);
         document.body.classList.add('disable-hover');
 
-        diableHoversTimeout = setTimeout(function(){
-            document.body.classList.remove('disable-hover');
+        diableHoversTimeout = setTimeout(() => {
+          document.body.classList.remove('disable-hover');
         }, 100);
       }
 
@@ -76,11 +69,22 @@ function Achievements(props) {
       if (mimicScrollElement.classList.contains('simplebar-dragging')) {
         const scrollPercentage = e.target.scrollTop / (mimicScrollContentElement.current.clientHeight - scrollbarMimic.current.el.clientHeight);
         const newScrollPos = (achievementsElement.current.clientHeight - document.body.clientHeight) * scrollPercentage;
-      
+
         scrollbarAchievements.current.contentWrapperEl.scrollTop = newScrollPos;
       }
     });
   }
+
+  // ------------------------------------------
+  // Component did mount & Component did update
+  // ------------------------------------------
+
+  useEffect(() => {
+    mimicScrollContentElement.current.style.height = `${achievementsElement.current.clientHeight}px`;
+    scrollbarMimic.current.recalculate();
+
+    setupScrollbar();
+  });
 
   // ------
   // Render
@@ -89,26 +93,35 @@ function Achievements(props) {
   return (
     <>
       <SimpleBar ref={scrollbarMimic} autoHide={false} className="mimic-scroll">
-          <div className="mimic-scroll__content" ref={mimicScrollContentElement}></div>
+        <div className="mimic-scroll__content" ref={mimicScrollContentElement} />
       </SimpleBar>
 
       <SimpleBar ref={scrollbarAchievements} autoHide={false} className="achievements-wrapper">
-          <div className="achievements" ref={achievementsElement}>
-            { achievementsData.map((item, index) => {
-              return (
-                <AchievementsItem
-                key={item['Unique Entry ID']}
-                data={item}
-                index={index}
-                stamps={(props.stamps) ? props.stamps[item['Internal ID']] : null}
-                setCarouselIndex={props.setCarouselIndex}
-                version={props.version} />
-              )
-            })}
-          </div>
+        <div className="achievements" ref={achievementsElement}>
+          { achievementsData.map((item, index) => (
+            <AchievementsItem
+              key={item['Unique Entry ID']}
+              data={item}
+              index={index}
+              stamps={(stamps) ? stamps[item['Internal ID']] : null}
+              setCarouselIndex={setCarouselIndex}
+              version={version}
+            />
+          ))}
+        </div>
       </SimpleBar>
     </>
   );
 }
+
+// ----------
+// Prop Types
+// ----------
+
+Achievements.propTypes = {
+  stamps: PropTypes.shape({}).isRequired,
+  setCarouselIndex: PropTypes.func.isRequired,
+  version: PropTypes.string.isRequired,
+};
 
 export default Achievements;

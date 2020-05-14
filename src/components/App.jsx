@@ -14,7 +14,6 @@ import './App.css';
 // ---------
 
 class App extends React.Component {
-  
   // -----
   // State
   // -----
@@ -23,14 +22,14 @@ class App extends React.Component {
     carouselActive: false,
     carouselIndex: 0,
     stamps: null,
-    version: '1.2.0'
+    version: '1.2.0',
   }
 
   // -------------------
   // Component did mount
   // -------------------
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.setState({ stamps: generateStamps() });
     this.checkURL();
     this.setupKeyboardShortcuts();
@@ -41,19 +40,21 @@ class App extends React.Component {
   // ------------------------
 
   setupKeyboardShortcuts = () => {
-    // 71 G, 27 Esc, 66 B
-
     window.addEventListener('keydown', (e) => {
+      const { carouselActive } = this.state;
+
+      // G
       if (e.keyCode === 71) {
         window.open('https://github.com/MariuszDabrowski/ac-miles');
       }
 
-      if ((e.keyCode === 27 || e.keyCode === 66) && this.state.carouselActive) {
+      // Esc and B
+      if ((e.keyCode === 27 || e.keyCode === 66) && carouselActive) {
         this.toggleCarousel();
       }
 
       // When in the carousel prevent the user from tabbing, they can use arrows + esc to navigate around
-      if (e.keyCode === 9 && this.state.carouselActive) {
+      if (e.keyCode === 9 && carouselActive) {
         e.preventDefault();
       }
     });
@@ -74,13 +75,14 @@ class App extends React.Component {
   // ---------------
   // Toggle carousel
   // ---------------
-  
+
   toggleCarousel = () => {
+    const { carouselActive } = this.state;
     const hadFocus = document.querySelector('.had-focus-before-carousel');
     const achievements = document.querySelector('.achievements');
 
-    if (this.state.carouselActive) window.history.replaceState({}, '', window.location.pathname);
-    this.setState({ carouselActive: (this.state.carouselActive) ? false : true }, () => {
+    if (carouselActive) window.history.replaceState({}, '', window.location.pathname);
+    this.setState({ carouselActive: !carouselActive }, () => {
       // If the user was using the keyboard to navigate, put the focus back to where it was before the carousel opened
       if (hadFocus) {
         hadFocus.focus();
@@ -97,7 +99,7 @@ class App extends React.Component {
   setCarouselIndex = (index, cb) => {
     this.setState(
       { carouselIndex: index },
-      this.toggleCarousel, () => { if (cb) cb(); }
+      this.toggleCarousel, () => { if (cb) cb(); },
     );
   }
 
@@ -106,31 +108,41 @@ class App extends React.Component {
   // ------
 
   render() {
+    const {
+      stamps,
+      carouselIndex,
+      carouselActive,
+      version,
+    } = this.state;
+
     return (
       <>
         <Loader />
 
-        {this.state.stamps &&
+        {stamps && (
           <Carousel
-          carouselIndex={this.state.carouselIndex}
-          visibility={this.state.carouselActive}
-          stamps={this.state.stamps}
-          version={this.state.version} />
-        }
-        
+            carouselIndex={carouselIndex}
+            visibility={carouselActive}
+            stamps={stamps}
+            version={version}
+          />
+        )}
+
         <NookMiles />
         <Header />
-        
-        {this.state.stamps &&
+
+        {stamps && (
           <Achievements
-          setCarouselIndex={this.setCarouselIndex}
-          stamps={this.state.stamps}
-          version={this.state.version} />
-        }
+            setCarouselIndex={this.setCarouselIndex}
+            stamps={stamps}
+            version={version}
+          />
+        )}
 
         <Buttons
-        carouselActive={this.state.carouselActive}
-        toggleCarousel={this.toggleCarousel} />
+          carouselActive={carouselActive}
+          toggleCarousel={this.toggleCarousel}
+        />
       </>
     );
   }
